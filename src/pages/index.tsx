@@ -36,7 +36,6 @@ export default function Home(): JSX.Element {
           description="Palworld Modding Kit & Docs">
           <HomepageHeader/>
           <main>
-              <HomepageFeatures/>
           </main>
       </Layout>
   );
