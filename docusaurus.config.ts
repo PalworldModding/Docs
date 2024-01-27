@@ -4,11 +4,11 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Palworld Modding Docs',
-  tagline: 'Palworld Related Modding Docs',
+  tagline: '',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://palworldmodding.github.com',
+  url: 'https://pwmodding.wiki',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -56,12 +56,17 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    image: 'img/palworld.png',
     navbar: {
       title: 'Palworld Modding Docs',
       logo: {
         alt: 'Palworld Modding Logo',
-        src: 'img/logo.svg',
+        src: 'img/palworld.png',
       },
       items: [
         {
@@ -94,16 +99,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Nebulae Discord',
+              href: 'https://discord.gg/Nkb2JHu7wc',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Palworld Modding Discord',
+              href: 'https://discord.gg/qHTZNcvYsv',
             },
           ],
         },
@@ -124,8 +125,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Palworld Modding. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.vsDark,
     },
   } satisfies Preset.ThemeConfig,
 };
