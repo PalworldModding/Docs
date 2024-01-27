@@ -37,7 +37,7 @@ export default function Home(): JSX.Element {
       <Layout
           title={`${siteConfig.title}`}
           description="Palworld Modding Kit & Docs">
-          <HomepageHeader/>
+          <HomepageHeader />
           <main>
           </main>
       </Layout>
