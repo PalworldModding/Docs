@@ -8,8 +8,11 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: url("./Palworld-Hero500.png") no-repeat 50% 40%;
+  background: url("./palbanner.png") no-repeat 50% 60%;
   background-size: 100%;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 2px 2px black;
 }
 
 @media screen and (max-width: 996px) {
@@ -22,4 +25,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-text-stroke: 0px white;
+  text-shadow: 0px 0px white;
 }
