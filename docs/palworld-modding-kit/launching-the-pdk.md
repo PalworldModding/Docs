@@ -4,7 +4,8 @@ sidebar_position: 3
 
 # Launching The PDK - Part 3
 
-After doing all of those steps, we are ready! Double-click the `Pal.uproject` file and it should open in Unreal Engine!
+## After doing all of those steps, we are ready! Double-click the `Pal.uproject` file and it should open in Unreal Engine!
+
 
 :::note
 If it tells you that modules are out of date and need to be recompiled, press **YES**

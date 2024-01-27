@@ -2,9 +2,7 @@
 sidebar_position: 1
 ---
 
-# Installation Of The PDK - Part 1
-
-## Prerequisites
+# Prerequisites - Part 1
 
 ### .NET 6
 

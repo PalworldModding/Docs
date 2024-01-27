@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Installation Of The PDK - Part 2
+# PDK Setup & Config - Part 2
 
 With the prerequisites out of the way, we are ready to download the sdk.
 
