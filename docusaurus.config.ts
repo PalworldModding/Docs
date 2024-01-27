@@ -29,10 +29,6 @@ const config: Config = {
     locales: ['en'],
   },
 
-  scripts: [
-      "https://buttons.github.io/buttons.js",
-  ],
-
   presets: [
     [
       'classic',
