@@ -123,7 +123,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Palworld Modding. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Palworld Modding. Built with Docusaurus. Not Affiliated with Pocket Pair, Inc.`,
     },
     prism: {
       theme: prismThemes.vsLight,
