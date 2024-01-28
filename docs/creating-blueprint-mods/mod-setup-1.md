@@ -38,6 +38,11 @@ These events shouldn't really be used!
 - EventBeginPlay
 - EventActorBeginOverlap
 
+:::tip
+Anything in the red box, should not be used.
+
+Anything in the green box, is suggested for use. (ModMenuButtonPressed is suggested for use, It's just not listed)
+:::
 ![ModActorEvents](./assets/ModActorEvents.png)
 
 ## ModActor Variables
