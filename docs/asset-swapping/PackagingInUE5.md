@@ -53,7 +53,7 @@ Change the **Blend Mode** to **Translucent**, and connect **A** (alpha) to **Opa
 
 Do that on any material you need, then dont forget to save everything (bottom right corner).
 
-![UE6](https://github.com/KURAMAAA0/PalModding/assets/58988462/85905fae-a8f9-4dda-bac6-7ee05b3c1011")
+![UE6](https://github.com/KURAMAAA0/PalModding/assets/58988462/85905fae-a8f9-4dda-bac6-7ee05b3c1011)
 
 Make sure that all your files have the EXACT same name they originally had in FModel.
 
