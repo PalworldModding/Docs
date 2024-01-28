@@ -22,19 +22,19 @@ The Project Defaults should be:
 -
 ![UE2](https://github.com/KURAMAAA0/PalModding/assets/58988462/0782bbbe-9b49-4597-b530-9805e1f14561)
 
-Click on **Platforms** towards the top, then **Packaging Settings**
+Click on `Platforms` towards the top, then `Packaging Settings
 
 ![UESETTING](https://github.com/KURAMAAA0/PalModding/assets/58988462/5c65653c-c1de-4f95-9e40-e08622395890)
 
-Uncheck **Use Io Store** and check **Generate Chunks**.
+Uncheck `Use Io Store` and check `Generate Chunks`.
 
 ![UESETTING2](https://github.com/KURAMAAA0/PalModding/assets/58988462/41cfcb81-5046-4388-bf5d-7fa8253f8f38)
 
-Search for **Cook everything** in the search bar and check **Cook everything in the project content directory (…)**.
+Search for `Cook everything` in the search bar and check `Cook everything in the project content directory (…)`.
 
 ![UESETTING3](https://github.com/KURAMAAA0/PalModding/assets/58988462/2967a6ba-031e-4464-b245-b67ac9f140a8)
 
-Create a folder structure **matching** the one from FModel. Ignore “Pal\Content\” as the Content Browser already starts in “Content”.
+Create a folder structure `matching` the one from FModel. Ignore `Pal\Content\` as the Content Browser already starts in `Content`.
 **For example**, since I modified Depresso model, body texture and eyes texture, I need to create the folder structure to get to these files.
 
 ![UEPATH1](https://github.com/KURAMAAA0/PalModding/assets/58988462/e86dc337-3c7d-4918-8646-448bbd962089)
@@ -56,10 +56,13 @@ Do that on any material you need, then dont forget to save everything (bottom ri
 ![UE6](https://github.com/KURAMAAA0/PalModding/assets/58988462/85905fae-a8f9-4dda-bac6-7ee05b3c1011")
 
 Make sure that all your files have the EXACT same name they originally had in FModel.
+
 In my case:
-**DeprivedDepresso** becomes **SK_NegativeKoala**
-**DeprivedDepresso_PhysicsAsset** becomes **PA_NegativeKoala_PhysicsAsset**
-**DeprivedDepresso_Skeleton** becomes **SK_NegativeKoala_Skeleton**
+- **DeprivedDepresso** becomes **SK_NegativeKoala**
+- **DeprivedDepresso_PhysicsAsset** becomes **PA_NegativeKoala_PhysicsAsset**
+- **DeprivedDepresso_Skeleton** becomes **SK_NegativeKoala_Skeleton**
+
+ 
 Note that SK_NegativeKoala_Skeleton was originally not in the same folder as the other files, so we have to create new folders and move it from its current folder.
 Always keep in mind that paths and filenames are very important.
 
@@ -78,10 +81,10 @@ Select **PrimaryAssetLabel**.
 
 Name it “Label_YourModName”. I named mine “Label_DeprivedDepresso”.
 Double click it, and make the following changes:
-Priority set to **1 or more**
-Chunk ID set to **1000 or more**, this will be in your final mod .pak to help you differentiate it from other .pak files.
-Cook Rule set to **Always Cook**
-Label Assets in My Directory **checked**.
+- Priority set to **1 or more**
+- Chunk ID set to **1000 or more**, this will be in your final mod .pak to help you differentiate it from other .pak files.
+- Cook Rule set to **Always Cook**
+- Label Assets in My Directory **checked**.
 Save everything (bottom right corner).
 Click on **Platforms, Windows, Shipping**
 Then click on **Platforms, Windows, Package Project**
@@ -90,14 +93,14 @@ Your mod will start packaging, this will take a while so grab a cup of tea!
 ![BLENDER3](https://github.com/KURAMAAA0/PalModding/assets/58988462/4be2947c-6056-4f43-9d9e-3c30fe1928b2)
 
 Or coffee..
-Once packaging is done, you’ll have 	a “Windows” folder made, go in through folder: Windows > Pal > Content > Paks.
+Once packaging is done, you’ll have a “Windows” folder made, go in through folder: `Windows -> Pal -> Content -> Paks`.
 In the Paks folder, you’ll most likely have two .pak files, **pakchunk0-Windows** and yours.
 Mine is pakchunk1000-Windows because I set the Chunk ID to 1000.
 You now need to go into your game local files.
 
 ![STEAM1](https://github.com/KURAMAAA0/PalModding/assets/58988462/c8563873-11e1-4376-a6da-09df5fdd2c0e)
 
-Copy your .pak file to **D:\Palworld\Pal\Content\Paks**.
+Copy your .pak file to `D:\Palworld\Pal\Content\Paks`.
 Rename it to *YourModName***_P** launch Palworld, and that’s it!
 **(YOUR .PAK FILENAME SHOULD END WITH “_P’, ELSE IT WON’T LOAD.)**
 Enjoy your beautiful creation.
