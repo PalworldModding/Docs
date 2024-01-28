@@ -22,7 +22,11 @@ Where we left off would be Double-clicking `Pal.uproject`, You should see this s
 ### Used Events
 - PreBeginPlay - This event is too early to use to initialize your mod. (Only Works In Mod Actor)
 - PostBeginPlay - This event is fired when the Player Controller Begin Play is called (Only Works In Mod Actor)
+  - The suggested event to use for initializing most things in your mod.
 - PrintToModLoader - Allows the ability to log to UE4SS Console through a blueprint.
+  - To use this event, Create a `Custom Event` in your `ModActor` called `PrintToModLoader` exactly.
+  - Add a initial String variable to this event, called `Message`. Leave the event alone now.
+  - You can now call a new function called `Print To Mod Loader` anywhere.
 - ModMenuButtonPressed - Used to enable ModButtons in UE4SS's mod list area. (Only Works In Mod Actor)
 
 ### Unused Events
