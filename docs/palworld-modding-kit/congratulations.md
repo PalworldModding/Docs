@@ -10,7 +10,7 @@ Make Sure These Two Settings Have Been Enabled ![EditorPrefExp](./assets/EditorP
 
 1) Create a Data Asset ( Primary Asset Label ) named after your mod name in your Contents folder. Set the priority to 1, and the Chunk ID to a memorable ID.
 2) Set your Mods  (ModActor and any other Assets you are going to include in your mod) Chunk ID to the same you used above.
-3) Go into **Project Settings -> Assets Manager** and verify your settings are similar below ( Make sure the rules match the primary asset label you made ) ![AssetsManagerSettings](./assets/AssetsManagerSettings.png)
+3) Go into **Project Settings -> Asset Manager** and verify your settings are similar below ( Make sure the rules match the primary asset label you made ) ![AssetsManagerSettings](./assets/AssetsManagerSettings.png)
 4) Once all Chunk ID's match on each mod file you are including, you can package your project ![Package button](./assets/UEPackageButton.png)
 5) You should have `pakchunk{Your Chunk ID}-Windows.pak` in the Paks output folder. Rename that to the mod name. There's your packaged mod!
 
