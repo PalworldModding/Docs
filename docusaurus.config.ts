@@ -27,7 +27,24 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'fr', 'ja', 'ru', 'uk'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      fr: {
+        label: 'Français',
+      },
+      ja: {
+        label: '日本語',
+      },
+      ru: {
+        label: 'Русский',
+      },
+      uk: {
+        label: 'Українська',
+      },
+    }
   },
 
   presets: [
@@ -81,6 +98,10 @@ const config: Config = {
           href: 'https://github.com/PalworldModding',
           label: 'GitHub',
           position: 'right',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'left',
         },
       ],
     },
