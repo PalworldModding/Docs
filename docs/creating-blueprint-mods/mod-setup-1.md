@@ -64,7 +64,7 @@ They are simply just variables added to your blueprint, that arnt used by your b
 
 ### Mod Buttons
 
-- Create a String Variable called ModButtons in your ModActor, In the properties panel change the following to the 6 squares in a box 
+- Create a String Variable called ModButtons in your ModActor, In the properties panel change the following to the 9 squares in a box 
 
 ![ModButtonsArray](./assets/ModButtonsArray.png)
   - Create a new custom event called `ModMenuButtonPressed` 
