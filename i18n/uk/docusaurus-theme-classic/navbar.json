@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "Palworld Modding Docs",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Palworld Modding Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
