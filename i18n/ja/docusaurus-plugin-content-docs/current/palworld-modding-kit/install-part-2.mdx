@@ -43,25 +43,29 @@ After downloading the repo, you should see the following file structure:
 
 ## Wwise integration
 
+:::warning
 Before continuing to open the sdk in unreal, we must integrate Wwise manually. This is because the Wwise version that the game uses, is not officially compatible with the engine version, so we have to manually copy it over.
+:::
 
-Open the directory you downloaded offline installation files for Wwise in, you should see the following structure:
+1) Open the directory you downloaded offline installation files for Wwise in ( [Back at the end of Part1](./install-part-1#finished) ), you should see the following structure:
 
 ![Offline installation files structure](./assets/WwiseOfflineIntegrationStructure.png)
 
-Unpack the `Unreal.5.0.tar.xz` archive.
+2) Unpack the `Unreal.5.0.tar.xz` archive.
 
 :::note
 You might need to do it twice, first time you unpack it, you might get a .tar file, unpack that one too.
 :::
 
-Copy over the unpacked `Wwise` folder into the `Plugins` folder of the SDK.
+import { FaFile, FaFolder } from "react-icons/fa";
 
-Almost done with Wwise integration, now we just need to copy over the needed dlls.
+3) Copy over the unpacked `Wwise` Folder ( <FaFolder/> ) into the `Plugins` folder of the SDK.
 
-Open the `Wwise` folder inside the SDK, and create a `ThirdParty` folder there.
+4) Almost done with Wwise integration, now we just need to copy over the needed dlls.
 
-Now go to the folder where you installed the Wwise SDK
+5) Open the `Wwise` Folder ( <FaFolder/> ) inside the SDK, and create a `ThirdParty` folder there.
+
+6) Now go to the Folder ( <FaFolder/> ) where you installed the Wwise SDK
 
 :::warning
 This is not the folder where you installed the integration files, but the folder where you installed the SDK
@@ -71,25 +75,28 @@ This is not the folder where you installed the integration files, but the folder
 C:\Program Files (x86)\Audiokinetic\Wwise 2021.1.11.7933\SDK
 ```
 
-Inside of this folder, select:
+Inside of this Folder ( <FaFolder/> ), select:
 
 * `Win32_vc170`
 * `x64_vc170`
 * `include`
 
-And copy over those folders to the `ThirdParty` folder.
+7) Copy over the Folders ( <FaFolder/> ) listed above to the `ThirdParty` folder you created earlier.
 
-After copying over those folders, make sure to duplicate the `vc170` folders as `vc160` also, so the structure will look as follows:
+8) After copying over those folders, make sure to duplicate the `vc170` folders as `vc160` also, so the structure will look as follows:
 
 ![VC160 Copies](./assets/Vc160Incident.png)
 
-:::note
+:::info
 If you continue without the following change, you will have to click OK on a dialog box that says Wwise is not compatible with the current Unreal Engine version every time you load up the editor.
-:::
+
 
 To fix this, navigate to `Plugins\Wwise` and open `Wwise.uplugin` with any text editor or ide. 
 
 Then change the entry `"EngineVersion" : "5.0.0",` to `"EngineVersion" : "5.1",`.
+:::
+
+### Finished
 
 Yay! Now we are done with integrating wwise!
 
