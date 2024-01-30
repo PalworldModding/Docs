@@ -128,6 +128,10 @@ const config: Config = {
               label: 'Palworld Modding Discord',
               href: 'https://discord.gg/qHTZNcvYsv',
             },
+            {
+              label: 'Palworld Modding Forums',
+              href: 'https://palworldforums.net/'
+            }
           ],
         },
         {
