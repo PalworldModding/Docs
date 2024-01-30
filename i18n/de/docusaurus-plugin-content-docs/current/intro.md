@@ -2,4 +2,4 @@
 sidebar_position: 1
 ---
 
-# Welcome to Palworld Modding Docs!
+# Willkommen bei den Palworld Modding Docs!
