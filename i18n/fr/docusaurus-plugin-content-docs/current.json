@@ -26,5 +26,13 @@
   "sidebar.tutorialSidebar.category.Asset Swapping": {
     "message": "Asset Swapping",
     "description": "The label for category Asset Swapping in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Lua Interop": {
+    "message": "Lua Interop",
+    "description": "The label for category Lua Interop in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Lua Interop.link.generated-index.description": {
+    "message": "A guide on doing two-way interop with Lua from Blueprints",
+    "description": "The generated-index page description for category Lua Interop in sidebar tutorialSidebar"
   }
 }
