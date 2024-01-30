@@ -2,8 +2,8 @@
 sidebar_position: 4
 ---
 
-# Exporting & Replacing 3D Assets
+# Exportieren & Ersetzen von 3D Assets
 
-This guide is written by [KURAMAAA0](https://github.com/KURAMAAA0/PalModding)
+Diese Anleitung wurde geschrieben von [KURAMAAA0](https://github.com/KURAMAAA0/PalModding)
 
 ## WIP.
