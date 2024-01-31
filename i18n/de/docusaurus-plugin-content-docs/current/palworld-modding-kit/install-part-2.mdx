@@ -1,0 +1,145 @@
+---
+sidebar_position: 2
+---
+
+# PDK Einrichtung & Konfiguration - Teil 2
+
+Nun da die Voraussetzungen erfüllt sind können wir mit dem download der SDK starten.
+
+## Repository Einrichtung
+
+Es gibt zwei Wege das Repository einzurichten:
+
+* Klonen von git
+* Herunterladen als zip
+
+Klonen von git hat den Vorteil, das Updates leichter zu installieren sind, benötigt allerdings Vorwissen von git. Diese Anleitung zeigt beide Möglichkeiten.
+
+### Klonen von git
+
+Um das Repository von Git zu klonen, nutze diesen Link: https://github.com/localcc/PalworldModdingKit.
+
+Führe mit `git clone` aus:
+
+```bash title="Git"
+git clone https://github.com/localcc/PalworldModdingKit
+```
+
+### Herunterladen als zip
+
+Wenn kein Git verwendet wird, kann die Zip-Datei über die Schaltfläche unten herunterladen werden:
+
+import GitHubButton from '@site/src/components/GitHubButton';
+
+<GitHubButton text="PDK Herunterladen" url="https://github.com/localcc/PalworldModdingKit/archive/HEAD.zip"/>
+
+Nach dem Herunterladen muss die zip Datei entpackt werden.
+
+### Kontrollieren
+
+Nachdem das Repository heruntergeladen wurde, sollte der Ordner so aussehen:
+
+![Repo Structure](./assets/RepoStructure.png)
+
+## Wwise Integration
+
+:::warning
+Bevor wir mit dem Öffnen des SDKs in Unreal fortfahren, müssen wir Wwise manuell integrieren. Das liegt daran, dass die Wwise-Version, die das Spiel verwendet, nicht offiziell mit der Engine-Version kompatibel ist, also müssen wir sie manuell kopieren.
+:::
+
+1) Öffnen das Verzeichnis, in dem die Offline-Installationsdateien für Wwise heruntergeladen sind ( [Zurück am Ende von Teil 1](./install-part-1#finished) ), Es sollte die folgende Struktur vorhanden sein:
+
+![Offline installation files structure](./assets/WwiseOfflineIntegrationStructure.png)
+
+2) Entpacke das `Unreal.5.0.tar.xz` Archiv.
+
+:::note
+Es kann sein das du dies zweimal machen musst, nach dem ersten Entpacken kannst du eine `.tar` Datei bekommen, entpacke auch diese.
+:::
+
+import { FaFile, FaFolder } from "react-icons/fa";
+
+3) Kopiere den Entpackten `Wwise` Ordner ( <FaFolder/> ) in den `Plugins` Order der SDK.
+
+4) Fast fertig mit der Wwise Integration, nun müssen nur noch die benötigten dlls kopiert werden.
+
+5) Öffne den `Wwise` Ordner ( <FaFolder/> ) im Ordner der SDK und erstelle einen `ThirdParty` Ordner.
+
+6) Nun gehe zum Ordner ( <FaFolder/> ) in dem die Wwise SDK installiert ist
+
+:::warning
+Dies ist nicht der Ordner, in dem die Integrationsdateien installiert sind, sondern der Ordner, in dem die SDK installiert ist
+:::
+
+```text title="Standart Wwise SDK Pfad"
+C:\Program Files (x86)\Audiokinetic\Wwise 2021.1.11.7933\SDK
+```
+
+In diesem Ordner ( <FaFolder/> ), wähle:
+
+* `Win32_vc170`
+* `x64_vc170`
+* `include`
+
+7) Kopiere die oben gelisteten Ordner ( <FaFolder/> ) in den `ThirdParty` Ordner den du erstellt hast.
+
+8) Nach dem Kopieren dieser Ordner kopiere die `vc170` Ordner und benenne Sie um zu `vc160`, die Ordnerstruktur wird wie folgt aussehen:
+
+![VC160 Copies](./assets/Vc160Incident.png)
+
+:::info
+Wenn ohne die folgende Änderung fortfahren wird, muss jedes Mal, wenn der Editor geladen wird, in einem Dialogfeld auf OK geklickt werden. Das Dialogfeld sagt, dass Wwise nicht mit der aktuellen Version von Unreal Engine kompatibel ist.
+
+
+Um dies zu beheben, gehe zu `Plugins\Wwise` und öffne `Wwise.uplugin` mit einem Texteditor.
+
+Dann Ändere den Eintrag `"EngineVersion" : "5.0.0",` zu `"EngineVersion" : "5.1",`.
+:::
+
+### Abschluss
+
+Yay! Nun haben wir Wwise integriert!
+
+## build tools von VS 2019 zu VS 2022 ändern
+In Unreal Engine 5.1, wird standardmäßig Visual Studio 2019 build tools benutzt wenn diese installiert sind.
+
+:::warning
+Die folgenden Änderungen sollten nur gemacht werden, wenn Visual Studio 2019 neben Visual Studio 2022 auch installiert ist.
+:::
+
+<details>
+    <summary>Falls du "Unreal Engine" nicht in `%APPDATA%` siehst</summary>
+    <div>
+        Wenn Sie `Unreal Engine` nicht in `%APPDATA%` sehen, bedeutet das, dass Unreal Engine noch nicht gestartet wurde.<br/>
+        Gehe zu `Epic Games Launcher -> Unreal Engine -> Library 0 >` Klicke auf "Starten" bei der Unreal Engine Version die du heruntergeladen hast (5.1.x).<br/>
+        ![UnrealEditorLaunchFirst](./assets/LaunchUnrealEditor.png)<br/>
+        Lass es laden bis du den "Neues Projekt erstellen" Bildschirm siehst, dann kannst du mit der Anleitung fortfahren.<br/>
+    </div>
+</details>
+
+Um dies zu ändern, gehe zu `%APPDATA%\Unreal Engine\UnrealBuildTool` und öffne `BuildConfiguration.xml` mit deinem Lieblings-XML-Editor.
+
+
+```xml title="Standard Configuration"
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
+</Configuration>
+```
+
+
+```xml title="Ändere dies wie folgt:"
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
+    <VCProjectFileGenerator>
+        <Version>VisualStudio2022</Version>
+    </VCProjectFileGenerator>
+    <WindowsPlatform>
+        <Compiler>VisualStudio2022</Compiler>
+    </WindowsPlatform>
+</Configuration>
+```
+
+:::tip
+Glückwunsch, du hast es durch die Konfiguration geschafft!
+:::
+

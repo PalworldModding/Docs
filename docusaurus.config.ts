@@ -27,7 +27,27 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'fr', 'ja', 'ru', 'uk', 'de'],
+    localeConfigs: {
+      de: {
+        label: 'German',
+      },
+      en: {
+        label: 'English',
+      },
+      fr: {
+        label: 'Français',
+      },
+      ja: {
+        label: '日本語',
+      },
+      ru: {
+        label: 'Русский',
+      },
+      uk: {
+        label: 'Українська',
+      },
+    }
   },
 
   presets: [
@@ -82,6 +102,10 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          type: 'localeDropdown',
+          position: 'left',
+        },
       ],
     },
     footer: {
@@ -107,6 +131,10 @@ const config: Config = {
               label: 'Palworld Modding Discord',
               href: 'https://discord.gg/qHTZNcvYsv',
             },
+            {
+              label: 'Palworld Modding Forums',
+              href: 'https://palworldforums.net/'
+            }
           ],
         },
         {
@@ -128,6 +156,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.vsLight,
       darkTheme: prismThemes.vsDark,
+      additionalLanguages: ['lua']
     },
   } satisfies Preset.ThemeConfig,
 };

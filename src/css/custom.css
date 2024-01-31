@@ -28,3 +28,17 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.usedevents {
+  color: #41ff00;
+}
+.usedevents[aria-selected='true'] {
+  border-bottom-color: #41ff00;
+}
+
+.unusedevents {
+  color: red;
+}
+.unusedevents[aria-selected='true'] {
+  border-bottom-color: red;
+}

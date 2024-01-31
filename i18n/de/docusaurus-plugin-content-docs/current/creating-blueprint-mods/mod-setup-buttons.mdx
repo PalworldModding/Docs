@@ -1,0 +1,22 @@
+---
+sidebar_position: 1
+---
+
+# Mod Knöpfe
+
+- Erstelle in deinem ModActor eine String-Variable mit dem Namen ModButtons, ändern in der Eigenschaftsleiste die folgenden Angaben zu den 9 Quadraten in einem Kasten
+
+![ModButtonsArray](./assets/ModButtonsArray.png)
+  - Erstellen Sie ein neues benutzerdefiniertes Ereignis namens `ModMenuButtonPressed`
+
+  ![ModMenuButtonPressed](./assets/ModMenuButtonPressed.png)
+
+  - Fügen Sie unter dem neu erstellten Ereignis eine Eingabevariable mit der Bezeichnung `Index` und dem Typen `Integer` ein. ![ModMenuInt](./assets/MonMenuButtonPRessedInt.png)
+
+  - Als Nächstes füge eine `Switch on Int` Aktion ein, diese wird mit dem `ModMenuButtonPressed` event verbunden.
+    - Für jeden Knopf, den du haben möchtest, muss ein weiterer pin zum `Switch On Int` hinzugefügt werden
+    - Deine pin's müssen zum `ModButtons String Array` passen ![ModButtonSwitchOnInt](./assets/ModSwitchOnEvent.png)
+    - Wenn ein `ModButton` geklickt wird, wird ein Ausführsignal mit einem `Integer` als Parameter gesendet.
+
+### Simples Beispiel mit ModButtons & PrintToModLoader
+![Example](./assets/example.png)
