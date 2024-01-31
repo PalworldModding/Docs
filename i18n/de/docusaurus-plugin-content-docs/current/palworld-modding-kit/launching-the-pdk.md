@@ -2,30 +2,37 @@
 sidebar_position: 3
 ---
 
-# Starten der PDK - Teil 3
+# Launching The PDK - Part 3
 
-## Nach all diesen Schritten sind wir bereit! 
+## After doing all of those steps, we are ready! 
 
-## Doppel-klicke die `Pal.uproject` Datei und es sollte sich Unreal Engine öffnen!
+## Double-click the `Pal.uproject` file and it should open in Unreal Engine!
 
 
 :::note
-Wenn Unreal Engine sagt, dass die Module veraltet sind und neu kompiliert werden müssen, drücke **JA**
-:::
- 
-:::warning
-Wwise wird bei jedem Start meckern, das es nicht mit der aktuellen Version von Unreal Engine kompatibel ist, drücke **YES**
+If it tells you that modules are out of date and need to be recompiled, press **YES**
 :::
 
 :::warning
-Wenn die Datei nicht in Unreal Engine startet sondern Fragt womit geöffnet werden soll, öffne Unreal Engine, und die Datei direkt von draus
+Windows REALLY hates long file paths. **If it continues to tell you that modules need to be recompiled, your file path may be too long.**
+This will be especially true if you downloaded the ZIP instead of using git clone. Try renaming the
+`palworldmoddingkit` folder, and removing the `-` and everything after it. You can also try moving it closer to the root
+of your drive.
 :::
- 
+
+:::warning
+Wwise will complain about not being compatible with the current Unreal Engine version every single time you start, click **YES**
+:::
+
+:::warning
+If the file doesn't open in unreal engine and instead asks you for associations, open Unreal Engine, and open the file from there instead
+:::
+
 :::note
-Möglicherweise erscheint beim Start ein Popup über Probleme mit dem Wwise-Projektpfad. Ignoriere dies und drücke das X in der Ecke, um das Popup zu schließen.
+You may see a popup on launch about Wwise project path issues, ignore it and press the X in the corner to close the popup.
 ![WwisePathIssue](./assets/ResetWwisePath.png)
 :::
 
 :::danger
-Du denkst vielleicht nichts passiert, doch Unreal Engine muss eine Menge Dinge im Hintergrund kompilieren bevor sich der Editor öffnet. Dies kann eine LANGE Zeit dauern je nachdem wie gut dein Computer ist.
+You may think nothing is happening, Unreal Engine has to compile a lot of things in the background before the editor opens. This may take a LONG while depending on your computers specifications.
 :::

@@ -1,12 +1,12 @@
 localcc:
   name: localcc
-  title: Verfasser von PDK
+  title: Creator of PDK
   url: https://github.com/localcc
   image_url: https://github.com/localcc.png
 
 itzdabbzz:
   name: ItzDabbzz
-  title: Dokumentation Betreuer & Author
+  title: Documentation Maintainer & Writer
   url: https://github.com/itzdabbzz
   image_url: https://github.com/itzdabbzz.png
 

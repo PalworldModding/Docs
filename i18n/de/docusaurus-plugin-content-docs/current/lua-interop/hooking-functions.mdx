@@ -2,67 +2,67 @@
 sidebar_position: 2
 ---
 
-# Funktionen von Lua hooken
+# Hooking functions from Lua
 
-In diesem Tutorial, wir werden die Funktion, die für das Herbeirufen eines Pals aus deiner Gruppe verantwortlich ist, hooken.
+In this tutorial, we will be hooking the function responsible for summoning a pal from your party.
 
-## Funktionen hooken
+## Hooking functions
 
-Um eine Funktion in ue4ss einzubinden, müssen wir die `RegisterHook` Funktion benutzen.
+To hook a function in ue4ss, we use the `RegisterHook` function.
 
-Die Signatur der Funktion sieht wie folgt aus:
+The signature of the function looks like so:
 
 ```
 RegisterHook(FunctionName, Callback)
 ```
 
-Die Parameter lauten wie folgt:
+The parameters are as follows:
 
-* `FunctionName` - ist der Funktionsname, den wir von ue4ss LiveView erhalten konnten
-* `Callback` - ist die Lua-Funktion, die aufgerufen werden soll, wenn die Hooked-Funktion ihre Ausführung beendet. Diese Funktion kann mehrere Parameter akzeptieren, die später besprochen werden.
+* `FunctionName` - is the function name we could get from ue4ss LiveView
+* `Callback` - is the lua function we want to get called, when the hooked function finishes executing. This function can accept several parameters, which will be discussed later.
 
 :::note
-UE4SS-Hooks werden ausgeführt, nachdem die aufgerufene Funktion die Ausführung beendet hat. Wir haben die Möglichkeit, den Rückgabewert zu prüfen und ihn zu überschreiben.
+UE4SS hooks execute after the hooked function has finished executing. We have the ability to inspect the return value, and override it.
 :::
 
-Das Ersetzen des Rückgabewerts eines Hooks ist einfach. Wir müssen lediglich den neuen wert per `return` ausgeben. Sollte dies nicht erwünscht sein muss lediglich das `return` weggelassen werden.
+Replacing a hook's return value is as simple as just using `return` with the new return value. If you don't wanna touch it, you can just not use this directive in your hook.
 
-## Registrierung für die Erstellung von Objekten
+## Registering for object creation
 
-Damit die Funktion `RegisterHook` funktioniert, muss unser Objekt jedoch bereits existieren, und hier kommt eine weitere wichtige Funktion ins Spiel: `NotifyOnNewObject`.
+However, for the `RegisterHook` function to work, our object needs to already exist, so here's where another important function comes in: `NotifyOnNewObject`.
 
-Diese Funktion ermöglicht es uns, Code auszuführen, wenn ein Objekt mit einer bestimmten Klasse erstellt wird, die Signatur der Funktion ist wie folgt:
+This function will allow us to execute some code, when an object with a specified class gets created, the signature of the function is as follows:
 
 ```
 NotifyOnNewObject(ObjectPath, Callback)
 ```
 
-Die Parameter sind:
+With the parameters being:
 
-* `ObjectPath` - den Pfad zu dem Objekt, dessen Erstellung wir beobachten wollen. Wir können diesen von ue4ss LiveView erhalten.
-* `Callback` - die Funktion, die aufgerufen werden soll, wenn das angegebene Objekt erstellt wird. Diese Funktion akzeptiert einen einzigen Parameter, nämlich die Instanz des erstellten Objekts.
+* `ObjectPath` - the path to the object we wanna watch for creation, we could get this from ue4ss LiveView.
+* `Callback` - the function we want to get called, when the given obejct gets created. This function accepts a single parameter which is the instance of the created object.
 
-## Schreiben unseres ersten Hooks
+## Writing our first hook
 
-Für dieses einfache Beispiel würden wir also einen Codeschnipsel schreiben wollen, der die Pals, die wir aus unserer Gruppe spawnen, verkleinert.
+So for this simple example, we would want to write a snippet of code, which would scale down pals that we spawn from our party.
 
-Zunächst einmal heißen alle unsere Pals, die zu unserer Gruppe gehören, in diesem Spiel `otomo`, also würden wir gerne etwas finden, das damit zu tun hat.
+First of all, all our pals that are part of our party are called `otomo` in this game, so we would like to find something related to that. 
 
-Aha! Es gibt eine `BP_OtomoPalHolderComponent`, die dafür verantwortlich ist, deine Gruppen Pals zu speichern und sie auf Wunsch zu spawnen.
+Aha! There's a `BP_OtomoPalHolderComponent`, which is responsible for storing your party pals, and spawning them when requested to.
 
-Nachdem wir die Funktionen durchgesehen haben, können wir eine mit einer Signatur wie dieser finden:
+After looking throgh it's functions, we can find one with a signature like this:
 
 ```cpp
 void ActivateOtomo(int32 SlotID, FTransform StartTransform, bool& IsSuccess);
 ```
 
-Dies ist die Funktion, die dafür verantwortlich ist, wenn ein Pal aus unserer Gruppe gespawnt wird (z.B. wenn er aus unserer Gruppe geworfen wird).
+This is the function that is responsible when a pal from our party gets spawned (e.g. throwing it from our party).
 
-### Abonnieren der Komponentenerstellung
+### Subscribing to component creation
 
-Hooken wir diese Funktion! Aber zuerst müssen wir sicherstellen, dass das Objekt, an das wir die Funktion koppeln wollen, existiert, also koppeln wir sie immer dann, wenn ein neues Objekt entsteht. Und dafür müssen wir `NotifyOnNewObject` verwenden.
+Let's hook that function! But first, we need to make sure the object we want to hook it on exists, so let's do the hooking whenever a new object spawns. And for that we will need to use `NotifyOnNewObject`.
 
-Also lasst uns endlich etwas tun!
+So let's do something already!
 
 ```lua title="main.lua"
 print("Hello world from Lua!")
@@ -74,30 +74,30 @@ RegisterHook("/Script/Engine.PlayerController:ClientRestart", function (Context)
 end)
 ```
 
-Dies sollte `Hallo world from Lua!` ausgeben, wenn wir unser Spiel starten, und wenn wir die Welt betreten, sollten unsere Nachricht erscheinen. Also lasst uns das Spiel öffnen und es ausprobieren!
+This should print `Hello world from Lua!` when we launch our game, and when we enter the world, we should see our message appear. So let's open the game and try it!
 
 :::warning
-Wenn keine Nachricht von deiner Mod erscheint, stelle sicher, dass die `enabled.txt` im Mod-Ordner vorhanden ist.
+If you're not seeing any messages from your mod appear, make sure you have `enabled.txt` in your mod folder.
 
-Wenn immer noch keine Nachricht erscheint, editiere die Datei `mods.txt`, um deine Mod zu aktivieren.
+If there are still no messages, edit `mods.txt` to include your mod and enable it there.
 :::
 
 
-Und jetzt sehen wir uns die Logs an...
+And now let's see the logs..
 
 ![First Hook Log](./assets/FirstHook.png)
 
-Yay, es funktioniert!
+Yay, it works!
 
 
 :::note
-Wir registrieren einen Hook für `ClientRestart` bevor wir versuchen, uns für `NotifyOnNewObject` zu registrieren, da die Registrierung sonst nicht zuverlässig ist und möglicherweise nicht immer ausgelöst wird, wenn die Komponente erstellt wird.
+We register a hook for `ClientRestart` before trying to register for `NotifyOnNewObject`, because otherwise registration is not reliable and might not always get fired when the component gets created.
 :::
 
 
-### Hooken der Funktion
+### Hooking the function
 
-Jetzt ist es an der Zeit, den gewünschten Hook zu schreiben. Für den Moment wollen wir nur ausgeben, dass unser Pal aktiviert wurde. Um dies zu tun, ändere den Code wie folgt:
+Now it's time to write the hook we want, for now let's just print that our pal got activated. To do this, change your code to the following:
 
 ```lua title="main.lua"
 print("Hello world from Lua!")
@@ -112,29 +112,29 @@ RegisterHook("/Script/Engine.PlayerController:ClientRestart", function (Context)
 end)
 ```
 
-Dannach drücke den `Restart All Mods` Knopf in ue4ss.
+After doing so, you can press the `Restart All Mods` button in ue4ss.
 
 ![Restart All Mods](./assets/RestartAllMods.png)
 
 
-Nachdem deine Mod neu geladen wurde, gehe zurück zum Hauptmenü und lade deine Welt erneut. Versuche nun einen Pal zu werfen, du solltest nun dies in der Console sehen:
+After reloading your mods, return to the title screen, and enter your world again. Now try throwing a pal from your party, and you should see this in your console:
 
 
 ![First Hook Works](./assets/FirstHookWorks.png)
 
 
-Cool! Wir können nun benachrichtigt werden wenn jemand einen Pal beschwört. Lass uns nun versuchen etwas nützliches damit zu machen. Für dieses Tutorial lass uns versuchen den Pal etwas kleiner zu machen.
+Nice! We can now get notified when someone spawns a pal from their party. Now let's do something useful with it. For the purposes of this tutorial, let's make the pal slightly smaller. 
 
-Dazu müssen wir eine Instanz des Pal-Actor erhalten, aber wie können wir das tun? Wir bekommen ja nur die SlotID.
+For that we would require to get an instance of the pal's actor, but how can we do that? We only get the SlotID afterall.
 
-Da die Komponente, die wir haben, eigentlich von `UPalOtomoHolderComponentBase` erbt, können wir in den Palworld Modding Kit Headern nachschauen, welche anderen Funktionen sie hat. Hier finden wir eine interessante Funktion:
+Because the component we have actually inherits from `UPalOtomoHolderComponentBase`, we can look into the palworld modding kit headers, for other functions it has, we can see an interesting function:
 
 ```cpp
 UFUNCTION(BlueprintCallable, BlueprintPure)
 APalCharacter* TryGetOtomoActorBySlotIndex(const int32 SlotIndex) const;
 ```
 
-Diese akzeptiert einen Slot-Index und liefert einen Pal-Akteur, genau das, was wir brauchen! Also benutzen wir sie:
+This accepts a slot index, and gives is a pal actor, exactly what we need! So let's use that:
 
 ```lua title="main.lua"
 print("Hello world from Lua!")
@@ -155,12 +155,12 @@ end)
 ```
 
 :::note
-F: Warum rufen wir manchmal `:get()` auf?
+Q: Why do we call `:get()` sometimes?
 
-A: Einige Parameter, die wir innerhalb unserer Hooks erhalten, sind eigentlich `RemoteUnrealParam`, normalerweise sind das Instanzen von Darstellern, Objekten, etc. Um also den inneren Wert zu erhalten, müssen wir `:get()` aufrufen.
+A: Some parameters we get inside of our hooks are actually `RemoteUnrealParam`, usually those are instances of actors, objects, etc. So for us to get the inner value of them we need to call `:get()`
 :::
 
 
-Dieser Code holt sich also die Komponenten instanz, holt sich einen Pal-Actor mit dem aktuell aktiven Slot-Index und setzt dessen 3D-Darsteller-Skalierung auf 60% des Originals. Lass uns ins Spiel springen und das überprüfen!
+So this code gets the component instance, gets a pal actor by the currently active slot index, and sets it's 3D actor scale to 60% of the original one. Let's hop into the game and check that!
 
 ![Cattiva being smaller as a result of the hook](./assets/FirstHookSmaller.jpg)
