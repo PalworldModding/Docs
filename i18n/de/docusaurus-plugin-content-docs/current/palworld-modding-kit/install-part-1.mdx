@@ -2,103 +2,103 @@
 sidebar_position: 1
 ---
 
-# Prerequisites - Part 1
+# Voraussetzungen - Teil 1
 
 ## .NET 6
 import { FaDownload } from "react-icons/fa6";
 
-For Unreal Build Tools to function correctly, you will need to have .NET 6 installed on your system.
+Damit die Unreal Build Tools korrekt funktionieren, muss .NET 6 auf dem System installiert sein.
 
-[Download <FaDownload />](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore&os=windows&arch=x64)
+[Herunterladen <FaDownload />](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore&os=windows&arch=x64)
 
-Click on the `Download x64` button to download the runtime:
+Klicke auf `Download x64` um die Runtime herunterzuladen:
 
 ![Dotnet download](./assets/Dotnet.png)
 
-Once you've downloaded the installer, open it and install the runtime.
+Sobald das Installationsprogramm heruntergeladen ist, öffne es und installiere die Runtime.
 
 ## Visual Studio 2022
 
-To compile the sdk you will need Visual Studio 2022 installed.
+Um die sdk zu kompilieren, muss Visual Studio 2022 installiert sein.
 
-[Download <FaDownload />](https://visualstudio.microsoft.com/vs/) 
+[Herunterladen <FaDownload />](https://visualstudio.microsoft.com/vs/)
 
-A community edition version will suffice. While installing it, make sure to check the following components in the installer:
+Die community edition reicht aus. Während der Installation müssen die folgenden Komponenten im Installationsprogramm ausgewählt werden:
 
 
 ![Visual Studio Installer Options](./assets/VisualStudioInstaller.png)
 ![Visual Studio Installer Options 2](./assets/VisualStudioInstaller2.png)
 
-Then press continue, and wait for visual studio to install.
+Drücke dann auf "Weiter" und warte auf die Installation von Visual Studio.
 
 import { FaCirclePlus } from "react-icons/fa6";
 import Highlight from '@site/src/components/Highlight';
 
 ## Unreal Engine 5.1
 
-After installing Visual Studio, we need to install Unreal Engine.
+Nach der installation Visual Studio, muss Unreal Engine installiert werden.
 
-1) Open Epic Games Launcher
-2) Head over to `Unreal Engine` tab
-3) Go into `Library` tab
-4) Press the <Highlight color="#dea309">Gold <FaCirclePlus /></Highlight> to add a new version
+1) Öffne den Epic Games Launcher
+2) Gehe zum `Unreal Engine` tab
+3) Gehe in den `Library` tab
+4) Drücke auf <Highlight color="#dea309"><FaCirclePlus /></Highlight> um eine neue Version hinzuzufügen
 
 ![Add new Unreal Engine version](./assets/EpicUnrealVersion.png)
 
-5) You should see a new card appear, with the ability to select an engine version.
-6) Select version `5.1`
+5) Nun sollte eine neue Karte mit der möglichkeit die Version auszuwählen sichtbar sein.
+6) Wähle Version `5.1`
 
 ![5.1 Version](./assets/Versions.png)
 
 :::warning
-Any 5.1 version will work, it doesn't matter if it's 5.1 or 5.1.1
+Jede 5.1 Version funktioniert, es ist egal, ob es 5.1 oder 5.1.1 ist
 :::
 
 ## Wwise
 
-Palworld uses [Wwise](https://www.audiokinetic.com/en/products/wwise/) for its sounds, so we will need to install this too.
+Palworld nutzt [Wwise](https://www.audiokinetic.com/en/products/wwise/) für Ton, also müssen wir auch dies Installieren.
 
 :::danger
-Even if you are not planning on making sounds, you still need wwise, otherwise the project will not compile
+Selbst wenn du nicht vor hast etwas an den Tönen zu ändern, musst du dennoch wwise installieren, ansonsten kannst du das Projekt nicht kompilieren
 :::
 
-1) To install [Wwise](https://www.audiokinetic.com/en/products/wwise/) click `Download Audikinetic Launcher` [Download <FaDownload />](https://www.audiokinetic.com/en/download)
+1) Um [Wwise](https://www.audiokinetic.com/en/products/wwise/) zu installieren, klicke `Audikinetic Launcher herunterladen` [Herunterladen <FaDownload />](https://www.audiokinetic.com/en/download)
 
 
 ![Download Audiokinetic Launcher](./assets/WwiseWebsiteDownload2.png)
 
 :::note
-This will require you to make an account.
+Dies erfordert, das ein Nutzeraccount erstellt wird.
 :::
 
-2) After downloading the launcher, install it and login.
-2) Head over to the `Wwise` tab.
-3) On the bottom left of your screen you should see an `Install A New Version` Header.
-4) Select `2021.1.11` as your [Wwise](https://www.audiokinetic.com/en/products/wwise/) version and press install
+2) Nachdem du den Launcher heruntergeladen hast, installiere ihn und melde dich an
+2) Gehe zum `Wwise` tab.
+3) Unten links auf deinem Bildschirm sollte nun `Neue Version installieren` sichtbar sein.
+4) Wähle `2021.1.11` als deine [Wwise](https://www.audiokinetic.com/en/products/wwise/) Version und klicke auf Installieren
 
 ![Install A New Version](./assets/WwiseInstallNewVersion.png)
 
 :::info
-On the next page, select:
+Auf der nächsten Seite, wähle:
 
 - SDK (C++)
 - Microsoft -> Windows -> Visual Studio 2022
 :::
 
-The selection should look like so:
+Die Auswahl sollte so aussehen:
 
 ![Install Options](./assets/WwiseInstallSelection.png)
 
-5) Now press `Next`, On the plugins page you don't need any, so hit `Install`!
-6) After installing the [Wwise](https://www.audiokinetic.com/en/products/wwise/) SDK, Head over to the `Unreal Engine` Tab.
-7) Press the <FaDownload /> button, and select `Offline Integration Files`
+5) Nun klick `Weiter`, es werden keine Plugins benötigt, also drücke `Installieren`!
+6) Nach der Installation von der [Wwise](https://www.audiokinetic.com/en/products/wwise/) SDK, geh zum `Unreal Engine` Tab.
+7) Klicke den <FaDownload /> Knopf, und wähle `Offline Integrations Datein`
 
 ![Offline integration files](./assets/WwiseOfflineIntegrationFiles.png)
 
-8) In the `Integration Version` Choose `2021.1.11` for the Wwise version. Set the directory to a memorable location, and hit install!
+8) Wähle unter `Integrations Version` die Version `2021.1.11` als Wwise-Version. Legen dann das Verzeichnis an einem denkwürdigen Ort fest, und klicke auf Installieren!
 
-### Finished
+### Abschluss
 
 :::note
-You will need this directory later, remember where you installed these files.
+Dieser Ordner wird später benötigt, also merke dir wo er installiert wurde.
 :::

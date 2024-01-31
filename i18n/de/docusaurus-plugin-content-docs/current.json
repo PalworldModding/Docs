@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Nächste",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Palworld Modding Kit": {
@@ -8,11 +8,11 @@
     "description": "The label for category Palworld Modding Kit in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Palworld Modding Kit.link.generated-index.description": {
-    "message": "A quick overview of the Palworld Modding Kit.",
+    "message": "Eine kurze übersicht über das Palworld Modding Kit.",
     "description": "The generated-index page description for category Palworld Modding Kit in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Creating A Blueprint Mod": {
-    "message": "Creating A Blueprint Mod",
+    "message": "Erstellung einer Blueprint Mod",
     "description": "The label for category Creating A Blueprint Mod in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Lua Interop": {
@@ -20,19 +20,19 @@
     "description": "The label for category Lua Interop in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Lua Interop.link.generated-index.description": {
-    "message": "A guide on doing two-way interop with Lua from Blueprints",
+    "message": "Ein Leitfaden zur Durchführung von Zwei-Wege-Interop mit Lua aus Blueprints",
     "description": "The generated-index page description for category Lua Interop in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Asset Swapping": {
-    "message": "Asset Swapping",
+    "message": "Assets Tauschen",
     "description": "The label for category Asset Swapping in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Useful Tools": {
-    "message": "Useful Tools",
+    "message": "Nützliche Werkzeuge",
     "description": "The label for category Useful Tools in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Useful Tools.link.generated-index.description": {
-    "message": "A useful set of tools to assist you in developing with Palworld Modding Kit.",
+    "message": "Nützliche Werkzeuge die bei der Entwicklung mit Palworld Modding Kit unterstützen.",
     "description": "The generated-index page description for category Useful Tools in sidebar tutorialSidebar"
   }
 }

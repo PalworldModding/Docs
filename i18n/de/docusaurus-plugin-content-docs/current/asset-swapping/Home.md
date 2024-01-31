@@ -2,21 +2,21 @@
 sidebar_position: 1
 ---
 
-# Required Tools & Intro
+# Benötigte Werkzeuge & Intro
 
-This guide is written by [KURAMAAA0](https://github.com/KURAMAAA0/PalModding)
+Diese Anleitung wurde geschrieben von [KURAMAAA0](https://github.com/KURAMAAA0/PalModding)
 
-### How to make Asset Swaps
+### Tauschen von Assets
 
-This guide will go on how to make an asset swap mod for Palworld. After reading this guide, you should be able to create asset swaps of and not limited to: Rigged 3D assets such as Pals or NPCs, static 3D assets such as items, weapons or any object, textures such Pal textures, Player textures or World textures and images such as icons or HUD elements.
+In dieser Anleitung wird beschrieben, wie man eine Asset-Tausch-Mod für Palworld erstellt. Nach diesem Guide solltest du in der Lage sein, die folgenden Assets zu tauschen: Rigged 3D-Assets wie Pals oder NPCs, statische 3D-Assets wie Gegenstände, Waffen oder andere Objekte, Texturen wie Pal-Texturen, Spieler-Texturen oder Welt-Texturen und Bilder wie Icons oder HUD-Elemente.
 
-## Required tools:
+## Benötigte Werkzeuge:
 
-- [FModel](https://fmodel.app/) to go through game files and export them.
-    - `Palworld Mappings File` ([direct download](https://github.com/KURAMAAA0/PalModding/raw/main/Assset%20Swap%20Guide/Mappings.usmap "direct download")), required to use FModel on Palworld.
-- [Unreal Engine 5.1.1](https://www.unrealengine.com/en-US/download) to package the final mod.
-  - *Be sure to select 5.1.1, as it is the version matching the one Palworld used.*
-- [Blender](https://www.blender.org/download/) to edit and export the 3D models.
-  - DarklightGames' psk/psa importer (https://github.com/DarklightGames/io_scene_psk_psa/releases) to import game files into Blender.
+- [FModel](https://fmodel.app/) um die Spieldateien zu erforschen.
+    - `Palworld Mappings File` ([direkter download](https://github.com/KURAMAAA0/PalModding/raw/main/Assset%20Swap%20Guide/Mappings.usmap "direkter download")), benötigt um FModel mit Palworld zu nutzen.
+- [Unreal Engine 5.1.1](https://www.unrealengine.com/en-US/download) um die Mod zu kompilieren.
+  - *Stelle sicher das Version 5.1.1 gewählt ist, da dies die Version die Palworld verwendet ist.*
+- [Blender](https://www.blender.org/download/) um 3D Models zu editieren und zu exportieren.
+  - DarklightGames' psk/psa importer (https://github.com/DarklightGames/io_scene_psk_psa/releases) um Spieldateien in Blender zu importieren.
 
 Let's begin.

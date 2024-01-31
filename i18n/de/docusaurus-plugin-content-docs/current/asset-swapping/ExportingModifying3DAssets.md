@@ -2,43 +2,43 @@
 sidebar_position: 3
 ---
 
-# Exporting & Modifying 3D Assets
+# Exportieren & Ersetzen von 3D Assets
 
-This guide is written by [KURAMAAA0](https://github.com/KURAMAAA0/PalModding)
+Diese Anleitung wurde geschrieben von [KURAMAAA0](https://github.com/KURAMAAA0/PalModding)
 
-In this section, you'll learn how to find the right files to export in order to modify 3D assets. You will not be taught how to use Blender.
-
-
-## Finding and exporting 3D models of Pals
-
-If you want to find a Pal 3D model, press `Control + Shift + F` in FModel, or click `Package -> Search`, then search for `SK_<PalCodeName>` (Replace \<PalCodeName\> Being your Pals name)
+In diesem Abschnitt wirst du lernen wie man die richtigen Dateien zum Exportieren findet um 3D Assets zu modifizieren. Wie Blender bedient wird, wird nicht gezeigt.
 
 
-#### To find the Code Name of any Pal, click **[HERE](https://github.com/KURAMAAA0/PalModding/blob/main/PalNamesCodeNames.txt "HERE")** and search for your wanted pal.
+## Finden und Exportieren von 3D-Modellen von Pals
 
-Double-click on the first result, should be the one **without** _`Skeleton` at the end.
+Um ein Pal 3D Modell zu finden, drücke `Steuerung + Umschalt + F` in FModel, oder klicke auf `Paket -> Suchen`, dann suche nach `SK_<PalCodeName>` (Ersetze \<PalCodeName\> mit dem Namen des Pals)
 
-Then go up one folder, meaning you shoud click on `Folders` at the top.
+
+#### Um den Code-Namen des Pals zu finden drücke **[HIER](https://github.com/KURAMAAA0/PalModding/blob/main/PalNamesCodeNames.txt "HIER")** und suche nach dem Pal.
+
+Doppelklicke das erste Ergebnis, dies sollte das **ohne** _`Skeleton` am Ende sein.
+
+Dann gehe einen Ordner hoch, das heisst du sollst auf `Ordener` oben klicken.
 
 ![FMODEL2](https://github.com/KURAMAAA0/PalModding/assets/58988462/6c0d144c-5a52-465b-8d76-f404d6ab3474)
 
-Right-click on your Pal's folder, click save Folder's Packages **Textures** (.png)
-Right-click on your Pal's folder, click save Folder's Packages **Models** (.psk)
-Now you can go ahead and open **Blender**.
+Rechts-Klicke auf den Ordner des Pals, klicke auf Ordnerpakete speichern **Texturen** (.png)
+Rechts-Klicke auf den Ordner des Pals, klicke auf Ordnerpakete speichern **Models** (.psk)
+Nun kannst du **Blender** öffnen.
 
 
-## Importing the 3D models in Blender
+## Importieren der Models in Blender
 
 :::tip
-    Make sure you either scale the armature and model down by 0.01 after import, or while exporting, scale should be set 0.1.
+    Stelle sicher, dass du entweder die Armatur und das Modell nach dem Import um 0,01 verkleinerst oder beim Exportieren die Skalierung auf 0,1 einstellst.
 
-    Make sure you are also disabling `Add Leaf Bones` on export.
+    Stelle sicher das `Add Leaf Bones` deaktiviert ist beim Export.
 
-    The armature name should be Armature
+    Der armature Name sollte `Armature` sein
     ![Armature](./assets/Armature.png)
 :::
 
-In Blender, click on `File -> Import -> Unreal PSK (.psk/.pskx)`
+In Blender, klicke auf `Datei -> Import -> Unreal PSK (.psk/.pskx)`
 
 ![BLENDER1](https://github.com/KURAMAAA0/PalModding/assets/58988462/98e6e332-75d2-4c60-ad49-d557459ce8d4)
 
@@ -47,31 +47,37 @@ The textures should be in the same folder as the .psk, apply them to the Pal mod
 We'll make `Depresso` (code name: `NegativeKoala`) into a completely sleep-deprived `Depresso` by editing his model.
 We will also change his textures, go to **this section** if you want to learn how to replace/edit images (same process as replacing/editing textures).
 
+Gehen in den Ausgabeordner, den du beim Ändern der FModel-Einstellungen festgelegt hast, gehe unter `Output -> Exports` durch die Ordner, bis du die Datei "SK_PalCodeName.psk" findest, und importiere sie.
+Die Texturen sollten sich im selben Ordner wie die .psk befinden, wendet sie auf das Pal-Modell an, wenn ihr es nicht ersetzen wollt, ansonsten ignoriert sie.
+Wir machen aus `Depresso` (Codename: `NegativeKoala`) einen völlig schlaf entzogenen `Depresso`, indem wir sein Modell bearbeiten.
+Wir werden auch seine Texturen ändern, geht zu **diesem Abschnitt**, wenn ihr lernen wollt, wie man Bilder ersetzt/bearbeitet (der gleiche Prozess wie das Ersetzen/Bearbeiten von Texturen).
 
-## Modifying the 3D models in Blender
-If you only want to modify your Pal 3D model, you can keep the model present in the viewport and do the modifications directly on it.
+
+## Modifizieren der 3D-Models in Blender
+Wenn du nur dein Pal 3D-Modell ändern möchtest, kannst du das Modell im Ansichtsfenster belassen und die Änderungen direkt daran vornehmen.
 If your model has a black background for his eyes and mouth, select the texture(s) with the issue, go to the **Shader Editor**, plug the **Alpha** channel of the texture into the **Alpha** property of the Principled BSDF.
+Wenn dein Modell einen schwarzen Hintergrund für seine Augen und seinen Mund hat, wähle die Textur(en) mit dem Problem aus, gehe zum **Shader-Editor** und verbinde den **Alpha**-Kanal der Textur mit der **Alpha**-Eigenschaft der Principled BSDF.
 
 ![BLENDERSHADER1](https://github.com/KURAMAAA0/PalModding/assets/58988462/c988b8db-3d1a-48ed-b597-8beda449cfb8)
 
 
 
-Then in the Material Properties tab change the `Blend Mode` to `Alpha Blend` and the `Shadow Mode` to `None`.
+Dannach ändere `Blend Mode` zu `Alpha Blend` und `Shadow Mode` zu `None` im Material Properties Tab.
 
 ![BLENDERSHADER2](https://github.com/KURAMAAA0/PalModding/assets/58988462/41e5a112-f107-468d-b69b-e38b9a36bfce)
 
 
-Your Pal should now be fixed and working!
+Dein Pal sollte nun gefixt sein und funktionieren!
 
 ![BLENDERSHADER3](https://github.com/KURAMAAA0/PalModding/assets/58988462/d0b93d38-ea6d-4a27-9ac4-14beab123f1f)
 
 
 
-Here's the poorly made `Sleep Deprived Depresso`, as well as his textures changed.
+Hier ist der etwas schlecht gemachte `Schlafenzugs Depresso`, mit den geänderten Texturen.
 
 ![BLENDER3](https://github.com/KURAMAAA0/PalModding/assets/58988462/3cd4b1f6-17d9-4160-8c04-d0acc640ce92)
 
 
-To export, simply go to `File > Export > FBX (.fbx)` and choose where you want to export it.
+Um zu exportieren, gehe einfach zu `Datei > Export > FBX (.fbx)` und wähle, wo du exportieren möchtest.
 
-Let's proceed with the final step, [packaging the file in UE5 to get a mod file!](https://github.com/KURAMAAA0/PalModding/blob/main/Assset%20Swap%20Guide/PackagingInUE5.md)
+Fahren wir nun mit dem letzten Schritt fort, [Verpacken der Datein in UE5 um eine Mod-Datei zu bekommen!](https://github.com/KURAMAAA0/PalModding/blob/main/Assset%20Swap%20Guide/PackagingInUE5.md)
