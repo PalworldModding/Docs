@@ -14,10 +14,7 @@ If it tells you that modules are out of date and need to be recompiled, press **
 :::
 
 :::warning
-Windows REALLY hates long file paths. **If it continues to tell you that modules need to be recompiled, your file path may be too long.**
-This will be especially true if you downloaded the ZIP instead of using git clone. Try renaming the
-`palworldmoddingkit` folder, and removing the `-` and everything after it. You can also try moving it closer to the root
-of your drive.
+Wenn die Datei nicht in Unreal Engine startet, sondern Fragt womit geöffnet werden soll, öffne Unreal Engine, und die Datei direkt von draus
 :::
 
 :::warning
