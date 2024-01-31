@@ -18,7 +18,7 @@ Wwise wird bei jedem Start meckern, das es nicht mit der aktuellen Version von U
 :::
 
 :::warning
-Wenn die Datei nicht in Unreal Engine startet sondern Fragt womit geöffnet werden soll, öffne Unreal Engine, und die Datei direkt von draus
+Wenn die Datei nicht in Unreal Engine startet, sondern Fragt womit geöffnet werden soll, öffne Unreal Engine, und die Datei direkt von draus
 :::
  
 :::note
