@@ -46,13 +46,6 @@ For example having a keychain attached to a weapon with a figurine on the other 
 ### exporting
 Select all your meshes and the armature then export this as FBX.
 
-# Unreal Engine
-### Importing
-Import the file like normal, Select the physicsasset and skeleton if its already in the project, Otherwise import them and place them according to their original File structure.
-
-If you are unsure how to do that, Follow the instructions on
-[Packaging final mod file through UE5](https://pwmodding.wiki/docs/asset-swapping/PackagingInUE5)
-
 ### Recommended step: Adding an animation 
 This step can be skipped if you don't care, It can help to have some idea of how the animation will play out in the game instead of exporting it and constantly packaging it. Rebooting the game and recooking each time.
 
@@ -73,7 +66,7 @@ Choose "Save Animation"
 ![Save Animation.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Save%20Animation.png)  
 Now if you go back to your blender project (you might want to save a copy just in case) you can now select your armature and then go to  
 file>Import>Import PSA  
-![Import skeleton Anim.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Import%20skeleton%20Anim.png?raw=true)  
+![Import skeleton Anim.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Import%20skeleton%20Anim.png)  
 After your animation is imported, if you play, it should now play the animation.  
 
 You want to now go to the Dope Sheet by clicking the icon in the top right corner and changing this to the Dope Sheet.  
@@ -90,7 +83,16 @@ Follow the usual FBX export settings. Such as turn off leaf bones etc
 And under **Bake Animation** 
 * turn off both **NLA Strips** as well as **All actions**
 * Make sure **Force Start/End Keyframes** and **Key All Bones** are toggled on
-  [Bake Animation Export settings.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Bake%20Animation%20Export%20settings.png?raw=true)  
+  [Bake Animation Export settings.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Bake%20Animation%20Export%20settings.png)  
+
+
+
+# Unreal Engine
+### Importing
+Import the file like normal, Select the physicsasset and skeleton if its already in the project, Otherwise import them and place them according to their original File structure.
+
+If you are unsure how to do that, Follow the instructions on
+[Packaging final mod file through UE5](https://pwmodding.wiki/docs/asset-swapping/PackagingInUE5)
 
 #### Importing The animation into Unreal
 You import the animation just like how you import any other model, Just put it somewhere and direct its skeleton etc the way you do the other files.
