@@ -5,6 +5,7 @@ Research by: Lewdlad, Dytser, Francislouis,
 In this page there will be references and discussion to breast physics and one small example shown of physics on a character model.
 
 # Jiggle Physics
+### How do the work?
 Jiggle physics in games are generally handled by a bone in the rig having physics attached to it, letting it move based on the momentum of the skeleton rather than any hardcoded/animated movement.
 
 The way this is setup is by having bones on the model to handle this and then having parts of our model weighted to these bones.
