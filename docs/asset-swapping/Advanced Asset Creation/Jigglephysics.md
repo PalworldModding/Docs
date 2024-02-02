@@ -14,8 +14,8 @@ in order to create and apply jiggle physics we need to do the following
 
 * Prepare the 3D model
 * Export the model correctly
+ 	* Recommended step: Preparing an animation and exporting it
 * Importing the model into Unreal Editor
-	* Recommended step: Preparing an animation and importing this into unreal
 * Creating and working with the Animation BluePrint
 * Attaching the APB to your model
 * Exporting and packaging correctly.
