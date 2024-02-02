@@ -139,7 +139,7 @@ Inside you will find the option for **Post Process Anim Blueprint** Select your 
 ![Attaching the ABP.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Attaching%20the%20ABP.png?raw=true)  
 
 Congratulations you now have added Jiggle Physics to your model
-### packaging the mod.
+## Packaging the mod.
 Follow packaging instructions like you would any other mod.
 However now with your ABP there will be the physics ABP in your skeleton folder, You want to keep this for the mod.
 
