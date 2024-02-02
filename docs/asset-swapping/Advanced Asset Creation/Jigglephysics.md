@@ -35,10 +35,10 @@ In this example i am adding jiggle physics to breasts of a character, so breast_
 ### Weight painting
 Now that you have bones in your models character rig you need to give weight to the model to have it attach to the bones. Depending on how much you want them to have physics applied to them you may want to start smaller.
 The amount of weight applied depends entirely on what you are trying to add physics to.
-##### Bodyparts
+#### Bodyparts
 For things that are attached to the body such as breasts, butt, thigh, stomach, ears etc, You likely don't want to overdo it, I recommend starting small and increase from there if you want, For breast a good recommended weight would be 0.5 for example.
 
-##### Detached Parts
+#### Detached Parts
 For things not attached to a characters body (hair, clothing tassels, etc) you generally would like to go stronger as having the part be "static" wouldnt look realistic, And unlike body fat physics which generally is more for secondary motion detached parts are more or less "made" of physics.
 
 For example having a keychain attached to a weapon with a figurine on the other end of the chain. we expect this figure to move and adhere to physics entirely rather than only partially like we do a body.
@@ -46,7 +46,7 @@ For example having a keychain attached to a weapon with a figurine on the other 
 ### exporting
 Select all your meshes and the armature then export this as FBX.
 
-## Unreal Engine
+# Unreal Engine
 ### Importing
 Import the file like normal, Select the physicsasset and skeleton if its already in the project, Otherwise import them and place them according to their original File structure.
 
