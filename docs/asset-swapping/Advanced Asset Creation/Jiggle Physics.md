@@ -97,7 +97,7 @@ If you are unsure how to do that, Follow the instructions on
 
 #### Importing The animation into Unreal
 You import the animation just like how you import any other model, Just put it somewhere and direct its skeleton etc the way you do the other files.
-I recommend naming them Anim that way you can easily find and know which files belong to the animations.
+I recommend naming them Anim that way you can easily find and know which files belong to the animations after cooking.
 
 ## creating and working with animation blueprint
 Right click your mesh in unreal. and go to **Create>Anim Blueprint** And name it whatever you want.  
