@@ -1,5 +1,6 @@
 Guide written by: Dytser  
-Research by: Lewdlad, Dytser, Francislouis, Realskies(youtube)  
+Research by: Lewdlad, Dytser, Francislouis,  
+
 ### Minor NSFW warning
 In this page there will be references and discussion to breast physics and one small example shown of physics on a character model.
 
