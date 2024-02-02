@@ -127,7 +127,7 @@ Now simply attach it instead of the input pose into the load order and compile
 ![Loaded Animation Sequence.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Loaded%20Animation%20Sequence.png)  
 
 Now if you look in your preview window you should see an animation going!  
-![JigglePreviewGif.gif](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/JigglePreviewGif.gif)
+![JigglePreviewGif.gif](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/JigglePreviewGif.gif)  
 With this you should have SOME idea how it will work ingame, Do note it wont be 1:1 when you actually get it ingame.
 
 ### REMEMBER! 
@@ -136,7 +136,7 @@ With this you should have SOME idea how it will work ingame, Do note it wont be 
 Double click your model and scroll down past the **Mesh** Settings
 Find the **Skeletal Mesh** dropdown and open it.
 Inside you will find the option for **Post Process Anim Blueprint** Select your newly made ABP and save the model.
-![Attaching the ABP.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Attaching%20the%20ABP.png?raw=true)
+![Attaching the ABP.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Attaching%20the%20ABP.png?raw=true)  
 
 Congratulations you now have added Jiggle Physics to your model
 ### packaging the mod.
