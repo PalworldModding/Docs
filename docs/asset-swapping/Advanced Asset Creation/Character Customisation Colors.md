@@ -1,5 +1,5 @@
-Guide written by: Dytser
-Research contributed by: Petra
+Guide written by: Dytser  
+Research contributed by: Petra  
 ## Material Slots
 Skin and hair color is controlled by the materials on the models.  
 Specifically their "material slot names".  
