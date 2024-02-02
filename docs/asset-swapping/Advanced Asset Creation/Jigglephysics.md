@@ -141,7 +141,9 @@ Inside you will find the option for **Post Process Anim Blueprint** Select your 
 Congratulations you now have added Jiggle Physics to your model
 ## Packaging the mod.
 Follow packaging instructions like you would any other mod.
-However now with your ABP there will be the physics ABP in your skeleton folder, You want to keep this for the mod.
+However now with your ABP there will be the physics ABP file in your skeleton folder, You want to keep this for the mod.  
+Naivgate to "Content\Pal\Model\Character\Skeleton\Human" or wherever your skeleton would be stored.  
+For example i named my ABP "oldClothJiggles".  So i now make sure to keep the **OldClothJiggles.uasset** and **OldClothJiggles.uexp** from the cooked folder when packaging the mod.
 
 When in doubt remember: **Delete the skeleton. Keep the ABP**
 It will attach to the bones on the mesh and since you didnt change the skeleton in the core of unreal it wont screw up the model ingame.
