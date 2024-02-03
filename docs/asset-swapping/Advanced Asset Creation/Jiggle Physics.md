@@ -1,5 +1,5 @@
-Guide written by: Dytser  
-Research by: Lewdlad, Dytser, Francislouis,  
+**Guide written by: Dytser**  
+**Research by: Lewdlad, Dytser, Francislouis,**  
 
 ### Minor NSFW warning
 In this page there will be references and discussion to breast physics and one small example shown of physics on a character model.
@@ -44,7 +44,7 @@ For things not attached to a characters body (hair, clothing tassels, etc) you g
 
 For example having a keychain attached to a weapon with a figurine on the other end of the chain. we expect this figure to move and adhere to physics entirely rather than only partially like we do a body.
 
-### exporting
+### Exporting
 Select all your meshes and the armature then export this as FBX.
 
 ### Recommended step: Adding an animation 
