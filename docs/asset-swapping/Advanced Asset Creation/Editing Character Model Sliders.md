@@ -1,5 +1,5 @@
-Guide written by: Dytser  
-Research contributed by: FrancisLouis  
+**Guide written by: Dytser**  
+**Research contributed by: FrancisLouis**  
 # Character Model Sliders
 For a while now it wasnt clear how the models handle the different shape sliders we can adjust at the start of the game. But after some research done on the discord its found out that shapekeys is whats controlling this.  
 However the downside is that despite now knowing whats controlling them, it would seem like the export from F model or importer into blender breaks these. So they have to be recreated.
