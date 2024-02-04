@@ -2,23 +2,25 @@
 sidebar_position: 3
 ---
 
-# Exporting & Modifying 3D Assets
+# 3Dアセットのエクスポートと編集
 
-This guide is written by [KURAMAAA0](https://github.com/KURAMAAA0/PalModding)
+このガイドは[KURAMAAA0](https://github.com/KURAMAAA0/PalModding)によって書かれました。
 
-In this section, you'll learn how to find the right files to export in order to modify 3D assets. You will not be taught how to use Blender.
+このガイドは[Latenos](https://github.com/Latenos/PalWorldModDocs)によって日本語に翻訳されました。
 
+このセクションでは、3Dアセットを修正するためにエクスポートする正しいファイルを見つける方法を学びます。Blenderの使い方は学びません。
 
-## Finding and exporting 3D models of Pals
+## パルの3Dモデルの検索とエクスポート
 
-If you want to find a Pal 3D model, press `Control + Shift + F` in FModel, or click `Package -> Search`, then search for `SK_<PalCodeName>` (Replace \<PalCodeName\> Being your Pals name)
+パルの3Dモデルを見つけるには、FModelで`Control + Shift + F`を押すか、上部メニューの`Package -> Search`をクリックして検索窓を使用します。
 
+そして、`SK_<PalCodeName>`（\<PalCodeName\>の部分をパルのコードネームに置き換え）を検索します。
 
-#### To find the Code Name of any Pal, click **[HERE](https://github.com/KURAMAAA0/PalModding/blob/main/PalNamesCodeNames.txt "HERE")** and search for your wanted pal.
+#### パルのコードネームを検索するには、**[こちら](https://github.com/KURAMAAA0/PalModding/blob/main/PalNamesCodeNames.txt "こちら")** のリンクからお目当てのパルを検索してください。（パルの英語名です）
 
-Double-click on the first result, should be the one **without** _`Skeleton` at the end.
+最初の結果をダブルクリックし、**最後に**`_Skeleton`がないものを選んでください。
 
-Then go up one folder, meaning you shoud click on `Folders` at the top.
+つぎに、一番上の`Folders`をクリックしてください。
 
 ![FMODEL2](https://github.com/KURAMAAA0/PalModding/assets/58988462/6c0d144c-5a52-465b-8d76-f404d6ab3474)
 
