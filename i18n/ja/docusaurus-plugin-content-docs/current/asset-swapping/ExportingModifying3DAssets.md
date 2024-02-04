@@ -20,14 +20,15 @@ sidebar_position: 3
 
 最初の結果をダブルクリックし、**最後に**`_Skeleton`がないものを選んでください。
 
-つぎに、一番上の`Folders`をクリックしてください。
+次に一つ上のパルの名前のフォルダに移動します。一番上にある`Folders`をクリックしてください。
 
 ![FMODEL2](https://github.com/KURAMAAA0/PalModding/assets/58988462/6c0d144c-5a52-465b-8d76-f404d6ab3474)
 
-Right-click on your Pal's folder, click save Folder's Packages **Textures** (.png)
-Right-click on your Pal's folder, click save Folder's Packages **Models** (.psk)
-Now you can go ahead and open **Blender**.
+目的のパルのフォルダを右クリックし、Save Folder's Packages **Textures** (.png)をクリックします。
 
+目的のパルのフォルダを右クリックし、Save Folder's Packages **Models** (.psk)をクリックします。
+
+これで**Blender**を開いて作業することができます。
 
 ## Importing the 3D models in Blender
 
