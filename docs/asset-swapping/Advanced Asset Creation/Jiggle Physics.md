@@ -101,7 +101,7 @@ I recommend naming them Anim that way you can easily find and know which files b
 
 ## creating and working with animation blueprint
 Right click your mesh in unreal. and go to **Create>Anim Blueprint** And name it whatever you want.  
-![Create ABP.png](assets/jiggle/unreal_craete_abp.png)  
+![Create ABP.png](assets/jiggle/unreal_create_abp.png)  
 This will create an Animation Blueprint next to your models skeleton file.
 Now you want to right click and add **Input pose** & **Spring Controller**
 
