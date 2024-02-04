@@ -29,9 +29,13 @@ Directoryには`Palworld`の実行ファイルがあるディレクトリを入�
 `ADVANCED`セクションにある`Local Mapping File`のチェックボックスにチェックを入れ、`Mapping File Path`を先ほどダウンロードした[Palworld Mapping File](https://github.com/KURAMAAA0/PalModding/raw/main/Assset%20Swap%20Guide/Mappings.usmap "Palworld mapping file")へ指定します。
 
 Settingsの左側にある`Models`タブをクリックします。
+
 `Model Export Directory`は簡単に見つけられるディレクトリに変更することをおすすめします。
+
 `Mesh Format`を`ActorX (psk / pskx)`に変更します。
+
 `Texture Format`を`PNG`に変更します。
+
 `OK`をクリックしてFModelを再起動します。
 
 ------------
