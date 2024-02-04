@@ -30,24 +30,24 @@ If you want to to function for both lower values and higher than 50% you need to
 #### Adding Shapekeys
 Select your model and go to the data tab.  
 look beneath vertex groups section and click the + icon in the shapekeys  
-![Adding Shapekeys](https://cdn.discordapp.com/attachments/745288624299311155/1202028860628013066/Adding_Shapekeys.png)  
+![Adding Shapekeys](assets/shapekey/shapekey_adding.png)  
 Now name them based on the table above.
 
 #### Editing Shapekeys
 To edit your shapekeys 
 **select** the one you would like to edit, Set its value to **1** and make sure to click the **"Edit"** button.  
-![Editing Shapekeys](https://cdn.discordapp.com/attachments/745288624299311155/1202028860926066759/Editing_a_shapekey.png)
+![Editing Shapekeys](assets/shapekey/shapekey_editing.png)
 
 # Export and import into Unreal Engine
 ### Exporting from Blender:
 When exporting to FBX its important to ensure that **"Apply Modifiers"** is turned off in the geometry tab.  
-![Apply Modifiers toggle, Contributed by FrancisLouis](https://cdn.discordapp.com/attachments/745288624299311155/1202028861177741403/FBX_Export_Turn_off_Modifiers.png)
+![Apply Modifiers toggle, Contributed by FrancisLouis](assets/shapekey/blender_export_shapekey.png)
 
 #### Importing Into Unreal 5.11
 When importing your FBX into Unreal make sure to go to  
 **Mesh>Advanced**  
 And toggle on the "Import Morph Targets" before importing  
-![Import Morph Targets, Contributed by FrancisLouis](https://cdn.discordapp.com/attachments/745288624299311155/1202031613123514438/Import_Morph_Targets.png?ex=65cbfa2d&is=65b9852d&hm=f5f928e3171da184f0d40402209d2f878b95076839d85635ff97ae0956a3bac2&)
+![Import Morph Targets, Contributed by FrancisLouis](assets/shapekey/unreal_import_shapekey.png)
 
 #### Testing your shapekeys/morphtargets
 Open the mesh and click the morphs tab
