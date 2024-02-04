@@ -19,4 +19,4 @@ Material on Hair and Brow is likely the same *Needs confirmation*
 Double click your model in Unreal Engine and then on the top left you can see all materials used in the model (these will be the same materials you have in blender), change the name of their material slots.  
 
 ### Example on Cloth armor:
-![Material Slot Example](https://cdn.discordapp.com/attachments/1199074455528407060/1202013790678294579/image.png)
+![Material Slot Example](assets/material/unreal_matslot_example.png)
