@@ -61,10 +61,10 @@ Just make your animation in blender, If you need instructions on that then you c
 For B:  
 In Fmodel you can navigate to 
 Content/Pal/Animation  
-![Pal Animation location.png](assets/jiggle/fmodel_anim_location)  
+![Pal Animation location.png](assets/jiggle/fmodel_anim_location.png)  
 Now simply find the animation of which you want to use, For example human "AS_Player_Female_Jog_None" and right click.  
 Choose "Save Animation"  
-![Save Animation.png](assets/jiggle/fmodel_anim_save)  
+![Save Animation.png](assets/jiggle/fmodel_anim_save.png)  
 Now if you go back to your blender project (you might want to save a copy just in case) you can now select your armature and then go to  
 file>Import>Import PSA  
 ![Import skeleton Anim.png](https://github.com/Dytser/Palworld-Modding-Wiki/blob/main/JigglePhysics_Images/Import%20skeleton%20Anim.png?raw=true)  
