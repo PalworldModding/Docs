@@ -1,65 +1,14 @@
-xcopy src\pages\**.md i18n\de\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.mdx i18n\de\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.jpg i18n\de\docusaurus-plugin-content-docs\current /s /e /y
-xcopy src\pages\**.png i18n\de\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.md i18n\de\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.mdx i18n\de\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.jpg i18n\de\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.png i18n\de\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.css i18n\de\docusaurus-plugin-content-docs\current /s /e /y
-xcopy blog\** i18n\de\docusaurus-plugin-content-blog /s /e /y
+set params=/s /e /y
 
-xcopy src\pages\**.md i18n\fr\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.mdx i18n\fr\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.jpg i18n\fr\docusaurus-plugin-content-docs\current /s /e /y
-xcopy src\pages\**.png i18n\fr\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.md i18n\fr\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.mdx i18n\fr\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.jpg i18n\fr\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.png i18n\fr\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.css i18n\fr\docusaurus-plugin-content-docs\current /s /e /y
-xcopy blog\** i18n\fr\docusaurus-plugin-content-blog /s /e /y
-
-xcopy src\pages\**.md i18n\ja\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.mdx i18n\ja\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.jpg i18n\ja\docusaurus-plugin-content-docs\current /s /e /y
-xcopy src\pages\**.png i18n\ja\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.md i18n\ja\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.mdx i18n\ja\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.jpg i18n\ja\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.png i18n\ja\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.css i18n\ja\docusaurus-plugin-content-docs\current /s /e /y
-xcopy blog\** i18n\ja\docusaurus-plugin-content-blog /s /e /y
-
-xcopy src\pages\**.md i18n\ru\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.mdx i18n\ru\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.jpg i18n\ru\docusaurus-plugin-content-docs\current /s /e /y
-xcopy src\pages\**.png i18n\ru\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.md i18n\ru\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.mdx i18n\ru\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.jpg i18n\ru\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.png i18n\ru\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.css i18n\ru\docusaurus-plugin-content-docs\current /s /e /y
-xcopy blog\** i18n\ru\docusaurus-plugin-content-blog /s /e /y
-
-xcopy src\pages\**.md i18n\uk\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.mdx i18n\uk\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.jpg i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
-xcopy src\pages\**.png i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.md i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.mdx i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.jpg i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.png i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.css i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
-xcopy blog\** i18n\uk\docusaurus-plugin-content-blog /s /e /y
-
-xcopy src\pages\**.md i18n\zh\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.mdx i18n\zh\docusaurus-plugin-content-pages /s /e /y
-xcopy src\pages\**.jpg i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
-xcopy src\pages\**.png i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.md i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.mdx i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.jpg i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.png i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
-xcopy docs\**.css i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
-xcopy blog\** i18n\zh\docusaurus-plugin-content-blog /s /e /y
+for %%l in (de,fr,ja,ru,uk,zh-hans) do (
+  for %%f in (md,mdx) do (
+    xcopy src\pages\**.%%f i18n\%%l\docusaurus-plugin-content-pages %params%
+  )
+  for %%f in (jpg,png,gif) do (
+    xcopy src\pages\**.%%f i18n\%%l\docusaurus-plugin-content-docs\current %params%
+  )
+  for %%f in (md,mdx,jpg,png,gif,css) do (
+    xcopy docs\**.%%f i18n\%%l\docusaurus-plugin-content-docs\current %params%
+  )
+  xcopy blog\** i18n\%%l\docusaurus-plugin-content-blog %params%
+)
