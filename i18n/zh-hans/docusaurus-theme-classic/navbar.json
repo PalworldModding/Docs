@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "Palworld模组制作 文档",
+    "message": "《幻兽帕鲁》模组制作 文档（Palworld Modding Docs）",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Palworld模组制作 徽标",
+    "message": "《幻兽帕鲁》模组制作 徽标",
     "description": "The alt text of navbar logo"
   },
   "item.label.Documentation": {
