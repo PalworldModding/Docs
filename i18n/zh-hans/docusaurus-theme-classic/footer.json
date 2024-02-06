@@ -1,0 +1,38 @@
+{
+  "link.title.Docs": {
+    "message": "文档",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "社区",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "更多信息",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.PDK Installation": {
+    "message": "《幻兽帕鲁》模组制作SDK 安装",
+    "description": "The label of footer link with label=PDK Installation linking to docs/category/palworld-modding-kit"
+  },
+  "link.item.label.Nebulae Discord": {
+    "message": "Nebulae Discord",
+    "description": "The label of footer link with label=Nebulae Discord linking to https://discord.gg/Nkb2JHu7wc"
+  },
+  "link.item.label.Palworld Modding Discord": {
+    "message": "Palworld Modding Discord",
+    "description": "The label of footer link with label=Palworld Modding Discord linking to https://discord.gg/qHTZNcvYsv"
+  },
+  "link.item.label.Blog": {
+    "message": "博客",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/PalworldModding"
+  },
+  "copyright": {
+    "message": "版权所有 © 2024 Palworld Modding。使用Docusaurus构建。不隶属于Pocket Pair有限公司呀。",
+    "description": "The footer copyright"
+  }
+}

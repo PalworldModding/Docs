@@ -52,3 +52,14 @@ xcopy docs\**.jpg i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
 xcopy docs\**.png i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
 xcopy docs\**.css i18n\uk\docusaurus-plugin-content-docs\current /s /e /y
 xcopy blog\** i18n\uk\docusaurus-plugin-content-blog /s /e /y
+
+xcopy src\pages\**.md i18n\zh\docusaurus-plugin-content-pages /s /e /y
+xcopy src\pages\**.mdx i18n\zh\docusaurus-plugin-content-pages /s /e /y
+xcopy src\pages\**.jpg i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
+xcopy src\pages\**.png i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
+xcopy docs\**.md i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
+xcopy docs\**.mdx i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
+xcopy docs\**.jpg i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
+xcopy docs\**.png i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
+xcopy docs\**.css i18n\zh\docusaurus-plugin-content-docs\current /s /e /y
+xcopy blog\** i18n\zh\docusaurus-plugin-content-blog /s /e /y
