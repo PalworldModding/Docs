@@ -4,130 +4,141 @@ sidebar_position: 2
 
 # 安装并配置《幻兽帕鲁》模组制作工具包 第二部分
 
-With the prerequisites out of the way, we are ready to download the sdk.
+:::info
+《幻兽帕鲁》模组制作工具包的英文名为 _Palworld_ Modding Kit，缩写为 **<abbr>PDK</abbr>** 。
 
-## Repository Setup
+它在本教程中可能也会被称为“SDK”。
+:::
 
-There are two ways to set up the repository:
+随着预备条件准备完毕，我们亦能够下载模组制作工具包了。
 
-* Cloning from git
-* Downloading a zip
+## 从仓库下载
 
-Cloning from git has the advantage of easier updates, but requires knowledge of git. This guide will explore both options.
+有2种方式来下载仓库中的内容。
 
-### Cloning from git
+* 通过Git克隆
+* 下载Zip文件
 
-To clone the repository from git, use this link: https://github.com/localcc/PalworldModdingKit.
+通过Git克隆的方式有个优势，可以方便地进行PDK更新，但需要一些基本的Git使用知识。接下来将给出这2种方式的指导。
 
-Using `git clone` run:
+### 通过Git克隆
+
+若需要使用Git克隆仓库，你需要仓库的链接：https://github.com/localcc/PalworldModdingKit。
+
+使用`git clone`命令：
 
 ```bash title="Git"
 git clone https://github.com/localcc/PalworldModdingKit
 ```
 
-### Downloading a zip
+### 下载Zip文件
 
-If you're not using git, you can download the zip using the button below:
+若你不想使用Git，只想简单地下载PDK，你可以使用下面的按钮来下载：
 
 import GitHubButton from '@site/src/components/GitHubButton';
 
-<GitHubButton text="Download PDK" url="https://github.com/localcc/PalworldModdingKit/archive/HEAD.zip"/>
+<GitHubButton text="下载PDK" url="https://github.com/localcc/PalworldModdingKit/archive/HEAD.zip"/>
 
-After downloading the zip file, unpack it.
+在下载完成后，只需要解压它便好啦。
 
-### Checking
+### 进行检查
 
-After downloading the repo, you should see the following file structure:
+在下载仓库内容后，你应该可以看到以下所示的文件夹结构：
 
-![Repo Structure](./assets/RepoStructure.png)
+![仓库结构](./assets/RepoStructure.png)
 
-## Wwise integration
+## 接入Wwise
 
 :::warning
-Before continuing to open the sdk in unreal, we must integrate Wwise manually. This is because the Wwise version that the game uses, is not officially compatible with the engine version, so we have to manually copy it over.
+在使用虚幻引擎打开SDK之前，我们必须手动安装Wwise。这是因为这个Wwise版本，官方并未使它与当前的虚幻引擎版本（`5.1`系列版本）兼容，所以我们又需要复制文件了。
 :::
 
-1) Open the directory you downloaded offline installation files for Wwise in ( [Back at the end of Part1](./install-part-1#finished) ), you should see the following structure:
+1、打开你在[上个教程](./install-part-1#finished)中下载Wwise的位置。如果成功安装，你应该可以看到以下文件夹结构。
 
-![Offline installation files structure](./assets/WwiseOfflineIntegrationStructure.png)
+![离线交互文件结构](./assets/WwiseOfflineIntegrationStructure.png)
 
-2) Unpack the `Unreal.5.0.tar.xz` archive.
+2、解压`Unreal.5.0.tar.xz`压缩包。
 
 :::note
-You might need to do it twice, first time you unpack it, you might get a .tar file, unpack that one too.
+你可能需要解压2次（如果你的解压软件不会自动识别Tgz文件），第1次会得到1个Tar文件，再解压它。
 :::
 
 import { FaFile, FaFolder } from "react-icons/fa";
 
-3) Copy over the unpacked `Wwise` Folder ( <FaFolder/> ) into the `Plugins` folder of the SDK.
+3、复制解压后的`Wwise`文件夹（<FaFolder/>）到SDK的`Plugins`文件夹
 
-4) Almost done with Wwise integration, now we just need to copy over the needed dlls.
+4、Wwise的操作已经快要完成了呢，现在只需要复制一些它需要的Dll文件。
 
-5) Open the `Wwise` Folder ( <FaFolder/> ) inside the SDK, and create a `ThirdParty` folder there.
+5、打开位于SDK中的`Wwise`文件夹（<FaFolder/>），并创建1个`ThirdParty`文件夹。
 
-6) Now go to the Folder ( <FaFolder/> ) where you installed the Wwise SDK
+6、现在转到你SDK所在的文件夹（<FaFolder/>）。
 
 :::warning
-This is not the folder where you installed the integration files, but the folder where you installed the SDK
+不是你安装那些交互文件的文件夹，而是Wwise SDK所在的文件夹。
 :::
 
-```text title="Default Wwise SDK Path"
+```text title="默认Wwise SDK位置"
 C:\Program Files (x86)\Audiokinetic\Wwise 2021.1.11.7933\SDK
 ```
 
-Inside of this Folder ( <FaFolder/> ), select:
+在那个文件夹中（<FaFolder/>），选中这些文件夹：
 
 * `Win32_vc170`
 * `x64_vc170`
 * `include`
 
-7) Copy over the Folders ( <FaFolder/> ) listed above to the `ThirdParty` folder you created earlier.
+7、复制以上列出的文件夹（<FaFolder/>）到你刚刚创建的`ThirdParty`文件夹。
 
-8) After copying over those folders, make sure to duplicate the `vc170` folders as `vc160` also, so the structure will look as follows:
+8、在在复制完毕后，确保再复制带有`vc170`字样的文件夹，然后将它改为`vc160`，最后应该看起来像这样：
 
-![VC160 Copies](./assets/Vc160Incident.png)
+![复制VC160](./assets/Vc160Incident.png)
 
 :::info
-If you continue without the following change, you will have to click OK on a dialog box that says Wwise is not compatible with the current Unreal Engine version every time you load up the editor.
+以下部分的操作是可选的。
 
+如果你不遵循下面的步骤，将会每次在打开PDK的项目文件后弹出1个信息框，它应该会说，“Wwise不与当前的虚幻引擎版本兼容（Wwise is not compatible with the current Unreal Engine version）”。
 
-To fix this, navigate to `Plugins\Wwise` and open `Wwise.uplugin` with any text editor or ide. 
+为了修复它，打开SDK文件夹中的`Plugins\Wwise`文件夹，使用文本编辑器打开`Wwise.uplugin`文件。
 
-Then change the entry `"EngineVersion" : "5.0.0",` to `"EngineVersion" : "5.1",`.
+然后更改`"EngineVersion" : "5.0.0",`为`"EngineVersion" : "5.1",`即可。
 :::
 
-### Finished
+### 完成
 
-Yay! Now we are done with integrating wwise!
+好耶！现在已经完成交互文件的操作啦。
 
-## Changing build tools from VS 2019 to VS 2022
-In Unreal Engine 5.1, by default, Visual Studio 2019 build tools will be used if they are installed.
+## 将编译工具从Visual Studio 2019改为Visual Studio 2022
+在虚幻引擎的5.1版本中，默认情况下，若Visual Studio 2019被安装，则会使用它。
 
 :::warning
-The below changes should only be made if Visual Studio 2019 is installed alongside Visual Studio 2022.
+以下操作应该只在Visual Studio 2019与Visual Studio 2022一并存在时才需要做。
+:::
+
+:::note
+译者提醒：你可能之前安装过Visual Studio 2019，且之后并未完全删除（比如这里）。此处建议：若在打开项目文件时出错，请尝试做这些操作。
 :::
 
 <details>
-    <summary>If you don't see "Unreal Engine" in `%APPDATA%`</summary>
+    <summary>如果你并没有看到“Unreal Engine”在`%APPDATA%`中</summary>
     <div>
-        If you don't see "Unreal Engine" in `%APPDATA%` that means you haven't launched Unreal Engine before<br/>
-        Go to `Epic Games Launcher -> Unreal Engine -> Library 0 >` Click "Launch" on the Unreal Engine version that you've downloaded (5.1.x).<br/>
-        ![UnrealEditorLaunchFirst](./assets/LaunchUnrealEditor.png)<br/>
-        Let it load until you see the creation of a new project screen then close it and continue with the guide.<br/>
+        如果你并没有看到“Unreal Engine”在`%APPDATA%`中，这说明你在安装虚幻引擎后并没有启动过它。<br/>
+        做以下操作：Epic Games启动器→虚幻引擎→库，点击在你下载的虚幻引擎上的“启动”按钮即可。<br/>
+        ![首次启动虚幻引擎](./assets/LaunchUnrealEditor.png)<br/>
+        等它初始化完成，直到你看到出现“新项目”窗口。关闭它，然后继续教程。<br/>
     </div>
 </details>
 
-To change this, navigate to `%APPDATA%\Unreal Engine\UnrealBuildTool` and open `BuildConfiguration.xml` with your favorite XML editor.
+为了修改文件，打开`%APPDATA%\Unreal Engine\UnrealBuildTool`文件夹并使用你喜欢的任何文本编辑器打开`BuildConfiguration.xml`。
 
 
-```xml title="Initial Configuration"
+```xml title="未改动的文件"
 <?xml version="1.0" encoding="utf-8" ?>
 <Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
 </Configuration>
 ```
 
 
-```xml title="Updated it to look like so:"
+```xml title="将文件的内容更改为以下内容："
 <?xml version="1.0" encoding="utf-8" ?>
 <Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
     <VCProjectFileGenerator>
@@ -140,6 +151,6 @@ To change this, navigate to `%APPDATA%\Unreal Engine\UnrealBuildTool` and open `
 ```
 
 :::tip
-Congratulations on making it through the configuration!
+恭喜你！终于配置完成啦。
 :::
 
