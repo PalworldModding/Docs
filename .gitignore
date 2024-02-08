@@ -21,3 +21,4 @@ yarn-error.log*
 .env
 /.idea/
 .idea/misc.xml
+yarn.lock

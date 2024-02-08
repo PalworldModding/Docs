@@ -1,0 +1,196 @@
+---
+sidebar_position: 4
+---
+
+# UE4SS Function Overview
+
+UE4SS comes with a built-in [Lua API](https://docs.ue4ss.com/dev/lua-api.html). Part of that is an array of useful functions that let us do cool stuff. In this section we're going to cover some of the more useful functions in the context of how they might get used in Palworld.
+
+We have two functions that make up the bread and butter of our Lua scripting: `RegisterHook` and `NotifyOnNewObject`. You'll get a better hands-on experience with them in the next tutorial, but for now let's just introduce you to them.
+
+---
+### **RegisterHook** 
+---
+This hooks on to _SomeFunction_ and fires **after** _SomeFunction_ is executed. 
+
+For example, one of the most common `RegisterHooks` you'll see in scripts right now is:
+```lua
+RegisterHook("/Script/Engine.PlayerController:ClientRestart", function (Context) 
+    -- do something
+end)
+```
+<details>
+<summary><b>What's the function being hooked?</b></summary>
+<blockquote>Hopefully you were thinking ClientRestart, or we might have a long road ahead of us</blockquote>
+</details>
+<br/>
+<details>
+<summary><b>Now, what is Context in this example?</b></summary>
+<blockquote>If you said PlayerController, good job! I'm proud of you. The first parameter in the callback is always the UObject calling the function. Aka, the context.</blockquote>
+</details>
+<br/>
+<b>What's the point of this hook, why do so many scripts use it?</b>  
+
+Well, what does it do? It executes `--do something` after the client restarts. It's a handy way to init stuff.
+
+Why do most scripts use it? Well, not everything is available right away when the game launches, so sometimes you need to delay your logic until you know whatever you want will be accessible. A general rule of thumb is anything that starts with `/Script/` should be available immediately. Anything else, you probably should put behind a hook like this.
+
+But this hook also sucks because it doesn't work for dedicated servers. So I'mma teach you a better one:
+```lua
+RegisterHook("/Script/Engine.PlayerController:ServerAcknowledgePossession", function(Context)
+    -- do something
+end)
+```
+This _should_ get called whenever a client connects to the server. It also works for local games. I use it in most my scripts.  
+<sup><sub>_Sometimes it doesn't work and I don't know why but we don't talk about that and just claim ignorance and blame the person running the server for setting up something wrong, idk._</sub></sup>  
+
+
+We said before the first parameter of the callback function is the UObject, but you can also get the params from the invoked function. The callback function of this is always: `function(UObject self, UFunctionParams)`  
+
+So if I have `StupidFunction(bool isTrue, int Id, string Message)` I can do
+```lua
+RegisterHook("/Script/Example.SomeObject:StupidFunction", function(Context, isTrue, Id, Message)
+    print("This message is: " .. Message:get())
+    print("The bool is: " .. isTrue:get())
+    print("The id is: " .. id:get())
+)
+```
+<br/>
+<details>
+<summary><b>What's up with the <code>:get()</code>?</b></summary>
+<blockquote>If you don't remember from last lesson, some of the params we get from hooks are actually these weird things called <code>RemoteUnrealParam</code>, for some reason that is above my level of understanding, so to get the _actual_ value of them, we need to call <code>:get()</code></blockquote>
+</details>
+<br/>
+
+
+Of course it's never that easy because UE never uses easy to work with parameters, but you get the idea.  
+<br/>
+
+---
+### **NotifyOnNewObject** 
+---
+This is magic sauce #2 which allows us to watch for particular objects to be created. Wanna know every time someone goes to build an Electric Heater? 
+```lua
+NotifyOnNewObject("/Game/Pal/Blueprint/MapObject/BuildObject/BP_BuildObject_HeaterElectric.BP_BuildObject_HeaterElectric_C", function(Context)
+    print("woah its a heater")
+end)
+```
+
+But Teh! How do you know the long address string thing? Baby steps! That's a problem for future you. Just get an understanding of the functions and how to use them for now, I promise we'll get to it.  
+<br/>
+If you were to run this code above as is, it may or may not work. Why? Remember what I said about things not always being available? Notice this isn't a `/Script/`. This might not exist yet when you're trying to create the notify. So to be sure, you wrap it in a `RegisterHook` with SAP or CR. And even that might not be enough...SAP sometimes fires too early, so we might need to wrap it with a delay too. We'll cover that in a bit, so for now we'll just take it as is.
+```lua 
+RegisterHook("/Script/Engine.PlayerController:ServerAcknowledgePossession", function(Context)
+    ExecuteWithDelay(5000,function()
+        NotifyOnNewObject("/Game/Pal/Blueprint/MapObject/BuildObject/BP_BuildObject_HeaterElectric_BP_BuildObject_HeaterElectric_C", function(Context)
+            print("woah its a heater")
+        end)
+    end)
+end)
+```
+But if you do that you're stupid. Because now every time that hook fires, you're creating a new notification. Two more players just joined your game. Now you have 3 `NotifyOnNewObject`. Remember, these execute whatever is in it _every time they fire_. So don't be stupid, and wrap it up.
+```lua
+local not_hooked = true
+RegisterHook("/Script/Engine.PlayerController:ServerAcknowledgePossession", function(Context)
+    if not_hooked then
+        ExecuteWithDelay(5000,function()
+            NotifyOnNewObject("/Game/Pal/Blueprint/MapObject/BuildObject/BP_BuildObject_HeaterElectric_BP_BuildObject_HeaterElectric_C", function(Context)
+                print("woah its a heater")
+            end)
+        end)
+        not_hooked = false
+    end
+end)
+```
+Now we're cooking with fire.
+
+Those two are going to be your bread and butter, but lets touch on a couple more useful UE4SS functions.
+<br/>
+<br/>
+
+---
+### **StaticFindObject**
+---
+
+Sometimes you just want the default class object. A good example is `PalUtility`. This bad boy has a lot of great commands in it. But you can't just do `PalUtility:AwesomeFunction` in your code, you need the default class to call it. In comes `StaticFindObject`
+```lua
+local PalUtil = StaticFindObject("/Script/Pal.Default__PalUtility")
+PalUtil:AwesomeFunction()
+```
+<br/>
+
+
+---
+### **Find Functions**
+---
+These are for locating objects. There are a bunch. You probably will use `FindFirstOf` and `FindAllOf` the most but there's also `FindObject` and `FindObjects`.
+
+The first two can use short names, which is nice because we don't need those big long adddresses and be lazy and just do something like:
+```lua
+local player = FindFirstOf("PalPlayerCharacter")
+```
+<br/>
+
+
+---
+### **LoopAsync and ExecuteWithDelay**
+---
+You saw `ExecuteWithDelay` in the previous example. These are both useful at times in their own right and you'll probably use them occasionally. Sometimes you want to make sure something happens a bit later and in that case you can do:
+```lua
+ExecuteWithDelay(later_in_ms, function()
+    --something
+end)
+```
+
+Other times you want something to happen every so often, in which case you can do 
+```lua
+LoopAsync(every_so_often, function()
+    --something
+end)
+```
+<br/>
+
+
+---
+### **FName + FText**
+---
+`FName` and `FText` are special string based shit that UE uses for some reason idk why I'm not a UE guy I just know they're annoying on the Lua side. If you ever need to turn a string into `FName` or `FText` you can do that with these functions:
+```lua
+local fname = FName(some_fname)
+local ftext = FText(some_text)
+```
+You can also do the reverse in case some function hands you the nasty stuff:
+```lua
+RegisterHook("/idk/some:function", function(fname_param, ftext_param)
+    local cool_string = fname_param:get():ToString()
+    local also_cool_string = ftext_param:get():ToString()
+    print(cool_string .. also_cool_string)
+end)
+```
+<br/>
+
+---
+### **Callback Functions**
+---
+Just to clarify...
+```lua
+RegisterHook("/idk/some:function", function(self)
+    --some complicated logic
+end)
+```
+Can also be written as
+```lua
+local function complicatedFunction(self)
+    --some complicated logic
+end
+
+RegisterHook("/idk/some:function", complicatedFunction)
+```
+In simple mods, people often just chose to nest the callback function because it can be a bit clearer at first glance, but as you get more and more complex code, it can be worth breaking these callbacks out into their own functions, else you be working with callbacks in callbacks in callbacks.  
+<br/>
+
+---
+### [**More functions**](https://docs.ue4ss.com/dev/lua-api.html)
+---
+There's a lot more functions available from the UE4SS API and I almost certainly underuse them and probably missed some useful ones, but these are personally the ones I have made the most use out of so far. For more info on that, base types, and other UE4SS api stuff, you can view their [docs directly](https://docs.ue4ss.com/dev/lua-api.html) instead of me trying to explain stuff I don't actually understand   
+<br/>

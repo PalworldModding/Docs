@@ -1,0 +1,17 @@
+---
+sidebar_position: 9
+---
+
+# DataTables
+<sub><sup>(this section should proably be reworked with it's own follow along tut when someone gets a chance)</sup></sub>  
+DataTables's hold all the juicy bits of info on stuff. Occasionally you want to search through them or see exactly what stuff is stored there, so you need to know how to look through them. The general idea is just find whatever string you want to search for and search that folder in VSCode like you would header files. 
+
+For a really brief example, the way I managed to stop pals from interacting with Electric Heaters in my [Electric Appliances](https://www.nexusmods.com/palworld/mods/436) mod was by changing the `AssignDefineDataId` property to one that can't be assigned to. How did I figure out which to assign them to in order to do that? 
+
+I did a super quick search in `DataTables` for the original id, `ElectricHeater_0`. Which led me to `DT_MapObjectAssignData`, which has a list of all of the assignable id's. Then I just looked for one that can't be assigned to and luckily enough found `PalStorage_0` which has `EPalWorkSuitability::None`. By changing the `AssignDefineDataId` of a heater's work task to `PalStorage_0`, pals can no longer work or be assigned to it.
+
+That's just a short and sweet example of how you can search DT's to get info on whatever you need.
+
+:::note
+Currently, DataTables can only be read from. The modification functionality is coming soon, hopefully in UE4SS 3.1. You can read the the [DataTable Devlog](https://gist.github.com/bitonality/87b00f6c28c39ccffb85fc71404d6c80) if you want some more background on it
+:::
