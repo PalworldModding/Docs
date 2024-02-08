@@ -15,13 +15,13 @@
     "message": "Erstellung einer Blueprint Mod",
     "description": "The label for category Creating A Blueprint Mod in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Lua Interop": {
-    "message": "Lua Interop",
-    "description": "The label for category Lua Interop in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Lua Modding": {
+    "message": "Lua Modding",
+    "description": "The label for category Lua Modding in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Lua Interop.link.generated-index.description": {
+  "sidebar.tutorialSidebar.category.Lua Modding.link.generated-index.description": {
     "message": "Ein Leitfaden zur Durchführung von Zwei-Wege-Interop mit Lua aus Blueprints",
-    "description": "The generated-index page description for category Lua Interop in sidebar tutorialSidebar"
+    "description": "The generated-index page description for category Lua Modding in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Asset Swapping": {
     "message": "Assets Tauschen",

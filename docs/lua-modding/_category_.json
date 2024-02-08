@@ -1,0 +1,8 @@
+{
+    "label": "Lua Modding",
+    "position": 3,
+    "link": {
+        "type": "generated-index",
+        "description": "A guide to dip your feet into Lua Modding in Palworld. If you are new to Lua or want a refresher course on Lua, check out the Lua Basics guide first, as these tutorials won't be covering Lua syntax, types or anything of the sort."
+    }
+}

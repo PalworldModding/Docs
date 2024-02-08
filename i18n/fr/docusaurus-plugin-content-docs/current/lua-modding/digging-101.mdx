@@ -1,0 +1,177 @@
+---
+sidebar_position: 6
+---
+
+# Digging 101
+
+Alright so at this point you maybe sorta understand some of the base functions available to you in UE4SS, but I know most of you are probably stuck on how to figure out what functions to actually hook onto or call to do whatever you actually want to do. 
+
+### Well, welcome to Digging 101 📖
+
+Let's start class by getting hands-on. Hop onto a fresh game world and keep the UE4SS console ready. The first task here is going to be something a lot of people are interested in: hook the function that gets called when a chat message is sent and print that message to console. 
+
+But we don't know anything about what function fires or where to even look. So let's dig into Live View. 
+
+:::note
+Live View might not actually be the best for this, since we're looking for a function, but I want you to start learning it and how you can switch back and forth between it and the header files, so bear with me.
+:::
+
+### Live View
+
+In the Live View search bar start seaching for something chat message related. I recommend to keep your searches as simple as possible while still being relevant, until you have a better idea of what you're searching for. We're looking for a function here, because we want to hook into it, so don't bother looking through classes or objects, just check out functions. Once you've done a little searching and think you might have a function to try, or if you get stuck, come back check out the spoiler tags.
+
+<br/>
+<details>
+<summary><b>Hint: If you can't think of something to start searching for..</b></summary>
+<blockquote>Try starting with just "chat" and see what you can find on that. We want to keep it simple after all.</blockquote>
+</details>
+<br/>
+<details>
+<summary><b>Think I found something!</b></summary>
+<blockquote>Alright! So if you searched for something along the lines of "chat" you probably wound up with some functions to sift through. Hopefully one of the functions you picked up on was `BroadcastChatMessage`. If you did, great job! If you didn't, I'm going to make your life a bit easier for the sake of the tutorial, and ask you to hone in on that one in particular.</blockquote>
+</details>
+
+---
+
+For demonstration purposes, lets try to hook that function you found and see if it actually fires when we say something in chat. Take this opportunity to use what you learned about functions to write up a script that:
+- Hooks that function
+- Prints something when the function is executed
+
+
+
+<br/>
+<details>
+<summary><b>Hint: But where do I get the function name/address thingie to hook?</b></summary>
+<blockquote>The function name for the hook is the full function path that you see in Live View, <code>/Script/Pal.PalGameStateInGame:BroadcastChatMessage</code>.</blockquote>
+</details>
+<br/>
+<details>
+<summary><b>Sanity check code</b></summary>
+
+```lua
+-- if you did something along these lines, you're good
+-- Technically you can wrap this in the SAP hook, but since it's a /Script/, we don't need to do that
+RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function()
+    print("enter chat fired")
+end)
+```
+
+</details>
+<br/> 
+
+
+Now lets leave the world, reload our mod script, rejoin and type something in chat. If you code is all good, you should see your hook get fired and something get printed to chat! 
+
+Nice! That means we actually managed to hook the right function. If you hadn't been guided to the right function, you might have had to try out a couple different functions to find which one did exactly what you were looking for.
+
+But we want to know more about this function now. What does it return? What parameters can we hook into? Can we get the message out of it?
+
+_In comes header files._ 
+
+---
+### Header Files
+
+Let's swap over to VSCode for a sec. Right-click on the `CXXHeaderDump` folder in the workspace and click `Find in Folder`. 
+
+![CXXHeaderDump folder right-clicked, showing the menu](./assets/vs_code_cxxfolder.png)
+
+This will open a search dialogue with the `./CXXHeaderDump` already filled in for the files to include. This lets us search for something in all files of that folder. In the first box we put whatever we're looking for, in this case we want to find more info on `BroadcastChatMessage` so search for that. Since we already know what function we were looking for of course we get a hit and it's in `Pal.hpp`. We can click on that search result to automatically open to it. 
+
+![VSCode Find in Files search for BroadcastChatMessage](./assets/vs_code_fif.png)
+
+:::note
+We also could have started off like this. Since we knew we were looking for something chat related, we could have just searched header files for "chat" and dug through what came up until we found something that looked promising.
+:::
+
+:::tip
+**Header File Tip:**
+If you're using the `CXXHeaderDump` most of the stuff we care about for Lua is going to be found in `Pal.hpp`.
+:::
+
+When we open to that spot, we can see that function and its parameter:
+```hpp
+void BroadcastChatMessage(const FPalChatMessage& ChatMessage);
+``` 
+So that's neat, we can just pass that parameter straight to our hook and hopefully get the chat message. Before we dig deeper, let's give that a try and see what happens. Try to alter your hook to grab the `ChatMessage` parameter, and try to print that to see what happens. I'll warn you that it _won't_ work, but this is the learning process.
+
+<br/>
+<details>
+<summary><b>Sanity check code</b></summary>
+
+```lua
+-- I expect you'll come up with something like this
+RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(self, ChatMessage)
+    print(ChatMessage:get())
+end)
+```
+
+</details>
+<br/> 
+
+
+<details>
+<summary><b>Comprehension check! What's the self parameter of this hook?</b></summary>
+
+>The self parameter is the UObject `PalGameStateInGame`
+
+</details>
+<br/> 
+
+
+
+If you did it correctly, you probably got greeted with an error along the lines of:  
+```
+Parameter #1 must be of type 'string'. Was of type 'userdata'.
+```
+
+`print()` expects a string to be given to it, and we know from the function header, `ChatMessage` is of type `FPalChatMessage`. So of course it's going to be angry. 
+
+Let's go back to the function in `Pal.hpp` and check out what exactly `FPalChatMessage` is, so we can break it down in our Lua. In VSCode, `Ctrl + Left-Click` on the type to chase down it's definition. 
+
+It should hop directly to the definition of `FPalChatMessage`, pretty neat. 
+
+It looks something like this:
+```hpp
+struct FPalChatMessage
+{
+    EPalChatCategory Category;
+    FString Sender;
+    FGuid SenderPlayerUId;
+    FString Message;
+    FGuid ReceiverPlayerUId;
+}; 
+```
+
+So it's a struct that has a couple different components we could play with. For now, let's just try getting the actual `FString Message` component, since we want to print the message to console. 
+
+In order to access this property, we need to deconstruct the struct we get into its parts. So now that you know the parts of the `ChatMessage` try to alter your hook to:
+- Get `ChatMessage`
+- Access the `Message` property
+- Print the `Message` property to console
+
+<details>
+<summary><b>Hint: <code>Was of type \`userdata\` error</code></b></summary>
+
+>Take note of what type this is returning and remember what I told you before...UE never returns you simple strings. Take a look at the [UE4SS docs](https://docs.ue4ss.com/dev/lua-api.html) and see if you can find any useful methods for the `Message` type.
+
+</details>
+
+<br/>
+<details>
+<summary><b>Sanity check code</b></summary>
+
+```lua
+-- Something like this should do the trick
+RegisterHook("/Script/Pal.PalGameStateInGame:BroadcastChatMessage", function(self, ChatMessage)
+    local chat_message = ChatMessage:get()
+    local message = chat_message.Message:ToString() -- Take note of the :ToString()! FString is not the same as a string!
+    print(message)
+end)
+```
+
+</details>
+<br/> 
+
+
+Nice work! Now we can log chat messages or whatever else you'd like to do with them. In the next tutorial we'll move on to something else a bit more hands on.  
+<br/>

@@ -1,0 +1,33 @@
+---
+sidebar_position: 8
+---
+
+# Config Files
+Now that you have a working base area mod, you could technically just release that as is and have people change the value in the main file. But that's lame and it's nice to provide a config file for better user experience. So here's a real brief lesson on that (which also doubles as an example on how to use separate files)
+
+We can real simply add a `config.lua` file to our `/Scripts` folder, and then call that in our `main.lua` file, like so:
+
+`config.lua`
+```lua
+local _my_mod_config = {
+    -- You can add comments with default values and such
+    -- Usually some explanation of what it does etc
+    area_range = 3500.0
+}
+return _my_mod_config
+```
+
+`main.lua`
+```lua
+local config = require "config"
+
+NotifyOnNewObject("/Script/Pal.PalBaseCampModel", function(base_model)
+    print("found a base model, waiting for it to finish initializing")
+    ExecuteWithDelay(10000, function()
+        base_model.AreaRange = config.area_range
+        print("changed a bases range")
+    end)
+end)
+```
+
+That's it! 

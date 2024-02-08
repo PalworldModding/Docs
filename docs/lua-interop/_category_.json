@@ -1,8 +1,0 @@
-{
-    "label": "Lua Interop",
-    "position": 3,
-    "link": {
-        "type": "generated-index",
-        "description": "A guide on doing two-way interop with Lua from Blueprints"
-    }
-}
