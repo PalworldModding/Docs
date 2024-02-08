@@ -1,20 +1,19 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # UE4SS Function Overview
 
 UE4SS comes with a built-in [Lua API](https://docs.ue4ss.com/dev/lua-api.html). Part of that is an array of useful functions that let us do cool stuff. In this section we're going to cover some of the more useful functions in the context of how they might get used in Palworld.
 
-You should be somewhat versed in `RegisterHook` and `NotifyOnNewObject` from the Hooking functions from the last tutorial, but you might not have a good grasp on them, so I'll cover them again.
-
+We have two functions that make up the bread and butter of our Lua scripting: `RegisterHook` and `NotifyOnNewObject`. You'll get a better hands-on experience with them in the next tutorial, but for now let's just introduce you to them.
 
 ---
 ### **RegisterHook** 
 ---
 This hooks on to _SomeFunction_ and fires **after** _SomeFunction_ is executed. 
 
-For example, the thing on the first tutorial:
+For example, one of the most common `RegisterHooks` you'll see in scripts right now is:
 ```lua
 RegisterHook("/Script/Engine.PlayerController:ClientRestart", function (Context) 
     -- do something
@@ -22,17 +21,17 @@ end)
 ```
 <details>
 <summary><b>What's the function being hooked?</b></summary>
-<blockquote>Hopefully you said ClientRestart, or we might have a long road ahead of us</blockquote>
+<blockquote>Hopefully you were thinking ClientRestart, or we might have a long road ahead of us</blockquote>
 </details>
 <br/>
 <details>
 <summary><b>Now, what is Context in this example?</b></summary>
-<blockquote>If you said PlayerController, good job. I'm proud of you. The first parameter in the callback is always the UObject calling the function. Aka, the context.</blockquote>
+<blockquote>If you said PlayerController, good job! I'm proud of you. The first parameter in the callback is always the UObject calling the function. Aka, the context.</blockquote>
 </details>
 <br/>
 <b>What's the point of this hook, why do so many scripts use it?</b>  
 
-Well, what does it do? It executes `--do something` after the client restarts. It's a handy way to init shit.
+Well, what does it do? It executes `--do something` after the client restarts. It's a handy way to init stuff.
 
 Why do most scripts use it? Well, not everything is available right away when the game launches, so sometimes you need to delay your logic until you know whatever you want will be accessible. A general rule of thumb is anything that starts with `/Script/` should be available immediately. Anything else, you probably should put behind a hook like this.
 
@@ -70,14 +69,14 @@ Of course it's never that easy because UE never uses easy to work with parameter
 ---
 ### **NotifyOnNewObject** 
 ---
-This is magic sauce #2 which allows us to watch for particular objects to be created. Wanna know every time some goes to build an Electric Heater? 
+This is magic sauce #2 which allows us to watch for particular objects to be created. Wanna know every time someone goes to build an Electric Heater? 
 ```lua
 NotifyOnNewObject("/Game/Pal/Blueprint/MapObject/BuildObject/BP_BuildObject_HeaterElectric.BP_BuildObject_HeaterElectric_C", function(Context)
     print("woah its a heater")
 end)
 ```
 
-But Teh! How do you know the long address string thing? Baby steps. That's a problem for future you. In the next section. Just learn about the functions and how to use them for now, I promise we'll get to it.  
+But Teh! How do you know the long address string thing? Baby steps! That's a problem for future you. Just get an understanding of the functions and how to use them for now, I promise we'll get to it.  
 <br/>
 If you were to run this code above as is, it may or may not work. Why? Remember what I said about things not always being available? Notice this isn't a `/Script/`. This might not exist yet when you're trying to create the notify. So to be sure, you wrap it in a `RegisterHook` with SAP or CR. And even that might not be enough...SAP sometimes fires too early, so we might need to wrap it with a delay too. We'll cover that in a bit, so for now we'll just take it as is.
 ```lua 
@@ -187,7 +186,7 @@ end
 
 RegisterHook("/idk/some:function", complicatedFunction)
 ```
-In simple mods, people often just chose to nest the callback function because it can be a bit more clear at first glance, but as you get more and more complex code, it can be worth breaking these callbacks out into their own functions, else you be working with callbacks in callbacks in callbacks.  
+In simple mods, people often just chose to nest the callback function because it can be a bit clearer at first glance, but as you get more and more complex code, it can be worth breaking these callbacks out into their own functions, else you be working with callbacks in callbacks in callbacks.  
 <br/>
 
 ---
