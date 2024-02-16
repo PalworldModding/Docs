@@ -1,6 +1,6 @@
 {
   "label": "Palworld Data",
-  "position": 4,
+  "position": 5,
   "link": {
     "type": "generated-index",
     "description": "Collection of IDs for game related objects with their respective english name."
