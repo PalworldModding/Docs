@@ -2,29 +2,29 @@
 sidebar_position: 4
 ---
 
-# Exporting The Project
+# プロジェクトのエクスポート
 
 :::note
-Make Sure These Two Settings Have Been Enabled ![EditorPrefExp](./assets/EditorPrefrencesExperimental.png) ![ProjectSettingsPackaging](./assets/ProjectSettingsPackaging.png)
+以下の2つの設定が有効になっていることを確認して下さい。 ![EditorPrefExp](./assets/EditorPrefrencesExperimental.png) ![ProjectSettingsPackaging](./assets/ProjectSettingsPackaging.png)
 :::
 
-1) Create a Data Asset ( Primary Asset Label ) named after your mod name in your Contents folder. Set the priority to 1, and the Chunk ID to a memorable ID.
-2) Set your Mods  (ModActor and any other Assets you are going to include in your mod) Chunk ID to the same you used above.
-3) Go into **Project Settings -> Asset Manager** and verify your settings are similar below ( Make sure the rules match the primary asset label you made ) ![AssetsManagerSettings](./assets/AssetsManagerSettings.png)
-4) Once all Chunk ID's match on each mod file you are including, you can package your project ![Package button](./assets/UEPackageButton.png)
-5) You should have `pakchunk{Your Chunk ID}-Windows.pak` in the Paks output folder. Rename that to the mod name. There's your packaged mod!
+1) ContentsフォルダにMOD名にちなんだ名前のData Asset ( Primary Asset Label )を作成する。優先度を1に設定し、Chunk IDを分かりやすいIDに設定する
+2) Mods  (ModActorとその他MODに含めるアセット) のChunk IDを上記のものと同じものに設定する
+3) **Project Settings -> Asset Manager**へ行き以下のような設定になっているか確認する(ルールが作成したPrimary Asset Labelと一致していることを確認して下さい) ![アセットマネージャの設定](./assets/AssetsManagerSettings.png)
+4) 各MODファイルに含まれる全てのChunk IDが一致したら、プロジェクトをパッケージングすることができます。 ![パッケージボタン](./assets/UEPackageButton.png)
+5) Paksの出力フォルダに`pakchunk{Your Chunk ID}-Windows.pak`があるはずです。それをMOD名にリネームして下さい。これこそあなたのパッケージしたMODです!
 
 <details>
-    <summary>If you only get 'pakchunk0-Windows.pak' instead of your memorable ID</summary>
+    <summary>分かりやすいIDではなく'pakchunk0-Windows.pak'のみ生成される場合</summary>
     <div>
-        Go into **Project Settings -> Packaging**<br/>
-        Then tick "Cook everything in the project content directory(ignore list of maps below)"<br/>
+        **Project Settings -> Packaging**へ行く。<br/>
+        "Cook everything in the project content directory(ignore list of maps below)"にチェックを入れる。<br/>
         ![image (5)](https://github.com/localcc/PalworldModdingKit/assets/10259891/c06cb6c6-8e2c-4560-bb1d-22f10f7563ad)
     </div>
 </details>
 
 :::tip
-Remember to enable BPModLoader in the `Palworld\Pal\Binaries\Win64\Mods\mods.txt` for UE4SS
+UE4SSのために`Palworld\Pal\Binaries\Win64\Mods\mods.txt`でBPModLoaderを有効にすることを忘れないこと。
 
 ![BPModLoader](./assets/BPModLoaderMod.png)
 :::

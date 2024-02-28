@@ -2,103 +2,103 @@
 sidebar_position: 1
 ---
 
-# Prerequisites - Part 1
+# 前提要素 - Part 1
 
 ## .NET 6
 import { FaDownload } from "react-icons/fa6";
 
-For Unreal Build Tools to function correctly, you will need to have .NET 6 installed on your system.
+Unreal Build Toolsを正しく機能させるには、システムに.NET 6がインストールされている必要があります。
 
-[Download <FaDownload />](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore&os=windows&arch=x64)
+[ダウンロード <FaDownload />](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore&os=windows&arch=x64)
 
-Click on the `Download x64` button to download the runtime:
+ランタイムをダウンロードするには`Download x64`ボタンをクリックして下さい:
 
-![Dotnet download](./assets/Dotnet.png)
+![Dotnetのダウンロード](./assets/Dotnet.png)
 
-Once you've downloaded the installer, open it and install the runtime.
+インストーラーをダウンロードしたら、それを開いてランタイムをインストールします。
 
 ## Visual Studio 2022
 
-To compile the sdk you will need Visual Studio 2022 installed.
+SDKをコンパイルするには、Visual Studio 2022がインストールされている必要があります。
 
-[Download <FaDownload />](https://visualstudio.microsoft.com/vs/) 
+[ダウンロード <FaDownload />](https://visualstudio.microsoft.com/vs/)
 
-A community edition version will suffice. While installing it, make sure to check the following components in the installer:
+Community Editionで十分です。インストールする際、以下のコンポーネントを確認して下さい:
 
 
-![Visual Studio Installer Options](./assets/VisualStudioInstaller.png)
-![Visual Studio Installer Options 2](./assets/VisualStudioInstaller2.png)
+![Visual Studioのインストーラーの設定](./assets/VisualStudioInstaller.png)
+![Visual Studioのインストーラーの設定2](./assets/VisualStudioInstaller2.png)
 
-Then press continue, and wait for visual studio to install.
+確認したらcontinueを押し、Visual Studioがインストールされるのを待ちます。
 
 import { FaCirclePlus } from "react-icons/fa6";
 import Highlight from '@site/src/components/Highlight';
 
 ## Unreal Engine 5.1
 
-After installing Visual Studio, we need to install Unreal Engine.
+Visual Studioのインストールが終わったら、Unreal Engineをインストールする必要があります。
 
-1) Open Epic Games Launcher
-2) Head over to `Unreal Engine` tab
-3) Go into `Library` tab
-4) Press the <Highlight color="#dea309">Gold <FaCirclePlus /></Highlight> to add a new version
+1) Epic Games Launcherを開く
+2) `Unreal Engine`タブを開く
+3) `Library`タブを開く
+4) <Highlight color="#dea309">Gold <FaCirclePlus /></Highlight>を押して新しいバージョンを追加する
 
-![Add new Unreal Engine version](./assets/EpicUnrealVersion.png)
+![新しいUnreal Engineのバージョンの追加](./assets/EpicUnrealVersion.png)
 
-5) You should see a new card appear, with the ability to select an engine version.
-6) Select version `5.1`
+5) エンジンのバージョンを選択できる新しいカードが表示される
+6) バージョン`5.1`を選択する
 
-![5.1 Version](./assets/Versions.png)
+![5.1バージョン](./assets/Versions.png)
 
 :::warning
-Any 5.1 version will work, it doesn't matter if it's 5.1 or 5.1.1
+5.1系であれば動作する。5.1でも5.1.1でも問題ない。
 :::
 
 ## Wwise
 
-Palworld uses [Wwise](https://www.audiokinetic.com/en/products/wwise/) for its sounds, so we will need to install this too.
+Palworldはサウンドに[Wwise](https://www.audiokinetic.com/en/products/wwise/)を使用しているため、これもインストールする必要がある。
 
 :::danger
-Even if you are not planning on making sounds, you still need wwise, otherwise the project will not compile
+例えサウンドを作る予定がなくともWwiseは必要です。プロジェクトがコンパイルできなくなってしまいます。
 :::
 
-1) To install [Wwise](https://www.audiokinetic.com/en/products/wwise/) click `Download Audikinetic Launcher` [Download <FaDownload />](https://www.audiokinetic.com/en/download)
+1) [Wwise](https://www.audiokinetic.com/en/products/wwise/)をインストールするために`Download Audikinetic Launcher`をクリック [ダウンロード <FaDownload />](https://www.audiokinetic.com/en/download)
 
 
-![Download Audiokinetic Launcher](./assets/WwiseWebsiteDownload2.png)
+![Audiokinetic Launcherのダウンロード](./assets/WwiseWebsiteDownload2.png)
 
 :::note
-This will require you to make an account.
+ダウンロードのためにアカウントを作る必要があります。
 :::
 
-2) After downloading the launcher, install it and login.
-2) Head over to the `Wwise` tab.
-3) On the bottom left of your screen you should see an `Install A New Version` Header.
-4) Select `2021.1.11` as your [Wwise](https://www.audiokinetic.com/en/products/wwise/) version and press install
+2) ランチャーをダウンロードしたら、インストールしログイン
+2) `Wwise`タブを開く
+3) 画面の左下に`Install A New Version`ヘッダーがある
+4) [Wwise](https://www.audiokinetic.com/en/products/wwise/)のバージョンとして`2021.1.11`を選択しInstallを押す
 
-![Install A New Version](./assets/WwiseInstallNewVersion.png)
+![新しいバージョンのインストール](./assets/WwiseInstallNewVersion.png)
 
 :::info
-On the next page, select:
+次のページでは以下を選択して下さい:
 
 - SDK (C++)
 - Microsoft -> Windows -> Visual Studio 2022
 :::
 
-The selection should look like so:
+選択は以下のようになるはずです:
 
-![Install Options](./assets/WwiseInstallSelection.png)
+![インストールの設定](./assets/WwiseInstallSelection.png)
 
-5) Now press `Next`, On the plugins page you don't need any, so hit `Install`!
-6) After installing the [Wwise](https://www.audiokinetic.com/en/products/wwise/) SDK, Head over to the `Unreal Engine` Tab.
-7) Press the <FaDownload /> button, and select `Offline Integration Files`
+5) `Next`を押し、どのプラグインも必要ないのでそのまま`Install`を押しましょう!
+6) [Wwise](https://www.audiokinetic.com/en/products/wwise/) SDKのインストールが終わったら、`Unreal Engine`タブを開く
+7) <FaDownload /> ボタンを押して、`Offline Integration Files`を選択する
 
-![Offline integration files](./assets/WwiseOfflineIntegrationFiles.png)
+![オフライン統合ファイル](./assets/WwiseOfflineIntegrationFiles.png)
 
-8) In the `Integration Version` Choose `2021.1.11` for the Wwise version. Set the directory to a memorable location, and hit install!
+8) `Integration Version`ではWwiseのバージョンとして`2021.1.11`を選択します。ディレクトリを分かりやすい場所に設定し、インストールを押します!
 
-### Finished
+### 完了
 
 :::note
-You will need this directory later, remember where you installed these files.
+このディレクトリは後で必要になるので、これらのファイルをインストールした場所は覚えておきましょう。
 :::

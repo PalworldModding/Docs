@@ -8,31 +8,31 @@
     "description": "The label for category Palworld Modding Kit in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Palworld Modding Kit.link.generated-index.description": {
-    "message": "A quick overview of the Palworld Modding Kit.",
+    "message": "Palworld Modding Kitの概要。",
     "description": "The generated-index page description for category Palworld Modding Kit in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Useful Tools": {
-    "message": "Useful Tools",
+    "message": "便利なツール",
     "description": "The label for category Useful Tools in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Useful Tools.link.generated-index.description": {
-    "message": "A useful set of tools to assist you in developing with Palworld Modding Kit.",
+    "message": "Palworld Modding Kitでの開発を支援する便利なツール群。",
     "description": "The generated-index page description for category Useful Tools in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Creating A Blueprint Mod": {
-    "message": "Creating A Blueprint Mod",
+    "message": "Blueprint Modの作成",
     "description": "The label for category Creating A Blueprint Mod in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Asset Swapping": {
-    "message": "Asset Swapping",
+    "message": "アセット差し替え",
     "description": "The label for category Asset Swapping in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Lua Modding": {
-    "message": "Lua Modding",
-    "description": "The label for category Lua Modding in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Lua Interop": {
+    "message": "Luaとの相互運用",
+    "description": "The label for category Lua Interop in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Lua Modding.link.generated-index.description": {
-    "message": "A guide on doing two-way interop with Lua from Blueprints",
-    "description": "The generated-index page description for category Lua Modding in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Lua Interop.link.generated-index.description": {
+    "message": "BlueprintsとLuaの相互運用のためのガイド。",
+    "description": "The generated-index page description for category Lua Interop in sidebar tutorialSidebar"
   }
 }
