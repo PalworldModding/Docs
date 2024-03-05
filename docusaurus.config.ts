@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import tabBlocks from "docusaurus-remark-plugin-tab-blocks";
 
 const config: Config = {
   title: 'Palworld Modding Docs',
@@ -59,14 +60,31 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/PalworldModding/Docs',
+          remarkPlugins: [tabBlocks],
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/PalworldModding/Docs',
+          remarkPlugins: [
+            [
+              tabBlocks,
+              // optional plugin configuration
+              {
+                labels: [
+                  ["json", "JSON"],
+                  ["jsx", "JSX"],
+                  ["tsx", "TSX"],
+                ],
+              },
+            ],
+          ],
+        },
+        pages: {
+          remarkPlugins: [tabBlocks],
         },
         theme: {
           customCss: './src/css/custom.css',
