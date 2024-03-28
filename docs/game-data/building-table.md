@@ -16,6 +16,8 @@ export function GetImageByName(props) {
 }
 
 <div className={styles["pak-container"]}>
+  <code>Pal/Content/Pal/DataTable/MapObject/Building/DT_BuildObjectDataTable.uasset</code>
+  <code>Pal/Content/Pal/DataTable/MapObject/Building/DT_BuildObjectIconDataTable.uasset</code>
 </div>
 
 <div className={styles["table-with-icons"]}>
