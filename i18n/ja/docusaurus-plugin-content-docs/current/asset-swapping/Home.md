@@ -2,25 +2,21 @@
 sidebar_position: 1
 ---
 
-# 必要なツールと概要
+# Required Tools & Intro
 
-このガイドは[KURAMAAA0](https://github.com/KURAMAAA0/PalModding)によって書かれました。
+This guide is written by [KURAMAAA0](https://github.com/KURAMAAA0/PalModding)
 
-このガイドは[Latenos](https://github.com/Latenos/PalWorldModDocs)によって日本語に翻訳されました。
+### How to make Asset Swaps
 
-### アセット差し替えMODの作り方
+This guide will go on how to make an asset swap mod for Palworld. After reading this guide, you should be able to create asset swaps of and not limited to: Rigged 3D assets such as Pals or NPCs, static 3D assets such as items, weapons or any object, textures such Pal textures, Player textures or World textures and images such as icons or HUD elements.
 
-このガイドでは、Palworldのアセット差し替えMODを作成する方法について説明します。
+## Required tools:
 
-このガイドを読むと、パルやNPCなどのリグ付き3Dアセット、アイテム、武器、オブジェクトなどの静的な3Dアセット、パルのテクスチャ、プレイヤーのテクスチャ、ワールドのテクスチャ、アイコンやHUDなどの画像テクスチャのアセット差し替えMODを作成できるようになります。
+- [FModel](https://fmodel.app/) to go through game files and export them.
+    - `Palworld Mappings File` ([direct download](https://github.com/KURAMAAA0/PalModding/raw/main/Assset%20Swap%20Guide/Mappings.usmap "direct download")), required to use FModel on Palworld.
+- [Unreal Engine 5.1.1](https://www.unrealengine.com/en-US/download) to package the final mod.
+  - *Be sure to select 5.1.1, as it is the version matching the one Palworld used.*
+- [Blender](https://www.blender.org/download/) to edit and export the 3D models.
+  - DarklightGames' psk/psa importer (https://github.com/DarklightGames/io_scene_psk_psa/releases) to import game files into Blender.
 
-## 必要なツール
-
-- [FModel](https://fmodel.app/)を使用してゲームファイルを調べ、エクスポートします。
-    - `Palworld Mappings File` ([直接ダウンロード](https://github.com/KURAMAAA0/PalModding/raw/main/Assset%20Swap%20Guide/Mappings.usmap "直接ダウンロード"))がパルワールドでFModelを使用するために必要です。
-- [Unreal Engine 5.1.1](https://www.unrealengine.com/en-US/download)を使用して最終的にMODをパッケージ化します。
-  - *パルワールドが使用しているバージョンと一致させるため、必ず 5.1.1 を選択してください。*
-- [Blender](https://www.blender.org/download/)を使用して3Dモデルを編集し、エクスポートします。
-  - DarklightGames氏制作の psk/psa importerアドオン (https://github.com/DarklightGames/io_scene_psk_psa/releases) がゲームファイルをBlenderにインポートするのに必要です。
-
-さぁ、始めよう。
+Let's begin.

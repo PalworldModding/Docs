@@ -20,7 +20,6 @@ export function GetImageByName(props) {
 </div>
 
 <div className={styles["table-with-icons"]}>
-
 | Icon                                                                           | Name                                                         | Item ID                                                      |
 |--------------------------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
 | <GetImageByName imageName="T_itemicon_Accessory_AT_1"/>                        | Attack Pendant                                               | Accessory_AT_1                                               |
@@ -183,7 +182,7 @@ export function GetImageByName(props) {
 | <GetImageByName imageName="T_itemicon_Material_Blueprint"/>                    | Golden Crown Schematic 2                                     | Blueprint_Head002_2                                          |
 | <GetImageByName imageName="T_itemicon_Material_Blueprint"/>                    | Golden Crown Schematic 3                                     | Blueprint_Head002_3                                          |
 | <GetImageByName imageName="T_itemicon_Material_Blueprint"/>                    | Golden Crown Schematic 4                                     | Blueprint_Head002_4                                          |
-| <GetImageByName imageName="T_itemicon_Material_Blueprint"/>                    | ITEM_NAME_Blueprint_Head002_5                                | Blueprint_Head002_5                                          |
+| <GetImageByName imageName="T_itemicon_Material_Blueprint"/>                    | Blueprint for Golden Crown 5                                 | Blueprint_Head002_5                                          |
 | <GetImageByName imageName="T_itemicon_Material_Blueprint"/>                    | Long-eared Headband Schematic 1                              | Blueprint_Head003_1                                          |
 | <GetImageByName imageName="T_itemicon_Material_Blueprint"/>                    | Long-eared Headband Schematic 2                              | Blueprint_Head003_2                                          |
 | <GetImageByName imageName="T_itemicon_Material_Blueprint"/>                    | Long-eared Headband Schematic 3                              | Blueprint_Head003_3                                          |
@@ -388,11 +387,11 @@ export function GetImageByName(props) {
 | <GetImageByName imageName="T_Icon_hund_gun_UI_debug_poison"/>                  | Unused Item                                                  | Debug_Handgun_Poison                                         |
 | <GetImageByName imageName="T_Icon_hund_gun_UI_debug_stun"/>                    | Unused Item                                                  | Debug_Handgun_Stun                                           |
 | <GetImageByName imageName="T_Icon_hund_gun_UI_debug_wetness"/>                 | Unused Item                                                  | Debug_Handgun_Wetness                                        |
-| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 1                                                  | DecalGun_1                                                   |
-| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 2                                                  | DecalGun_2                                                   |
-| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 3                                                  | DecalGun_3                                                   |
-| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 4                                                  | DecalGun_4                                                   |
-| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 5                                                  | DecalGun_5                                                   |
+| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 1 +0                                               | DecalGun_1                                                   |
+| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 2 +1                                               | DecalGun_2                                                   |
+| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 3 +2                                               | DecalGun_3                                                   |
+| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 4 +3                                               | DecalGun_4                                                   |
+| <GetImageByName imageName="T_itemicon_Weapon_DecalGun"/>                       | Decal Gun 5 +4                                               | DecalGun_5                                                   |
 | <GetImageByName imageName="T_itemicon_Food_DeerLocoMoco"/>                     | Eikthyrdeer Loco Moco                                        | DeerLocoMoco                                                 |
 | <GetImageByName imageName="T_itemicon_Food_DeerStew"/>                         | Eikthyrdeer Stew                                             | DeerStew                                                     |
 | <GetImageByName imageName="T_itemicon_Material_Diamond"/>                      | Diamond                                                      | Diamond                                                      |
@@ -844,11 +843,11 @@ export function GetImageByName(props) {
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Boltmane Saddle                                              | SkillUnlock_ElecLion                                         |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Minigun"/>         | Grizzbolt's Minigun                                          | SkillUnlock_ElecPanda                                        |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Elphidran Saddle                                             | SkillUnlock_FairyDragon                                      |
-| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Water Elphidran Saddle                                       | SkillUnlock_FairyDragon_Water                                |
+| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Elphidran Aqua Saddle                                        | SkillUnlock_FairyDragon_Water                                |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Feather Ostrich Saddle                                       | SkillUnlock_FeatherOstrich                                   |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Fenglope Saddle                                              | SkillUnlock_FengyunDeeper                                    |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Pyrin Saddle                                                 | SkillUnlock_FireKirin                                        |
-| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Dark Pyrin Saddle                                            | SkillUnlock_FireKirin_Dark                                   |
+| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Pyrin Noct Saddle                                            | SkillUnlock_FireKirin_Dark                                   |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Arsox Saddle                                                 | SkillUnlock_FlameBuffalo                                     |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Dinossom Saddle                                              | SkillUnlock_FlowerDinosaur                                   |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Dinossom Lux Saddle                                          | SkillUnlock_FlowerDinosaur_Electric                          |
@@ -872,14 +871,14 @@ export function GetImageByName(props) {
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Frostallion Noct Saddle                                      | SkillUnlock_IceHorse_Dark                                    |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_MultiMissile"/>    | Jetragon's Missile Launcher                                  | SkillUnlock_JetDragon                                        |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Kingpaca Saddle                                              | SkillUnlock_KingAlpaca                                       |
-| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Ice Kingpaca Saddle                                          | SkillUnlock_KingAlpaca_Ice                                   |
+| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Kingpaca Cryst Saddle                                        | SkillUnlock_KingAlpaca_Ice                                   |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Blazamut Saddle                                              | SkillUnlock_KingBahamut                                      |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Univolt Saddle                                               | SkillUnlock_Kirin                                            |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Harness"/>         | Foxparks's Harness                                           | SkillUnlock_Kitsunebi                                        |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_MultiMissile"/>    | Relaxaurus's Missile Launcher                                | SkillUnlock_LazyDragon                                       |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_MultiMissile"/>    | Relaxaurus Lux's Missile Launcher                            | SkillUnlock_LazyDragon_Electric                              |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Blazehowl Saddle                                             | SkillUnlock_Manticore                                        |
-| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Dark Kingferno Saddle                                        | SkillUnlock_Manticore_Dark                                   |
+| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Blazehowl Noct Saddle                                        | SkillUnlock_Manticore_Dark                                   |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_AssaultRifle"/>    | Tanzee's Assault Rifle                                       | SkillUnlock_Monkey                                           |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Sweepa Saddle                                                | SkillUnlock_MopKing                                          |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Grintale Saddle                                              | SkillUnlock_NaughtyCat                                       |
@@ -889,18 +888,18 @@ export function GetImageByName(props) {
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Ragnahawk Saddle                                             | SkillUnlock_RedArmorBird                                     |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Paladius Saddle                                              | SkillUnlock_SaintCentaur                                     |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Broncherry Saddle                                            | SkillUnlock_SakuraSaurus                                     |
-| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Water Broncherry Saddle                                      | SkillUnlock_SakuraSaurus_Water                               |
+| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Broncherry Aqua Saddle                                       | SkillUnlock_SakuraSaurus_Water                               |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Surfent Saddle                                               | SkillUnlock_Serpent                                          |
-| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Aquadon Terra Saddle                                         | SkillUnlock_Serpent_Ground                                   |
+| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Surfent Terra Saddle                                         | SkillUnlock_Serpent_Ground                                   |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Quivern Saddle                                               | SkillUnlock_SkyDragon                                        |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Suzaku Saddle                                                | SkillUnlock_Suzaku                                           |
-| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Water Suzaku Saddle                                          | SkillUnlock_Suzaku_Water                                     |
+| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Suzaku Aqua Saddle                                           | SkillUnlock_Suzaku_Water                                     |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Beakon Saddle                                                | SkillUnlock_ThunderBird                                      |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Rayhound Saddle                                              | SkillUnlock_ThunderDog                                       |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Jormuntide Saddle                                            | SkillUnlock_Umihebi                                          |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Jormuntide Ignis Saddle                                      | SkillUnlock_Umihebi_Fire                                     |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Reptyro Saddle                                               | SkillUnlock_VolcanicMonster                                  |
-| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Ice Reptyro Saddle                                           | SkillUnlock_VolcanicMonster_Ice                              |
+| <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Reptyro Cryst Saddle                                         | SkillUnlock_VolcanicMonster_Ice                              |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Saddle"/>          | Chillet Saddle                                               | SkillUnlock_WeaselDragon                                     |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Gloves"/>          | Hangyu's Gloves                                              | SkillUnlock_WindChimes                                       |
 | <GetImageByName imageName="T_itemicon_Essential_SkillUnlock_Gloves"/>          | Hangyu Cryst's Glove                                         | SkillUnlock_WindChimes_Ice                                   |

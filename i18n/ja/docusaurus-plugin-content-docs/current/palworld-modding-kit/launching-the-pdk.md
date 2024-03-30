@@ -2,36 +2,37 @@
 sidebar_position: 3
 ---
 
-# PDKの起動 - Part 3
+# Launching The PDK - Part 3
 
-## これまでのステップを全てこなし、遂に準備が整った! 
+## After doing all of those steps, we are ready! 
 
-## `Pal.uproject`ファイルをダブルクリックしUnreal Engineで開く!
+## Double-click the `Pal.uproject` file and it should open in Unreal Engine!
 
-
-:::note
-モジュールが古く再コンパイルする必要があると表示されたら、**YES**を押します。
-:::
-
-:::warning
-Windowsは長いファイルパスを**本当に**嫌います。**モジュールの再コンパイルが必要だと繰り返し表示され続ける場合は、ファイルパスが長すぎる可能性があります。**
-git cloneを使わずにZIPをダウンロードした場合は特にそうでしょう。
-`palworldmoddingkit`フォルダの名前を変更したり全ての`-`を削除してみて下さい。また、ドライブのルートに近づけてみて下さい。
-:::
-
-:::warning
-Wwiseは起動する度に現在のUnreal Engineバージョンと互換性がないと言ってきますが、**YES**を押します。
-:::
-
-:::warning
-ファイルがUnreal Engineで開かず代わりに関連付けを求められた場合は、Unreal Engineで開き、そこからファイルを開いて下さい。
-:::
 
 :::note
-起動時にWwiseプロジェクトパスの問題に関するポップアップが表示されるかもしれませんが、無視して隅のXボタンを押してポップアップを閉じます。
+If it tells you that modules are out of date and need to be recompiled, press **YES**
+:::
+
+:::warning
+Windows REALLY hates long file paths. **If it continues to tell you that modules need to be recompiled, your file path may be too long.**
+This will be especially true if you downloaded the ZIP instead of using git clone. Try renaming the
+`palworldmoddingkit` folder, and removing the `-` and everything after it. You can also try moving it closer to the root
+of your drive.
+:::
+
+:::warning
+Wwise will complain about not being compatible with the current Unreal Engine version every single time you start, click **YES**
+:::
+
+:::warning
+If the file doesn't open in unreal engine and instead asks you for associations, open Unreal Engine, and open the file from there instead
+:::
+
+:::note
+You may see a popup on launch about Wwise project path issues, ignore it and press the X in the corner to close the popup.
 ![WwisePathIssue](./assets/ResetWwisePath.png)
 :::
 
 :::danger
-何も起こってないと思うかもしれませんが、Unreal Engineはエディタを開く前にバックグラウンドで多くのものをコンパイルする必要があります。使用しているコンピュータのスペックによっては**長い**時間が掛かる場合があります。
+You may think nothing is happening, Unreal Engine has to compile a lot of things in the background before the editor opens. This may take a LONG while depending on your computers specifications.
 :::
