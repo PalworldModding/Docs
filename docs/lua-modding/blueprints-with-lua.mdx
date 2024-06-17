@@ -7,6 +7,10 @@ First, we have to let our Lua mod know that the Blueprints mod is active. We'll 
 
 This function will return your ModActor as a parameter to your Lua mod. Your Lua mod will then use your ModActor to call the functions inside of it. After making this `Lua_ModInitialized` function, we'll need to set an output parameter which will include our ModActor blueprint. This is what gets sent to our Lua mod so we can cache it and call our other functions found inside the blueprint.
 
+:::note
+When creating events in blueprints for use with Lua mods, make sure the event name is unique. Currently, RegisterCustomEvent only allows one hook per event name; otherwise, any previous hook with the same name will get overwritten and won't be called at all. This also means that multiple Lua mods can't hook to the same blueprint event, for example, in case the blueprint mod in question is a library. This may change in the future, but for now this is the implementation.
+:::
+
 Your function should look like this:
 
 ![1](./assets/blueprints-with-lua/2.png)
