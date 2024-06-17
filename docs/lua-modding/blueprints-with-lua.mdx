@@ -128,7 +128,10 @@ Now when we call `ModActor:PrintPalNameFromHolder(HolderComponent)` from our Lua
 
 As you can see from the image above, we take the `PalOtomoHolderComponentBase` that's passed in, use the `TryGetCurrentSelectPalActor` function to get the currently selected Pal's `CharacterParameterComponent`, then use the `GetNickname` function to get that Pal's nickname. We use the `FormatText` method to create a readable string that takes the Pal's name as an input, then convert the formatted text to a string before printing our new string to the mod loader with `PrintToModLoader`.
 
-After that's done, you're ready to test your new mod. Assuming your Lua mod is set up correctly in the game's installation folder, follow the steps in the [Exporting The Project](/palworld-modding-kit/congratulations.md) section to export your mod's .pak file, copy the .pak file to the game's pak directory under `Palworld/Pal/Content/Paks`, then start the game.
+After that's done, you're ready to test your new mod. Assuming your Lua mod is set up correctly in the game's installation folder, follow the steps in the [Exporting The Project](/palworld-modding-kit/congratulations.md) section to export your mod's .pak file, copy the .pak file into the LogicMods folder located in `Palworld/Pal/Content/Paks`, then start the game.
+:::note
+If you don't have a LogicMods folder in your Paks folder yet, you can create it yourself.
+:::
 
 If everything is correct, you should see your Lua mod's message print in the mod loader when you start the game. Try sending out one of your pals, and you'll see your pal's name printed to the mod loader from your Blueprints mod.
 
