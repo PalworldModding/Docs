@@ -15,11 +15,17 @@ Your function should look like this:
 
 ![1](./assets/blueprints-with-lua/2.png)
 
-:::note
-If you have multiple ModActor blueprints in the dropdown (which will happen if you've created more than one Blueprints mod), make sure the ModActor Object Reference is targeting your specific mod. You can tell if you're targeting your mod if you only see "ModActor" when hovering over the option, like so:
-
-![3](./assets/blueprints-with-lua/3.png)
-:::
+<details>
+    <summary>If you have multiple ModActor blueprints in the dropdown</summary>
+    <div>
+        This can be avoided by creating another Actor blueprint within your mod's folder and letting that blueprint handle all of the logic instead. By doing this, ModActor is only responsible for spawning the "core" Actor blueprint, and you'll have an easier time since you can reference that 'core' Actor instead. <br/>As an example, assuming we have a mod called MyFirstMod, we'll create a new BP_FirstModCore Actor blueprint in the folder next to ModActor: <br/>
+        ![folder](./assets/blueprints-with-lua/folder.png)<br/>
+        After that, we'll spawn a new BP_FirstModCore actor from inside ModActor: <br/>
+        ![spawnActor](./assets/blueprints-with-lua/spawnActor.png) <br/>
+        Lastly, we'll handle the logic from inside the BP_FirstModCore blueprint and continue the tutorial from there:<br/>
+        ![actorHandlingLogic](./assets/blueprints-with-lua/actorHandlingLogic.png)<br/>
+    </div>
+</details>
 
 Now we'll connect the PostBeginPlay event to this function. As mentioned in the [Setting Up A Basic Mod](creating-blueprint-mods/mod-setup-1.mdx) section, PreBeginPlay is called too early to initialize our mod, so we'll use PostBeginPlay instead.
 
