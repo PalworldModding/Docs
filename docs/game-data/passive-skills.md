@@ -7,17 +7,17 @@ sidebar_position: 4
 import styles from "./styles.module.css";
 
 <div className={styles["pak-container"]}>
-  <code>Pal/Content/Pal/DataTable/Character/DT_PalMonsterParameter.uasset</code>
+  <code>Pal/Content/Pal/DataTable/PassiveSkill/DT_PassiveSkill_Main.uasset</code>
 </div>
 
 <div className={styles["table-with-icons"]}>
 
 | Passive Skill Name                                                             | In Code Name                                                 | Always Used By                                               |
 |--------------------------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
-| Hooligan                                                                       | PAL_rude                                                     | Goirat                                                       |
+| Hooligan                                                                       | PAL_rude                                                     | Gorirat                                                      |
 | Coward                                                                         | PAL_ALLAttack_down1                                          | Cattiva                                                      |
 | Hard Skin                                                                      | Deffence_up1                                                 | Astegon, Warsect, Digtoise                                   |
-| Glutton                                                                        | PAL_FullStomach_Up_1                                         | LazyDragon                                                   |
+| Glutton                                                                        | PAL_FullStomach_Up_1                                         | Relaxaurus                                                   |
 | Abnormal                                                                       | ElementResist_Normal_1_PAL                                   | Lovander                                                     |
 | Celestial Emperor                                                              | ElementBoost_Normal_2_PAL                                    | Paladius                                                     |
 | Lord of the Underworld                                                         | ElementBoost_Dark_2_PAL                                      | Necromus                                                     |
