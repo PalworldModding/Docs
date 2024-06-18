@@ -21,6 +21,7 @@ process is very similar to a normal model swap except for some key differences i
 
 ## Critical Notes
 - This method works for adding physics to **CUSTOM BONES** in both Hair and Head Swaps. It does **NOT** work for adding physics bones to Outfit swaps. (Unless you like T-posing everywhere)So it works best doing them all together and choosing which Kawaii parts will be Hair and which will be Head.
+  - Can be done using only Hair swap or only Head swap for the Kawaii Items if preferred.
 - As long as you're adding physics to Default Bones on an Outfit, that'll work without the Compatible Skeletons. Can skip right to the Kawaii section for that.
 ####
 This is absolutely not a replacement for the bone reorder and animation tool by **`Shifty`**
@@ -31,12 +32,18 @@ Can be used in combination with Jiggle Physics (18+) guide by **`Dytser`**
 
 ## Tools Needed
 
-- FModel
-- Blender
-- UE 5.1
-- Kawaii Physics plugin 1.10
-- UnrealPak
-
+- [FModel](https://fmodel.app/); Allows you to extract, view, and find files from the game
+  - Updated Mapping file for Palworld
+    - Can be found on the [**Palworld Modding Community**](https://discord.gg/qHTZNcvYsv) Discord
+- [Blender](https://www.blender.org/download/); 3D Modeling Software
+  - psk/psa importer
+    - [for Versions 2.8-2.9](https://github.com/Befzz/blender3d_import_psk_psa/releases/tag/v2.8.3)
+    - [for Version 4.1](https://github.com/DarklightGames/io_scene_psk_psa/releases)
+- [Unreal Engine 5.1.1](https://www.unrealengine.com/en-US/download)
+- [Kawaii Physics Plugin 1.10](https://github.com/pafuhana1213/KawaiiPhysics/releases/tag/20221203-v1.10.0); Physics Simulation Addon for UE used by the game
+  - Specific version ~ KawaiiPhysics_5_1_20221203.zip
+- UnrealPak; For compiling into game readable pak files
+  - Can be found on the [**Palworld Modding Community**](https://discord.gg/qHTZNcvYsv) Discord
 
 ## Preview
 See **`Gif 01`** for a brief preview of what this guide accomplishes
@@ -152,6 +159,7 @@ linked to the spine
     - Any Custom added bones Above the Waist will error when aiming side to side while mounted. This has something to do with the animation lock of the root bone.
     - To Fix. all above waist added bones must use names of existing in game bones that are not being used by the Outfit Swap. 
         - All the Hair bones can be used to fix this **`SEE IMAGE 19`**
+          - [List of Hair Bones](https://docs.google.com/document/d/1kBmoOP-K0QBaEn1EcXzmJlzZ2b1mySK3VzlfVTdbpzY/edit?pli=1) compiled and provided by **`BackwoodsBeast`** from the [**Palworld Modding Community**](https://discord.gg/qHTZNcvYsv) Discord
     - This bug persists on anything with applied physics even if not using Kawaii. ie. spring controllers for jiggle physics
         - I recommend repurposing the backpack bones as weight paint for breasts
 <table>
@@ -397,6 +405,21 @@ Second image shows how it looks pulled into the other swaps after setup
 - Open the `Skeleton`
     - Under the `Asset Details` Tab, Add a `Compatible Skeleton` and set it to the `SK_PalHuman_Skeleton` from the *Outfit FBX*  **`SEE IMAGE 11`**
         - **IMPORTANT** This tab might be hidden by default for you, click on Window on the top bar to turn it on
+    - If you would like helmets to be visible with your swap then you need to add replacement **Skeletal Sockets** to the head bone
+        - Relative Position of these sockets can be found using FModel however may need adjustment specific to your model
+            - Socket_HairAttach_HeadEquip_top01
+                - Controls the following Helmets: Monarch's Crown, Golden Crown, Graduation Cap, Witch's Crown (Ultra)
+            - Socket_HairAttach_HeadEquip_top02
+                - Controls the following Helmets: Long-eared Headband
+            - Socket_HairAttach_HeadEquip_top03
+                - Controls the following Helmets: Silk Hat
+            - Socket_HairAttach_HeadEquip_front
+                - Controls the following Helmets: Metal Helm, Refined Metal Helm, Pal Metal Helm
+            - Socket_HairAttach_Ear02_L
+                - Controls the following Helmets: Feathered Hair Band
+            - Not Controlled by Sockets in the Hair as they replace the Hair when equipped
+                - Following helmets: Soft Hat, Tocotoco Cap, Grinning Tocotoco Cap, Farming Hat, Tricorne, Helmet, Bowler Hat, Gumoss Cap, Penking Cap, Katress Cap, Witch Hat
+                - **IMPORTANT** Equipping any of these will hide the entire Kawaii Hair File and add a small Hair effect linked to the model
 - Open the `Animation Blueprint`
      - Set up your Kawaii physics and Collision. **`SEE IMAGE 12`**
         - I wont go into detail on this as its quite involved but I will link a very informative Video at the end of this for how to do it. 
