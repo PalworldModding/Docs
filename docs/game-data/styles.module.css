@@ -50,6 +50,13 @@
     left: 0;
 }
 
+.pal-raid-icon {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    filter: hue-rotate(260deg) brightness(150%)
+}
+
 .pak-container {
     display: flex;
     flex-direction: column;
