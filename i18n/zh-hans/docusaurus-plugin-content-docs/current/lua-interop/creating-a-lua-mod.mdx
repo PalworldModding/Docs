@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+---
+
+# Creating a Lua Mod
+
+First off, to create a lua mod, we need to head into the dir where we have UE4SS installed, and go inside of the `Mods` folder. 
+
+In that folder, let's create a new folder called `TestLuaInteropMod`.
+
+Open this folder, and create:
+
+import { FaFile, FaFolder } from "react-icons/fa";
+
+* <FaFile/> File `enabled.txt` - this file is used to tell ue4ss that your mod should be enabled
+
+* <FaFolder/> Folder `Scripts` - this will store all our lua scripts of the mod
+
+Open the `Scripts` folder, and create a `main.lua` file. This file will be the entrypoint of our mod, and we will do all of our logic here.
+
+:::note
+You can have your scripts spread over multiple files, but this will not be covered in this tutorial
+:::
+
+Your folder structure should now look like this:
+
+![Mod Structure](./assets/ModStructure.png)
+
+Now open your `main.lua` file in your favorite code editor, and let's actually write some code!
+
