@@ -44,6 +44,7 @@ export function GetImageByName(props) {
 <GetImageByName  imageName="T_BlackMetalDragon_icon_normal"/>                              | Astegon                                                 | BlackMetalDragon                    |
 <GetImageByName isBoss="true" imageName="T_BlackMetalDragon_icon_normal"/>                         | Astegon (Boss)                                          | BOSS_BlackMetalDragon               |
 <GetImageByName  imageName="T_BossDemo_Image_Volcano"/>                          | Axel & Orserk                                           | GYM_ThunderDragonMan                |
+<GetImageByName  imageName="T_BossDemo_Image_Volcano"/>                        | Axel & Orserk                                           | GYM_ThunderDragonMan_2              |
 <GetImageByName  imageName="T_BlueDragon_icon_normal"/>                                    | Azurobe                                                 | BlueDragon                          |
 <GetImageByName isBoss="true" imageName="T_BlueDragon_icon_normal"/>                               | Azurobe (Boss)                                          | BOSS_BlueDragon                     |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                    | BadCatgirl                                              | BadCatgirl                          |
@@ -65,6 +66,10 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                               | BlackPuppy (Boss)                                       | BOSS_BlackPuppy                     |
 <GetImageByName  imageName="T_KingBahamut_icon_normal"/>                                   | Blazamut                                                | KingBahamut                         |
 <GetImageByName isBoss="true" imageName="T_KingBahamut_icon_normal"/>                              | Blazamut (Boss)                                         | BOSS_KingBahamut                    |
+<GetImageByName  imageName="T_KingBahamut_Dragon_icon_normal"/>                            | Blazamut Ryu                                            | KingBahamut_Dragon                  |
+<GetImageByName isBoss="true" imageName="T_KingBahamut_Dragon_icon_normal"/>                       | Blazamut Ryu (Boss)                                     | BOSS_KingBahamut_Dragon             |
+<GetImageByName isRaidBoss="true" imageName="T_KingBahamut_Dragon_icon_normal"/>                       | Blazamut Ryu (Raid Boss)                                | RAID_KingBahamut_Dragon             |
+<GetImageByName isRaidBoss="true" imageName="T_KingBahamut_Dragon_icon_normal"/>                     | Blazamut Ryu (Raid Boss)                                | RAID_KingBahamut_Dragon_2           |
 <GetImageByName  imageName="T_Manticore_icon_normal"/>                                     | Blazehowl                                               | Manticore                           |
 <GetImageByName isBoss="true" imageName="T_Manticore_icon_normal"/>                                | Blazehowl (Boss)                                        | BOSS_Manticore                      |
 <GetImageByName  imageName="T_Manticore_Dark_icon_normal"/>                                | Blazehowl Noct                                          | Manticore_Dark                      |
@@ -85,10 +90,8 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | BrownRabbit (Boss)                                      | BOSS_BrownRabbit                    |
 <GetImageByName  imageName="T_Ronin_icon_normal"/>                                         | Bushi                                                   | Ronin                               |
 <GetImageByName isBoss="true" imageName="T_Ronin_icon_normal"/>                                    | Bushi (Boss)                                            | BOSS_Ronin                          |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                    | Bushi Noct                                              | Ronin_Dark                          |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                               | Bushi Noct  (Boss)                                      | BOSS_Ronin_Dark                     |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                   | CandleGhost                                             | CandleGhost                         |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | CandleGhost (Boss)                                      | BOSS_CandleGhost                    |
+<GetImageByName  imageName="T_Ronin_Dark_icon_normal"/>                                    | Bushi Noct                                              | Ronin_Dark                          |
+<GetImageByName isBoss="true" imageName="T_Ronin_Dark_icon_normal"/>                               | Bushi Noct (Boss)                                       | BOSS_Ronin_Dark                     |
 <GetImageByName  imageName="T_BerryGoat_icon_normal"/>                                     | Caprity                                                 | BerryGoat                           |
 <GetImageByName isBoss="true" imageName="T_BerryGoat_icon_normal"/>                                | Caprity (Boss)                                          | BOSS_BerryGoat                      |
 <GetImageByName  imageName="T_PinkCat_icon_normal"/>                                       | Cattiva                                                 | PinkCat                             |
@@ -101,22 +104,24 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_ChickenPal_icon_normal"/>                               | Chikipi (Boss)                                          | BOSS_ChickenPal                     |
 <GetImageByName  imageName="T_WeaselDragon_icon_normal"/>                                  | Chillet                                                 | WeaselDragon                        |
 <GetImageByName isBoss="true" imageName="T_WeaselDragon_icon_normal"/>                             | Chillet (Boss)                                          | BOSS_WeaselDragon                   |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                             | Chillet Ignis                                           | WeaselDragon_Fire                   |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                        | Chillet Ignis  (Boss)                                   | BOSS_WeaselDragon_Fire              |
+<GetImageByName  imageName="T_WeaselDragon_Fire_icon_normal"/>                             | Chillet Ignis                                           | WeaselDragon_Fire                   |
+<GetImageByName isBoss="true" imageName="T_WeaselDragon_Fire_icon_normal"/>                        | Chillet Ignis (Boss)                                    | BOSS_WeaselDragon_Fire              |
 <GetImageByName  imageName="T_CuteButterfly_icon_normal"/>                                 | Cinnamoth                                               | CuteButterfly                       |
 <GetImageByName isBoss="true" imageName="T_CuteButterfly_icon_normal"/>                            | Cinnamoth (Boss)                                        | BOSS_CuteButterfly                  |
 <GetImageByName  imageName="T_WoolFox_icon_normal"/>                                       | Cremis                                                  | WoolFox                             |
 <GetImageByName isBoss="true" imageName="T_WoolFox_icon_normal"/>                                  | Cremis (Boss)                                           | BOSS_WoolFox                        |
+<GetImageByName  imageName="T_KendoFrog_icon_normal"/>                                     | Croajiro                                                | KendoFrog                           |
+<GetImageByName isBoss="true" imageName="T_KendoFrog_icon_normal"/>                                | Croajiro (Boss)                                         | BOSS_KendoFrog                      |
 <GetImageByName  imageName="T_WhiteTiger_icon_normal"/>                                    | Cryolinx                                                | WhiteTiger                          |
 <GetImageByName isBoss="true" imageName="T_WhiteTiger_icon_normal"/>                               | Cryolinx (Boss)                                         | BOSS_WhiteTiger                     |
 <GetImageByName  imageName="T_DreamDemon_icon_normal"/>                                    | Daedream                                                | DreamDemon                          |
 <GetImageByName isBoss="true" imageName="T_DreamDemon_icon_normal"/>                               | Daedream (Boss)                                         | BOSS_DreamDemon                     |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                     | DarkAlien                                               | DarkAlien                           |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | DarkAlien (Boss)                                        | BOSS_DarkAlien                      |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                               | DarkMechaDragon                                         | DarkMechaDragon                     |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                          | DarkMechaDragon (Boss)                                  | BOSS_DarkMechaDragon                |
 <GetImageByName  imageName="T_DarkMutant_icon_normal"/>                                    | DarkMutant                                              | DarkMutant                          |
 <GetImageByName isBoss="true" imageName="T_DarkMutant_icon_normal"/>                               | DarkMutant (Boss)                                       | BOSS_DarkMutant                     |
+<GetImageByName  imageName="T_FeatherOstrich_icon_normal"/>                                | Dazemu                                                  | FeatherOstrich                      |
+<GetImageByName isBoss="true" imageName="T_FeatherOstrich_icon_normal"/>                           | Dazemu (Boss)                                           | BOSS_FeatherOstrich                 |
 <GetImageByName  imageName="T_RaijinDaughter_icon_normal"/>                                | Dazzi                                                   | RaijinDaughter                      |
 <GetImageByName isBoss="true" imageName="T_RaijinDaughter_icon_normal"/>                           | Dazzi (Boss)                                            | BOSS_RaijinDaughter                 |
 <GetImageByName  imageName="T_NegativeKoala_icon_normal"/>                                 | Depresso                                                | NegativeKoala                       |
@@ -129,6 +134,8 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_FlowerDinosaur_Electric_icon_normal"/>                  | Dinossom Lux (Boss)                                     | BOSS_FlowerDinosaur_Electric        |
 <GetImageByName  imageName="T_Garm_icon_normal"/>                                          | Direhowl                                                | Garm                                |
 <GetImageByName isBoss="true" imageName="T_Garm_icon_normal"/>                                     | Direhowl (Boss)                                         | BOSS_Garm                           |
+<GetImageByName  imageName="T_SifuDog_icon_normal"/>                                       | Dogen                                                   | SifuDog                             |
+<GetImageByName isBoss="true" imageName="T_SifuDog_icon_normal"/>                                  | Dogen (Boss)                                            | BOSS_SifuDog                        |
 <GetImageByName  imageName="T_BlackFurDragon_icon_normal"/>                                | Dragostrophe                                            | BlackFurDragon                      |
 <GetImageByName isBoss="true" imageName="T_BlackFurDragon_icon_normal"/>                           | Dragostrophe (Boss)                                     | BOSS_BlackFurDragon                 |
 <GetImageByName  imageName="T_LazyCatfish_icon_normal"/>                                   | Dumud                                                   | LazyCatfish                         |
@@ -147,8 +154,6 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_FairyDragon_Water_icon_normal"/>                        | Elphidran Aqua (Boss)                                   | BOSS_FairyDragon_Water              |
 <GetImageByName  imageName="T_Horus_icon_normal"/>                                         | Faleris                                                 | Horus                               |
 <GetImageByName isBoss="true" imageName="T_Horus_icon_normal"/>                                    | Faleris (Boss)                                          | BOSS_Horus                          |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | FeatherOstrich                                          | FeatherOstrich                      |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                           | FeatherOstrich (Boss)                                   | BOSS_FeatherOstrich                 |
 <GetImageByName  imageName="T_CatVampire_icon_normal"/>                                    | Felbat                                                  | CatVampire                          |
 <GetImageByName isBoss="true" imageName="T_CatVampire_icon_normal"/>                               | Felbat (Boss)                                           | BOSS_CatVampire                     |
 <GetImageByName  imageName="T_FengyunDeeper_icon_normal"/>                                 | Fenglope                                                | FengyunDeeper                       |
@@ -169,6 +174,7 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_BluePlatypus_icon_normal"/>                             | Fuack (Boss)                                            | BOSS_BluePlatypus                   |
 <GetImageByName  imageName="T_CuteMole_icon_normal"/>                                      | Fuddler                                                 | CuteMole                            |
 <GetImageByName isBoss="true" imageName="T_CuteMole_icon_normal"/>                                 | Fuddler (Boss)                                          | BOSS_CuteMole                       |
+<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                       | GYM_MoonQueen_2_Servant                                 | GYM_MoonQueen_2_Servant             |
 <GetImageByName  imageName="T_Eagle_icon_normal"/>                                         | Galeclaw                                                | Eagle                               |
 <GetImageByName isBoss="true" imageName="T_Eagle_icon_normal"/>                                    | Galeclaw (Boss)                                         | BOSS_Eagle                          |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                   | GhostRabbit                                             | GhostRabbit                         |
@@ -181,8 +187,8 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | GoldenHorse (Boss)                                      | BOSS_GoldenHorse                    |
 <GetImageByName  imageName="T_Gorilla_icon_normal"/>                                       | Gorirat                                                 | Gorilla                             |
 <GetImageByName isBoss="true" imageName="T_Gorilla_icon_normal"/>                                  | Gorirat (Boss)                                          | BOSS_Gorilla                        |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | Gorirat Terra                                           | Gorilla_Ground                      |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                           | Gorirat Terra  (Boss)                                   | BOSS_Gorilla_Ground                 |
+<GetImageByName  imageName="T_Gorilla_Ground_icon_normal"/>                                | Gorirat Terra                                           | Gorilla_Ground                      |
+<GetImageByName isBoss="true" imageName="T_Gorilla_Ground_icon_normal"/>                           | Gorirat Terra (Boss)                                    | BOSS_Gorilla_Ground                 |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                   | GrassDragon                                             | GrassDragon                         |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | GrassDragon (Boss)                                      | BOSS_GrassDragon                    |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                      | GrimGirl                                                | GrimGirl                            |
@@ -191,8 +197,6 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_NaughtyCat_icon_normal"/>                               | Grintale (Boss)                                         | BOSS_NaughtyCat                     |
 <GetImageByName  imageName="T_ElecPanda_icon_normal"/>                                     | Grizzbolt                                               | ElecPanda                           |
 <GetImageByName isBoss="true" imageName="T_ElecPanda_icon_normal"/>                                | Grizzbolt (Boss)                                        | BOSS_ElecPanda                      |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                   | GuardianDog                                             | GuardianDog                         |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | GuardianDog (Boss)                                      | BOSS_GuardianDog                    |
 <GetImageByName  imageName="T_PlantSlime_icon_normal"/>                                    | Gumoss                                                  | PlantSlime                          |
 <GetImageByName isBoss="true" imageName="T_PlantSlime_icon_normal"/>                               | Gumoss (Boss)                                           | BOSS_PlantSlime                     |
 <GetImageByName isBoss="true" imageName="T_PlantSlime_icon_normal"/>                        | Gumoss (Boss)                                           | BOSS_PlantSlime_Flower              |
@@ -202,16 +206,20 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_WindChimes_Ice_icon_normal"/>                           | Hangyu Cryst (Boss)                                     | BOSS_WindChimes_Ice                 |
 <GetImageByName  imageName="T_HadesBird_icon_normal"/>                                     | Helzephyr                                               | HadesBird                           |
 <GetImageByName isBoss="true" imageName="T_HadesBird_icon_normal"/>                                | Helzephyr (Boss)                                        | BOSS_HadesBird                      |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                            | Helzephyr Lux                                           | HadesBird_Electric                  |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                       | Helzephyr Lux  (Boss)                                   | BOSS_HadesBird_Electric             |
+<GetImageByName  imageName="T_HadesBird_Electric_icon_normal"/>                            | Helzephyr Lux                                           | HadesBird_Electric                  |
+<GetImageByName isBoss="true" imageName="T_HadesBird_Electric_icon_normal"/>                       | Helzephyr Lux (Boss)                                    | BOSS_HadesBird_Electric             |
 <GetImageByName  imageName="T_WizardOwl_icon_normal"/>                                     | Hoocrates                                               | WizardOwl                           |
 <GetImageByName isBoss="true" imageName="T_WizardOwl_icon_normal"/>                                | Hoocrates (Boss)                                        | BOSS_WizardOwl                      |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                     | HoodGhost                                               | HoodGhost                           |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | HoodGhost (Boss)                                        | BOSS_HoodGhost                      |
+<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                    | IceNarwhal                                              | IceNarwhal                          |
+<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                               | IceNarwhal (Boss)                                       | BOSS_IceNarwhal                     |
 <GetImageByName  imageName="T_Baphomet_icon_normal"/>                                      | Incineram                                               | Baphomet                            |
 <GetImageByName isBoss="true" imageName="T_Baphomet_icon_normal"/>                                 | Incineram (Boss)                                        | BOSS_Baphomet                       |
 <GetImageByName  imageName="T_Baphomet_Dark_icon_normal"/>                                 | Incineram Noct                                          | Baphomet_Dark                       |
 <GetImageByName isBoss="true" imageName="T_Baphomet_Dark_icon_normal"/>                            | Incineram Noct (Boss)                                   | BOSS_Baphomet_Dark                  |
+<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | JellyfishFairy                                          | JellyfishFairy                      |
+<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                           | JellyfishFairy (Boss)                                   | BOSS_JellyfishFairy                 |
 <GetImageByName  imageName="T_JetDragon_icon_normal"/>                                     | Jetragon                                                | JetDragon                           |
 <GetImageByName isBoss="true" imageName="T_JetDragon_icon_normal"/>                                | Jetragon (Boss)                                         | BOSS_JetDragon                      |
 <GetImageByName  imageName="T_Hedgehog_icon_normal"/>                                      | Jolthog                                                 | Hedgehog                            |
@@ -224,18 +232,16 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_Umihebi_Fire_icon_normal"/>                             | Jormuntide Ignis (Boss)                                 | BOSS_Umihebi_Fire                   |
 <GetImageByName  imageName="T_CatMage_icon_normal"/>                                       | Katress                                                 | CatMage                             |
 <GetImageByName isBoss="true" imageName="T_CatMage_icon_normal"/>                                  | Katress (Boss)                                          | BOSS_CatMage                        |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                  | Katress Ignis                                           | CatMage_Fire                        |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                             | Katress Ignis  (Boss)                                   | BOSS_CatMage_Fire                   |
+<GetImageByName  imageName="T_CatMage_Fire_icon_normal"/>                                  | Katress Ignis                                           | CatMage_Fire                        |
+<GetImageByName isBoss="true" imageName="T_CatMage_Fire_icon_normal"/>                             | Katress Ignis (Boss)                                    | BOSS_CatMage_Fire                   |
 <GetImageByName  imageName="T_Kelpie_icon_normal"/>                                        | Kelpsea                                                 | Kelpie                              |
 <GetImageByName isBoss="true" imageName="T_Kelpie_icon_normal"/>                                   | Kelpsea (Boss)                                          | BOSS_Kelpie                         |
 <GetImageByName  imageName="T_Kelpie_Fire_icon_normal"/>                                   | Kelpsea Ignis                                           | Kelpie_Fire                         |
 <GetImageByName isBoss="true" imageName="T_Kelpie_Fire_icon_normal"/>                              | Kelpsea Ignis (Boss)                                    | BOSS_Kelpie_Fire                    |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                     | KendoFrog                                               | KendoFrog                           |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | KendoFrog (Boss)                                        | BOSS_KendoFrog                      |
+<GetImageByName  imageName="T_SmallArmadillo_icon_normal"/>                                | Kikit                                                   | SmallArmadillo                      |
+<GetImageByName isBoss="true" imageName="T_SmallArmadillo_icon_normal"/>                           | Kikit (Boss)                                            | BOSS_SmallArmadillo                 |
 <GetImageByName  imageName="T_NegativeOctopus_icon_normal"/>                               | Killamari                                               | NegativeOctopus                     |
 <GetImageByName isBoss="true" imageName="T_NegativeOctopus_icon_normal"/>                          | Killamari (Boss)                                        | BOSS_NegativeOctopus                |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                            | KingBahamut_Dragon                                      | KingBahamut_Dragon                  |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                       | KingBahamut_Dragon (Boss)                               | BOSS_KingBahamut_Dragon             |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                     | KingWhale                                               | KingWhale                           |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | KingWhale (Boss)                                        | BOSS_KingWhale                      |
 <GetImageByName  imageName="T_KingAlpaca_icon_normal"/>                                    | Kingpaca                                                | KingAlpaca                          |
@@ -244,10 +250,10 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_KingAlpaca_Ice_icon_normal"/>                           | Kingpaca Cryst (Boss)                                   | BOSS_KingAlpaca_Ice                 |
 <GetImageByName  imageName="T_AmaterasuWolf_icon_normal"/>                                 | Kitsun                                                  | AmaterasuWolf                       |
 <GetImageByName isBoss="true" imageName="T_AmaterasuWolf_icon_normal"/>                            | Kitsun (Boss)                                           | BOSS_AmaterasuWolf                  |
+<GetImageByName  imageName="T_WingGolem_icon_normal"/>                                     | Knocklem                                                | WingGolem                           |
+<GetImageByName isBoss="true" imageName="T_WingGolem_icon_normal"/>                                | Knocklem (Boss)                                         | BOSS_WingGolem                      |
 <GetImageByName  imageName="T_SheepBall_icon_normal"/>                                     | Lamball                                                 | SheepBall                           |
 <GetImageByName isBoss="true" imageName="T_SheepBall_icon_normal"/>                                | Lamball (Boss)                                          | BOSS_SheepBall                      |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                  | LeafPrincess                                            | LeafPrincess                        |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                             | LeafPrincess (Boss)                                     | BOSS_LeafPrincess                   |
 <GetImageByName  imageName="T_LizardMan_icon_normal"/>                                     | Leezpunk                                                | LizardMan                           |
 <GetImageByName isBoss="true" imageName="T_LizardMan_icon_normal"/>                                | Leezpunk (Boss)                                         | BOSS_LizardMan                      |
 <GetImageByName  imageName="T_LizardMan_Fire_icon_normal"/>                                | Leezpunk Ignis                                          | LizardMan_Fire                      |
@@ -255,10 +261,13 @@ export function GetImageByName(props) {
 <GetImageByName  imageName="T_Carbunclo_icon_normal"/>                                     | Lifmunk                                                 | Carbunclo                           |
 <GetImageByName isBoss="true" imageName="T_Carbunclo_icon_normal"/>                                | Lifmunk (Boss)                                          | BOSS_Carbunclo                      |
 <GetImageByName  imageName="T_BossDemo_Image_Forest"/>                                 | Lily & Lyleen                                           | GYM_LilyQueen                       |
+<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                               | Lily & Lyleen                                           | GYM_LilyQueen_2                     |
 <GetImageByName  imageName="T_Werewolf_icon_normal"/>                                      | Loupmoon                                                | Werewolf                            |
 <GetImageByName isBoss="true" imageName="T_Werewolf_icon_normal"/>                                 | Loupmoon (Boss)                                         | BOSS_Werewolf                       |
 <GetImageByName  imageName="T_PinkLizard_icon_normal"/>                                    | Lovander                                                | PinkLizard                          |
 <GetImageByName isBoss="true" imageName="T_PinkLizard_icon_normal"/>                               | Lovander (Boss)                                         | BOSS_PinkLizard                     |
+<GetImageByName  imageName="T_LeafPrincess_icon_normal"/>                                  | Lullu                                                   | LeafPrincess                        |
+<GetImageByName isBoss="true" imageName="T_LeafPrincess_icon_normal"/>                             | Lullu (Boss)                                            | BOSS_LeafPrincess                   |
 <GetImageByName  imageName="T_Mutant_icon_normal"/>                                        | Lunaris                                                 | Mutant                              |
 <GetImageByName isBoss="true" imageName="T_Mutant_icon_normal"/>                                   | Lunaris (Boss)                                          | BOSS_Mutant                         |
 <GetImageByName  imageName="T_LilyQueen_icon_normal"/>                                     | Lyleen                                                  | LilyQueen                           |
@@ -272,6 +281,7 @@ export function GetImageByName(props) {
 <GetImageByName  imageName="T_GhostBeast_icon_normal"/>                                    | Maraith                                                 | GhostBeast                          |
 <GetImageByName isBoss="true" imageName="T_GhostBeast_icon_normal"/>                               | Maraith (Boss)                                          | BOSS_GhostBeast                     |
 <GetImageByName  imageName="T_BossDemo_Image_Desert"/>                                     | Marcus & Faleris                                        | GYM_Horus                           |
+<GetImageByName  imageName="T_BossDemo_Image_Desert"/>                                   | Marcus & Faleris                                        | GYM_Horus_2                         |
 <GetImageByName  imageName="T_Bastet_icon_normal"/>                                        | Mau                                                     | Bastet                              |
 <GetImageByName isBoss="true" imageName="T_Bastet_icon_normal"/>                                   | Mau (Boss)                                              | BOSS_Bastet                         |
 <GetImageByName  imageName="T_Bastet_Ice_icon_normal"/>                                    | Mau Cryst                                               | Bastet_Ice                          |
@@ -280,20 +290,16 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_Alpaca_icon_normal"/>                                   | Melpaca (Boss)                                          | BOSS_Alpaca                         |
 <GetImageByName  imageName="T_DarkScorpion_icon_normal"/>                                  | Menasting                                               | DarkScorpion                        |
 <GetImageByName isBoss="true" imageName="T_DarkScorpion_icon_normal"/>                             | Menasting (Boss)                                        | BOSS_DarkScorpion                   |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                           | Menasting Terra                                         | DarkScorpion_Ground                 |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                      | Menasting Terra  (Boss)                                 | BOSS_DarkScorpion_Ground            |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                     | MoonQueen                                               | MoonQueen                           |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | MoonQueen (Boss)                                        | BOSS_MoonQueen                      |
+<GetImageByName  imageName="T_DarkScorpion_Ground_icon_normal"/>                           | Menasting Terra                                         | DarkScorpion_Ground                 |
+<GetImageByName isBoss="true" imageName="T_DarkScorpion_Ground_icon_normal"/>                      | Menasting Terra (Boss)                                  | BOSS_DarkScorpion_Ground            |
+<GetImageByName  imageName="T_MimicDog_icon_normal"/>                                      | Mimog                                                   | MimicDog                            |
+<GetImageByName isBoss="true" imageName="T_MimicDog_icon_normal"/>                                 | Mimog (Boss)                                            | BOSS_MimicDog                       |
 <GetImageByName  imageName="T_GrassPanda_icon_normal"/>                                    | Mossanda                                                | GrassPanda                          |
 <GetImageByName isBoss="true" imageName="T_GrassPanda_icon_normal"/>                               | Mossanda (Boss)                                         | BOSS_GrassPanda                     |
 <GetImageByName  imageName="T_GrassPanda_Electric_icon_normal"/>                           | Mossanda Lux                                            | GrassPanda_Electric                 |
 <GetImageByName isBoss="true" imageName="T_GrassPanda_Electric_icon_normal"/>                      | Mossanda Lux (Boss)                                     | BOSS_GrassPanda_Electric            |
 <GetImageByName  imageName="T_CowPal_icon_normal"/>                                        | Mozzarina                                               | CowPal                              |
 <GetImageByName isBoss="true" imageName="T_CowPal_icon_normal"/>                                   | Mozzarina (Boss)                                        | BOSS_CowPal                         |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | MushroomDragon                                          | MushroomDragon                      |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                           | MushroomDragon (Boss)                                   | BOSS_MushroomDragon                 |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                           | MushroomDragon_Dark                                     | MushroomDragon_Dark                 |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                      | MushroomDragon_Dark (Boss)                              | BOSS_MushroomDragon_Dark            |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                   | MysteryMask                                             | MysteryMask                         |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | MysteryMask (Boss)                                      | BOSS_MysteryMask                    |
 <GetImageByName  imageName="T_BlackCentaur_icon_normal"/>                                  | Necromus                                                | BlackCentaur                        |
@@ -304,6 +310,8 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_HawkBird_icon_normal"/>                                 | Nitewing (Boss)                                         | BOSS_HawkBird                       |
 <GetImageByName  imageName="T_NightFox_icon_normal"/>                                      | Nox                                                     | NightFox                            |
 <GetImageByName isBoss="true" imageName="T_NightFox_icon_normal"/>                                 | Nox (Boss)                                              | BOSS_NightFox                       |
+<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                   | OctopusGirl                                             | OctopusGirl                         |
+<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | OctopusGirl (Boss)                                      | BOSS_OctopusGirl                    |
 <GetImageByName  imageName="T_ThunderDragonMan_icon_normal"/>                              | Orserk                                                  | ThunderDragonMan                    |
 <GetImageByName isBoss="true" imageName="T_ThunderDragonMan_icon_normal"/>                         | Orserk (Boss)                                           | BOSS_ThunderDragonMan               |
 <GetImageByName  imageName="T_SaintCentaur_icon_normal"/>                                  | Paladius                                                | SaintCentaur                        |
@@ -317,6 +325,8 @@ export function GetImageByName(props) {
 <GetImageByName  imageName="T_dummy_icon"/>                                  | PinkKangaroo                                            | PinkKangaroo                        |
 <GetImageByName isBoss="true" imageName="T_dummy_icon"/>                             | PinkKangaroo (Boss)                                     | BOSS_PinkKangaroo                   |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                             | PlantSlime_Flower                                       | PlantSlime_Flower                   |
+<GetImageByName  imageName="T_ScorpionMan_icon_normal"/>                                   | Prixter                                                 | ScorpionMan                         |
+<GetImageByName isBoss="true" imageName="T_ScorpionMan_icon_normal"/>                              | Prixter (Boss)                                          | BOSS_ScorpionMan                    |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                  | PurpleSpider                                            | PurpleSpider                        |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                             | PurpleSpider (Boss)                                     | BOSS_PurpleSpider                   |
 <GetImageByName  imageName="T_FireKirin_icon_normal"/>                                     | Pyrin                                                   | FireKirin                           |
@@ -325,6 +335,8 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_FireKirin_Dark_icon_normal"/>                           | Pyrin Noct (Boss)                                       | BOSS_FireKirin_Dark                 |
 <GetImageByName  imageName="T_SkyDragon_icon_normal"/>                                     | Quivern                                                 | SkyDragon                           |
 <GetImageByName isBoss="true" imageName="T_SkyDragon_icon_normal"/>                                | Quivern (Boss)                                          | BOSS_SkyDragon                      |
+<GetImageByName  imageName="T_SkyDragon_Grass_icon_normal"/>                               | Quivern Botan                                           | SkyDragon_Grass                     |
+<GetImageByName isBoss="true" imageName="T_SkyDragon_Grass_icon_normal"/>                          | Quivern Botan (Boss)                                    | BOSS_SkyDragon_Grass                |
 <GetImageByName  imageName="T_RedArmorBird_icon_normal"/>                                  | Ragnahawk                                               | RedArmorBird                        |
 <GetImageByName isBoss="true" imageName="T_RedArmorBird_icon_normal"/>                             | Ragnahawk (Boss)                                        | BOSS_RedArmorBird                   |
 <GetImageByName  imageName="T_ThunderDog_icon_normal"/>                                    | Rayhound                                                | ThunderDog                          |
@@ -351,20 +363,22 @@ export function GetImageByName(props) {
 <GetImageByName isBoss="true" imageName="T_FlameBambi_icon_normal"/>                               | Rooby (Boss)                                            | BOSS_FlameBambi                     |
 <GetImageByName  imageName="T_Boar_icon_normal"/>                                          | Rushoar                                                 | Boar                                |
 <GetImageByName isBoss="true" imageName="T_Boar_icon_normal"/>                                     | Rushoar (Boss)                                          | BOSS_Boar                           |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                   | ScorpionMan                                             | ScorpionMan                         |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | ScorpionMan (Boss)                                      | BOSS_ScorpionMan                    |
+<GetImageByName  imageName="T_BossDemo_Image_Sakurajima"/>                                 | Saya & Selyne                                           | GYM_MoonQueen                       |
+<GetImageByName  imageName="T_BossDemo_Image_Sakurajima"/>                               | Saya & Selyne                                           | GYM_MoonQueen_2                     |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                       | Sekhmet                                                 | Sekhmet                             |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                                  | Sekhmet (Boss)                                          | BOSS_Sekhmet                        |
+<GetImageByName  imageName="T_MoonQueen_icon_normal"/>                                     | Selyne                                                  | MoonQueen                           |
+<GetImageByName isBoss="true" imageName="T_MoonQueen_icon_normal"/>                                | Selyne (Boss)                                           | BOSS_MoonQueen                      |
 <GetImageByName  imageName="T_BlackGriffon_icon_normal"/>                                  | Shadowbeak                                              | BlackGriffon                        |
 <GetImageByName isBoss="true" imageName="T_BlackGriffon_icon_normal"/>                             | Shadowbeak (Boss)                                       | BOSS_BlackGriffon                   |
+<GetImageByName  imageName="T_MushroomDragon_icon_normal"/>                                | Shroomer                                                | MushroomDragon                      |
+<GetImageByName isBoss="true" imageName="T_MushroomDragon_icon_normal"/>                           | Shroomer (Boss)                                         | BOSS_MushroomDragon                 |
+<GetImageByName  imageName="T_MushroomDragon_Dark_icon_normal"/>                           | Shroomer Noct                                           | MushroomDragon_Dark                 |
+<GetImageByName isBoss="true" imageName="T_MushroomDragon_Dark_icon_normal"/>                      | Shroomer Noct (Boss)                                    | BOSS_MushroomDragon_Dark            |
 <GetImageByName  imageName="T_WhiteMoth_icon_normal"/>                                     | Sibelyx                                                 | WhiteMoth                           |
 <GetImageByName isBoss="true" imageName="T_WhiteMoth_icon_normal"/>                                | Sibelyx (Boss)                                          | BOSS_WhiteMoth                      |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                       | SifuDog                                                 | SifuDog                             |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                                  | SifuDog (Boss)                                          | BOSS_SifuDog                        |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                               | SkyDragon_Grass                                         | SkyDragon_Grass                     |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                          | SkyDragon_Grass (Boss)                                  | BOSS_SkyDragon_Grass                |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | SmallArmadillo                                          | SmallArmadillo                      |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                           | SmallArmadillo (Boss)                                   | BOSS_SmallArmadillo                 |
+<GetImageByName  imageName="T_CandleGhost_icon_normal"/>                                   | Sootseer                                                | CandleGhost                         |
+<GetImageByName isBoss="true" imageName="T_CandleGhost_icon_normal"/>                              | Sootseer (Boss)                                         | BOSS_CandleGhost                    |
 <GetImageByName  imageName="T_ElecCat_icon_normal"/>                                       | Sparkit                                                 | ElecCat                             |
 <GetImageByName isBoss="true" imageName="T_ElecCat_icon_normal"/>                                  | Sparkit (Boss)                                          | BOSS_ElecCat                        |
 <GetImageByName  imageName="T_Serpent_icon_normal"/>                                       | Surfent                                                 | Serpent                             |
@@ -400,33 +414,38 @@ export function GetImageByName(props) {
 <GetImageByName  imageName="T_GrassRabbitMan_icon_normal"/>                                | Verdash                                                 | GrassRabbitMan                      |
 <GetImageByName isBoss="true" imageName="T_GrassRabbitMan_icon_normal"/>                           | Verdash (Boss)                                          | BOSS_GrassRabbitMan                 |
 <GetImageByName  imageName="T_BossDemo_Image_Desert"/>                              | Victor & Shadowbeak                                     | GYM_BlackGriffon                    |
+<GetImageByName  imageName="T_BossDemo_Image_Desert"/>                            | Victor & Shadowbeak                                     | GYM_BlackGriffon_2                  |
+<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                     | Victor & Shadowbeak                                     | GYM_BlackGriffon_2_Avatar           |
 <GetImageByName  imageName="T_CuteFox_icon_normal"/>                                       | Vixy                                                    | CuteFox                             |
 <GetImageByName isBoss="true" imageName="T_CuteFox_icon_normal"/>                                  | Vixy (Boss)                                             | BOSS_CuteFox                        |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                 | VolcanoDragon                                           | VolcanoDragon                       |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                            | VolcanoDragon (Boss)                                    | BOSS_VolcanoDragon                  |
 <GetImageByName  imageName="T_HerculesBeetle_icon_normal"/>                                | Warsect                                                 | HerculesBeetle                      |
+<GetImageByName  imageName="T_HerculesBeetle_Ground_icon_normal"/>                         | Warsect  Terra                                          | HerculesBeetle_Ground               |
+<GetImageByName isBoss="true" imageName="T_HerculesBeetle_Ground_icon_normal"/>                    | Warsect  Terra (Boss)                                   | BOSS_HerculesBeetle_Ground          |
 <GetImageByName isBoss="true" imageName="T_HerculesBeetle_icon_normal"/>                           | Warsect (Boss)                                          | BOSS_HerculesBeetle                 |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                         | Warsect Terra                                           | HerculesBeetle_Ground               |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                    | Warsect Terra  (Boss)                                   | BOSS_HerculesBeetle_Ground          |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                   | WaterLizard                                             | WaterLizard                         |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | WaterLizard (Boss)                                      | BOSS_WaterLizard                    |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                              | WhiteAlienDragon                                        | WhiteAlienDragon                    |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                         | WhiteAlienDragon (Boss)                                 | BOSS_WhiteAlienDragon               |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                     | WhiteDeer                                               | WhiteDeer                           |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | WhiteDeer (Boss)                                        | BOSS_WhiteDeer                      |
 <GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                             | WhiteShieldDragon                                       | WhiteShieldDragon                   |
 <GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                        | WhiteShieldDragon (Boss)                                | BOSS_WhiteShieldDragon              |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                     | WingGolem                                               | WingGolem                           |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                                | WingGolem (Boss)                                        | BOSS_WingGolem                      |
 <GetImageByName  imageName="T_FoxMage_icon_normal"/>                                       | Wixen                                                   | FoxMage                             |
 <GetImageByName isBoss="true" imageName="T_FoxMage_icon_normal"/>                                  | Wixen (Boss)                                            | BOSS_FoxMage                        |
-<GetImageByName  imageName="T_itemicon_Material_PalEgg_Unknown"/>                                  | Wixen Noct                                              | FoxMage_Dark                        |
-<GetImageByName isBoss="true" imageName="T_itemicon_Material_PalEgg_Unknown"/>                             | Wixen Noct  (Boss)                                      | BOSS_FoxMage_Dark                   |
+<GetImageByName  imageName="T_FoxMage_Dark_icon_normal"/>                                  | Wixen Noct                                              | FoxMage_Dark                        |
+<GetImageByName isBoss="true" imageName="T_FoxMage_Dark_icon_normal"/>                             | Wixen Noct (Boss)                                       | BOSS_FoxMage_Dark                   |
 <GetImageByName  imageName="T_SweetsSheep_icon_normal"/>                                   | Woolipop                                                | SweetsSheep                         |
 <GetImageByName isBoss="true" imageName="T_SweetsSheep_icon_normal"/>                              | Woolipop (Boss)                                         | BOSS_SweetsSheep                    |
 <GetImageByName  imageName="T_Yeti_icon_normal"/>                                          | Wumpo                                                   | Yeti                                |
 <GetImageByName isBoss="true" imageName="T_Yeti_icon_normal"/>                                     | Wumpo (Boss)                                            | BOSS_Yeti                           |
 <GetImageByName  imageName="T_Yeti_Grass_icon_normal"/>                                    | Wumpo Botan                                             | Yeti_Grass                          |
 <GetImageByName isBoss="true" imageName="T_Yeti_Grass_icon_normal"/>                               | Wumpo Botan (Boss)                                      | BOSS_Yeti_Grass                     |
+<GetImageByName  imageName="T_WhiteAlienDragon_icon_normal"/>                              | Xenogard                                                | WhiteAlienDragon                    |
+<GetImageByName isBoss="true" imageName="T_WhiteAlienDragon_icon_normal"/>                         | Xenogard (Boss)                                         | BOSS_WhiteAlienDragon               |
+<GetImageByName  imageName="T_DarkAlien_icon_normal"/>                                     | Xenovader                                               | DarkAlien                           |
+<GetImageByName isBoss="true" imageName="T_DarkAlien_icon_normal"/>                                | Xenovader (Boss)                                        | BOSS_DarkAlien                      |
+<GetImageByName  imageName="T_GuardianDog_icon_normal"/>                                   | Yakumo                                                  | GuardianDog                         |
+<GetImageByName isBoss="true" imageName="T_GuardianDog_icon_normal"/>                              | Yakumo (Boss)                                           | BOSS_GuardianDog                    |
 <GetImageByName  imageName="T_BossDemo_Image_Grass"/>                                 | Zoe & Grizzbolt                                         | GYM_ElecPanda                       |
+<GetImageByName  imageName="T_BossDemo_Image_Grass"/>                               | Zoe & Grizzbolt                                         | GYM_ElecPanda_2                     |
 </div>
