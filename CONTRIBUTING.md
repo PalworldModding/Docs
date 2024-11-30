@@ -10,7 +10,7 @@ These below are more just recommendations and you can use normal GitHub CLI if y
 
 [GitHub Desktop](https://github.com/apps/desktop)
 
-[Visual Studio Code](https://code.visualstudio.com/)
+[Visual Studio Code](https://code.visualstudio.com/) - **This is not Visual Studio, it's like Notepad, but better.**
 
 ## Setting up GitHub and a local repository
 
