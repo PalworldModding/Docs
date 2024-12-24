@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://pwmodding.wiki/blog</id>
+    <title>Palworld Modding Docs Blog</title>
+    <updated>2024-01-27T08:26:58.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://pwmodding.wiki/blog"/>
+    <subtitle>Palworld Modding Docs Blog</subtitle>
+    <icon>https://pwmodding.wiki/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Blog]]></title>
+        <id>https://pwmodding.wiki/blog/Blog</id>
+        <link href="https://pwmodding.wiki/blog/Blog"/>
+        <updated>2024-01-27T08:26:58.000Z</updated>
+    </entry>
+</feed>
