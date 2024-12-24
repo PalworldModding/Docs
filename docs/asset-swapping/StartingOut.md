@@ -18,7 +18,7 @@ If you cannot find it, go to your `Steam library -> Right Click -> Palworld -> M
 Click `OK` and go to FModel settings.
 Change your `Output Directory` to somewhere you'll find easily.
 In the `GAME` section, change `UE Versions` to `GAME_UE5_1`.
-In the `ADVANCED` section, check `Local Mapping File` and change `Mapping File Path` to the [Palworld Mapping File](https://github.com/KURAMAAA0/PalModding/raw/main/Assset%20Swap%20Guide/Mappings.usmap "Palworld mapping file") you downloaded earlier.
+In the `ADVANCED` section, check `Local Mapping File` and change `Mapping File Path` to the [Palworld Mapping File](https://github.com/PalworldModding/UsefulFiles/raw/refs/heads/master/Mappings.usmap) you downloaded earlier.
 
 On the left side of the settings, click on the `Models` tab.
 Change your `Model Export Directory` to somewhere you'll find easily.
