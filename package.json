@@ -1,6 +1,31 @@
 {
-  "name": "docs",
-  "version": "0.0.0",
+  "name": "palworld_docs",
+  "description": "Palworld Documentation",
+  "repository": {
+    "url": "https://github.com/PalworldModding/Docs/",
+    "type": "git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "docusaurus",
+    "palworld"
+  ],
+  "contributors": [
+    {
+      "url": "https://github.com/localcc",
+      "name": "localcc"
+    },
+    {
+      "name": "ItzDabbzz",
+      "url": "https://github.com/ItzDabbzz"
+    }
+  ],
+  "homepage": "https://pwmodding.wiki/",
+  "bugs": {
+    "url": "https://github.com/PalworldModding/Docs/issues"
+  },
+  "version": "0.0.5",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
