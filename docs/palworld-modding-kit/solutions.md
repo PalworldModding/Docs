@@ -16,10 +16,13 @@ This is an error that you'll get when trying to launch the Modding Kit if you're
 
 Solution found by **GungnirIncarnate**
 
-Go to Visual Studio Installer -> Modify -> Individual Components and add “MSVC v143 - VS 2022 c++ x64/x86 build tools (v14.38-17.8)”
-You can confirm if it’s installed the correct one by going to the VS install path and seeing if the folder is there (C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.38.33130)
-Change your “%appdata%\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml” to
-```
+Go to `Visual Studio Installer -> Modify -> Individual Components` and add `MSVC v143 - VS 2022 C++ x64/x86 Build Tools (v14.38-17.8)`
+
+You can confirm if it’s installed the correct one by going to the VS install path and seeing if the folder is there 
+`(C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.38.33130)`
+Change your `“%appdata%\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml”` to
+
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
     <WindowsPlatform>
