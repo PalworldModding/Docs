@@ -1,16 +1,30 @@
-# Website
+# Palworld Modding Documetation
+
+## Credits
+- [LocalCC](https://github.com/LocalCC)
+- [ItzDabbzz](https://github.com/ItzDabbzz)
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
 
-```
+Depending on your package manager, either run and add `yarn`, `pnpm` or `npm` to run the appropriate package install command(s).
+
+```properties
 $ yarn
+```
+
+```properties
+$ pnpm i
+```
+
+```properties
+$ npm i
 ```
 
 ### Local Development
 
-```
+```shell
 $ yarn start
 ```
 
@@ -18,7 +32,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 ### Build
 
-```
+```properties
 $ yarn build
 ```
 
@@ -28,13 +42,13 @@ This command generates static content into the `build` directory and can be serv
 
 Using SSH:
 
-```
+```properties
 $ USE_SSH=true yarn deploy
 ```
 
 Not using SSH:
 
-```
+```properties
 $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
