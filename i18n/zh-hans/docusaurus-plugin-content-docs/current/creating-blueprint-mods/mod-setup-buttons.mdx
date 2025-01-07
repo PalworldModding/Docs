@@ -1,0 +1,22 @@
+---
+sidebar_position: 1
+---
+
+# Mod Buttons
+
+- Create a String Variable called ModButtons in your ModActor, In the properties panel change the following to the 9 squares in a box
+
+![ModButtonsArray](./assets/ModButtonsArray.png)
+  - Create a new custom event called `ModMenuButtonPressed`
+
+  ![ModMenuButtonPressed](./assets/ModMenuButtonPressed.png)
+
+  - Under the newly created event, Add a input variable that is a `Integer` named `Index` ![ModMenuInt](./assets/MonMenuButtonPRessedInt.png)
+
+  - Next add a `Switch on Int` action, connected to the `ModMenuButtonPressed` event.
+    - For every single button you wish to have, you will add a pin to this `Switch On Int`
+    - Your pin's must match up to `ModButtons String Array` ![ModButtonSwitchOnInt](./assets/ModSwitchOnEvent.png)
+    - When a `ModButton` is clicked, it will send a Execute signal, through which every integer is connected to it.
+
+### Basic Example Of ModButtons & PrintToModLoader
+![Example](./assets/example.png)
