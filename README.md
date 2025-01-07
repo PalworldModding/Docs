@@ -1,8 +1,12 @@
 # Palworld Modding Documetation
 
-## Credits
+## Contributors
 - [LocalCC](https://github.com/LocalCC)
 - [ItzDabbzz](https://github.com/ItzDabbzz)
+- [Dyster](https://github.com/Dytser)
+- [Latenos](https://github.com/Latenos)
+- [Okaetsu](https://github.com/Okaetsu)
+- [Tctcl](https://github.com/Tctcl)
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
