@@ -2,7 +2,7 @@
 
 Written by [Guillotine](https://next.nexusmods.com/profile/GuilloMods/mods) - All mods in the link are made using this technique. 
 
-_Last updated: [09/12/24]_
+_Last updated: [26/12/24]_
 
 **Difficulty:** *Beginner Friendly.*
 
@@ -10,7 +10,7 @@ In this guide I will teach you how to edit datatables, certain blueprints and ot
 
 **Arguably** _easier than using Unreal, you won't have all the functionalities that Unreal has, but we can still do alot_ 
 
-**Note:** in order to make mods for the gamepass version, you will **need** to use Unreal Engine due to it being a different format. 
+- **Note:** in order to make mods for the gamepass version, you will **need** to use Unreal Engine due to it being a different format. 
 
 Programs you will **need** to follow along with this guide:
 - For finding and exporting the game-files you want to edit - [FModel](https://fmodel.app/)
@@ -38,9 +38,11 @@ Double click on `Pal-Windows.pak`
 
 Now you're greeted with alot of folders containing `Datatables` from the game, what we're looking for for this guide will be found in the `Item` folder.
 
-Now, in this folder you will see a file called `DT_ItemRecipeDataTable`, that sounds like what we're looking for but if you want to be sure, you can double click the file and read what is stored in it.
+Now, in this folder you will see a file called `DT_ItemRecipeDataTable_Common`, that sounds like what we're looking for but if you want to be sure, you can double click the file and read what is stored in it.
 
-![Picture of DT_ItemRecipeDataTable](./assets/UAssetGuide1/Image_1_Row_42.png)
+- **NOTE:** If the file you're intending to edit has a `_Common` variant, then that's the file you want to edit, editing the one **without** `_Common` does nothing.
+
+![Picture of DT_ItemRecipeDataTable](./assets/UAssetGuide1/ItemRecipeDataTable_Row_45.png)
 
 Time to grab the file to edit it, to do this, you right click the file and `Export Raw Data (.uasset)`
 
@@ -50,13 +52,13 @@ Let's edit
 
 First off, i want you to create a folder called "MyFirstMod_P" anywhere you want.
 
-**Note:** It's important that the folder name ends with `_P` for the game to be able to read your file over the official recipe datatable file.
+- **Note:** It's important that the folder name ends with `_P` for the game to be able to read your file over the official recipe datatable file.
 
 Next, i want you to locate your `FModel Export Folder`.
 
 Now, grab the `FIRST` folder, named "Pal" and drag it into your "MyFirstMod_P" folder
 
-**Note:** It's important that your mod `keeps the same folder structure` as the way it was exported, otherwise the game can't read it.
+- **Note:** It's important that your mod `keeps the same folder structure` as the way it was exported, otherwise the game can't read it.
 
 Time to open up UAssetGUI and set it up.
 
@@ -66,7 +68,7 @@ Then, top right make sure it says `Palworld` and `5.1` (the Unreal version the g
 
 ![Picture of Version Selection](./assets/UAssetGuide1/Image_2_Row_64.png)
 
-Now you can go ahead and `File > Open` and locate your "MyFirstMod_P" folder and go through it until you find the `DT_ItemRecipeDataTable.uasset`
+Now you can go ahead and `File > Open` and locate your "MyFirstMod_P" folder and go through it until you find the `DT_ItemRecipeDataTable_Common.uasset`
 
 We're in, click the + on `Export Data` > `Export 1` > `Table Info`. Now at the top you will see PalSphere, click it and now we can change the behaviour of the recipe itself.
 
@@ -82,7 +84,7 @@ Now insert that data into the file, so for example `Material1_Id - CopperIngot` 
 
 After you've imported all the changes you want to make, `CTRL + S` to save or `File > Save`.
 
-**Note:** It's important that you save after every edit in one specific table, meaning you can't edit `Palsphere` and then `PalSphere_Mega` without saving in between as UAssetGUI will be confused on what you want to save and you might have to start over if you move on without saving.
+- **Note:** It's important that you save after every edit in one specific table, meaning you can't edit `Palsphere` and then `PalSphere_Mega` without saving in between as UAssetGUI will be confused on what you want to save and you might have to start over if you move on without saving.
 
 Great, we have now edited the recipe and we can close UAssetGUI and move on to UnrealPak to turn our mod folder into a .pak file so it can be read by the game.
 
