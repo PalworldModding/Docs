@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpalworld_docs=self.webpackChunkpalworld_docs||[]).push([[3842],{27135:l=>{l.exports=JSON.parse('{"permalink":"/uk/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
