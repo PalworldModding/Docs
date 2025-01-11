@@ -2,7 +2,7 @@
 
 Written by [Guillotine](https://next.nexusmods.com/profile/GuilloMods/mods) - All mods in the link are made using this technique. 
 
-_Last updated: [09/12/24]_
+_Last updated: [26/12/24]_
 
 **Difficulty:** Intermediate
 
@@ -19,11 +19,15 @@ Programs you will **need** to follow along with this guide apart from the ones u
 
 Let's start by showing you how you can add more items to the merchants, this will teach you the basics of the technique we will use for the future guides.
 
-First I want you to export `DT_ItemShopCreateData`, either by going to `Pal>Content>Pal>Datatable>ItemShop` or at the top left, go `Packages>Search` and type what we want to find, in this case `ItemShopCreateData`.
+First I want you to export `DT_ItemShopCreateData_Common`, either by going to `Pal>Content>Pal>Datatable>ItemShop` or at the top left, go `Packages>Search` and type what we want to find, in this case `ItemShopCreateData`.
+
+- **NOTE:** Again, if your file has a `_Common` variant, make sure you edit that file and not the one without `_Common`
 
 Now open that file with UAssetGUI and go over to `Village_Shop / ProductDataArray` and scroll all the way down on the `right side`, you can see that we have 37 rows of "Variant" `PalItemShopCreateDataStruct` so let's add a new line here.
 
-Click the `PalItemShopCreateDataStruct` ONCE and copy + paste it to the next row and change the number to 38, hit `save` and `re-open` the file to update it.
+Click the `PalItemShopCreateDataStruct` ONCE and copy + paste it to the next row and change the number to 38. 
+
+`save` and `open the file again` to update it.
 
 ![1](./assets/UAssetGuide2/Image_1_Row_27.png)
 
@@ -33,22 +37,26 @@ Now when you go back to `Village_Shop / ProductDataArray` and scroll down on the
 
 Let's add Dog Coins, the ItemID for it is `DogCoin` so enter that at the top row of `StaticItemId` instead of `PalItem_ToSell_05`
 
+![2.1](./assets/UAssetGuide2/Merchant_Image_Row_36.png)
+
 Now you have 5 different properties to play around with and I will explain them in short
+- StaticItemId = the items static item ID > you can find them [here](https://pwmodding.wiki/docs/game-data/item-table)
 - ProductType = This will be explained in the `Step 3. Add functionality to existing items` section, come back later.
 - OverridePrice = The price you want the item to cost in the `Coin` currency
-- BuyRate = Multiplier for the price of the item decided in `itemdatatable`, just leave it at 1 (you used to have to do math but they were nice and added OverridePrice, thanks Pocketpair)
-- SellRate = the price the merchant will buy the item back for, just keep it at -1 for now
-- Stock = How many of this item the merchant will have in stock, put this at 0 or higher else the item will not be visible in the shop.
+- ProductNum = How many of this item will be sold in bulk
+- Stock = `-1 = not visible in shop.` - `0 = Infinite amount.` - `1 or higher` means that the merchant has a max amount of this item and stock, resets after one in game day.
 
-Congratulations, you have now added a new item to the Small Settlement merchant, open up the game and see if it worked.
+Congratulations, you can now buy `50x Dog Coins for 1 coin` at the `Small Settlement merchant`, install the mod and open up the game to see if it worked.
 
 Save this mod folder for when you come back after reading `Step 3. Add functionality to existing items`
+
+- **Hint** if you're coming back from `Step 3` and need further guidance, search for `EPalItemShopProductType` in vscode and you see we can change `"Normal"` to `"OnlyPurchaseOne"` on the `"ProductType"` category, this means a player can only buy this item `one time` in their full play through in your world, just like the jewelry slot items at the `Medal Merchant`.
 
 ## Step 2. Add recipes
 
 Now that you understand how to create new rows in a datatable, let's move onto adding new recipes and you will see how some files behave when trying to add new rows and how to combat it.
 
-I want you to export `DT_ItemRecipeDataTable` again, if you still have the mod folder from the first guide page, you can use that if you want.
+I want you to export `DT_ItemRecipeDataTable_Common` again, if you still have the mod folder from the first guide page, you can use that if you want.
 
 Now, I want you to open up `2 instances` of UAssetGUI and have them next to eachother, open the same Recipe file on both windows
 
@@ -74,7 +82,7 @@ Let's add that functionality to the Pal Gear Workbench in the next step.
 
 This guide will start introducing you a bit to blueprint editing, which can be tricky at some parts and sometimes it just won't let us do what we want, but I will show you a little of what we can do.
 
-**Note:** When working with blueprints, they will sometimes not allow us to open them and give us an error message, to combat this, I want you to export the whole `blueprint folder` as many files depend on the whole folder structure to be intact to allow us to even open the files, sometimes it will even tell us which file is missing and you can add that file to your `blueprint folder`. Store the folder wherever you want for future use.
+- **Note:** When working with blueprints, they will sometimes not allow us to open them and give us an error message, to combat this, I want you to export the whole `blueprint folder` as many files depend on the whole folder structure to be intact to allow us to even open the files, sometimes it will even tell us which file is missing and you can add that file to your `blueprint folder`. Store the folder wherever you want for future use.
 
 Now that you have a blueprint folder that you can work with, go ahead and also export `BP_BuildObject_WorkBench_SkillUnlock` and store it in a `new mod` folder for now.
 
