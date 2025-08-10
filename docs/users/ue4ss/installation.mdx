@@ -1,0 +1,43 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Installation (Client)
+
+So you're looking to get started with using UE4SS for Palworld? You've come to the right place! This guide will walk you through the installation steps for each platform that currently supports UE4SS. Linux is excluded from this guide since UE4SS does not officially support it yet.
+
+## Installing UE4SS
+
+This step can vary depending on the platform you're on so I will be splitting the instructions for each one in the form of buttons just below this text.
+
+<Tabs
+  defaultValue="steam"
+  values={[
+    {label: 'Steam', value: 'steam'},
+    {label: 'Game Pass', value: 'gamepass'},
+  ]}>
+  <TabItem value="steam">
+    1. First, we want to locate where Palworld is installed. Easy way to do this is to open Steam and find Palworld in your Library. Right-click it, select **Properties**, navigate to **Installed Files** and click on the button that says **Browse**. You are now at the root folder of your Palworld install.
+
+    2. You'll see a bunch of folders and files like Pal, Engine, Palworld.exe. Navigate into Pal > Binaries > Win64 and you should now see Palworld-Win64-Shipping.exe in the Win64 folder.
+
+    3. Locate your `UE4SS-Palworld.zip` or `UE4SS_v3.0.1-xxx-xxxxxxxx.zip` depending on if you went the manual route or not. Open the .zip file if it isn't open already and move the `ue4ss` folder and `dwmapi.dll` file into the Win64 folder you navigated to in the previous step. If you went the manual route when downloading UE4SS, then you'll have to move the downloaded `MemberVariablesLayout` file inside the ue4ss folder as well.
+
+    4. You have now successfully installed UE4SS for Steam version of Palworld, congrats! You may now proceed to the Configuration guide to ensure UE4SS is running smoothly when playing.
+  </TabItem>
+
+  <TabItem value="gamepass">
+    NOTE: This is meant for the PC version. You can't do modding on consoles!
+    
+    1. First, we want to locate where Palworld is installed. Easy way to do this is to open the Xbox app and find Palworld in **My Library**. Right-click it, select **Manage**, navigate to **Files** and click on the button that says **Browse**. You should now be in the folder where your Xbox games are installed and you can just navigate into Palworld > Content folder.
+
+    2. You should see a bunch of folders and files like Pal, Engine, gamelaunchhelper.exe. Navigate into Pal > Binaries > WinGDK and you should now see Palworld-WinGDK-Shipping.exe in the WinGDK folder.
+
+    3. Locate your `UE4SS-Palworld.zip` or `UE4SS_v3.0.1-xxx-xxxxxxxx.zip` depending on if you went the manual route or not. Open the .zip file if it isn't open already and move the `ue4ss` folder and `dwmapi.dll` file into the WinGDK folder you navigated to in the previous step. If you went the manual route when downloading UE4SS, then you'll have to move the downloaded `MemberVariablesLayout` file inside the `ue4ss` folder as well.
+
+    4. You have now successfully installed UE4SS for Game Pass version of Palworld, congrats! You may now proceed to the Configuration guide to ensure UE4SS is running smoothly when playing.
+  </TabItem>
+</Tabs>
