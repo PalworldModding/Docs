@@ -94,6 +94,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+      },
+    },
     // Replace with your project's social card
     colorMode: {
       defaultMode: 'dark',
@@ -104,30 +109,55 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: 'img/palworld.png',
+    image: 'img/palworldnew.png',
     navbar: {
       title: 'Palworld Modding Docs',
       logo: {
         alt: 'Palworld Modding Logo',
-        src: 'img/palworld.png',
+        src: 'img/palworldnew.png',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Documentation',
+          label: 'User Guide',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'devSidebar',
+          position: 'left',
+          label: 'Developer Guide',
+        },
+        /* TODO: This will have to wait until an automatic API docs generator gets implemented for our docs.
+        {
+          type: 'docSidebar',
+          sidebarId: 'apiSidebar',
+          position: 'left',
+          label: 'API Reference',
+        },
+        */
         // {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://github.com/PalworldModding',
           label: 'GitHub',
           position: 'right',
         },
         {
-          type: 'localeDropdown',
-          position: 'left',
-        },
+          type: 'dropdown',
+          label: 'Discord',
+          position: 'right',
+          items: [
+            {
+              label: 'Modding Community',
+              href: 'https://discord.gg/qHTZNcvYsv',
+            }
+          ]
+        }
       ],
     },
     footer: {
@@ -137,7 +167,7 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'PDK Installation',
+              label: 'PMK Installation',
               to: 'docs/category/palworld-modding-kit',
             },
           ],
@@ -162,10 +192,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/PalworldModding',

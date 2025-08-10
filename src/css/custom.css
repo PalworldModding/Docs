@@ -42,3 +42,11 @@
 .unusedevents[aria-selected='true'] {
   border-bottom-color: red;
 }
+
+.navbar__brand img {
+  border-radius: 25%;
+}
+
+html[data-theme='dark'] .token.prolog {
+  color: #9cdcfe !important; /* Small fix to make XML heading tag more visible */
+}
