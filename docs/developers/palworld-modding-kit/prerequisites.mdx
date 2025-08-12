@@ -1,0 +1,123 @@
+---
+sidebar_position: 1
+---
+
+# Prerequisites
+
+## Introduction to Modding Kit
+
+Palworld Modding Kit allows you to utilize Unreal Editor to create various mods that interact with the game, be it editing values, calling in-game functions to make actions happen or creating entirely new content for the game.
+
+Do note that this is an unofficial Modding Kit which means that you won't have access to the full game's code or content. It is meant to be a skeleton project for interfacing with the game's API.
+
+It is recommended to have a basic understanding of Unreal Engine and how to use the Editor and Blueprints, because the basics apply to Unreal modding regardless of which game it is. The only thing that changes is the API you're using, which in this case is Palworld.
+
+## Prerequisites
+
+You'll want to make sure you install all the prerequisites. If you skipped any steps, you will run into the "Pal could not be compiled" error once you launch the Modding Kit.
+
+### .NET 6
+import { FaDownload } from "react-icons/fa6";
+
+For Unreal Build Tools to function correctly, you will need to have .NET 6 installed on your system.
+
+[Download <FaDownload />](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore&os=windows&arch=x64)
+
+Click on the `Download x64` button to download the runtime:
+
+![Dotnet download](./assets/Dotnet.png)
+
+Once you've downloaded the installer, open it and install the runtime.
+
+### Visual Studio 2022
+
+You will need Visual Studio 2022 installed to be able to compile the Modding Kit, which is a process that happens when you first launch it. Community 2022 version will suffice.
+
+[Download <FaDownload />](https://visualstudio.microsoft.com/vs/) 
+
+While installing it, make sure to check the following components under the Workloads tab in the installer:
+
+
+![Visual Studio Installer Options](./assets/VisualStudioInstaller.png)
+![Visual Studio Installer Options 2](./assets/VisualStudioInstaller2.png)
+
+You'll also want to navigate to the Individual Components tab, search for `MSVC v143 - VS 2022 C++ x64/x86 Build Tools (v14.38-17.8)` and make sure it's checked.
+
+![](./assets/IndividualComponents.png)
+
+Then press Continue, and wait for Visual Studio to install.
+
+import { FaCirclePlus } from "react-icons/fa6";
+import Highlight from '@site/src/components/Highlight';
+
+### Unreal Engine 5.1
+
+After installing Visual Studio, we need to install Unreal Engine.
+
+1) Download Epic Games Launcher
+2) Open Epic Games Launcher
+3) Head over to `Unreal Engine` tab
+4) Go into `Library` tab
+5) Press the <Highlight color="#dea309">Gold <FaCirclePlus /></Highlight> to add a new version
+
+![Add new Unreal Engine version](./assets/EpicUnrealVersion.png)
+
+5) You should see a new card appear, with the ability to select an engine version.
+6) Select version `5.1`
+
+![5.1 Version](./assets/Versions.png)
+
+:::warning
+Any 5.1 version will work, it doesn't matter if it's 5.1 or 5.1.1
+:::
+
+### Wwise
+
+Palworld uses [Wwise](https://www.audiokinetic.com/en/products/wwise/) for its sounds, so we will need to install this too.
+
+:::danger
+Even if you are not planning on making sounds, you still need wwise, otherwise the project will not compile.
+:::
+
+1) To install [Wwise](https://www.audiokinetic.com/en/products/wwise/) click `Download Audiokinetic Launcher` [Download <FaDownload />](https://www.audiokinetic.com/en/download)
+
+
+![Download Audiokinetic Launcher](./assets/WwiseWebsiteDownload2.png)
+
+:::note
+This will require you to make an account.
+:::
+
+2) After downloading the launcher, install it and login.
+2) Head over to the `Wwise` tab.
+3) On the bottom left of your screen you should see an `Install A New Version` Header.
+4) Select `2021.1.11` as your [Wwise](https://www.audiokinetic.com/en/products/wwise/) version and press install
+
+![Install A New Version](./assets/WwiseInstallNewVersion.png)
+
+:::info
+On the next page, select:
+
+- SDK (C++)
+- Microsoft -> Windows -> Visual Studio 2022
+:::
+
+The selection should look like so:
+
+![Install Options](./assets/WwiseInstallSelection.png)
+
+5) Now press `Next`, On the plugins page you don't need any, so hit `Install`!
+6) After installing the Wwise SDK, Head over to the `Unreal Engine` Tab.
+7) Press the <FaDownload /> ` Download...` button, and select `Offline Integration Files`
+
+![Offline integration files](./assets/WwiseOfflineIntegrationFiles.png)
+
+8) In the `Integration Version` Choose `2021.1.11` for the Wwise version. Set the directory to a memorable location, and hit install!
+
+:::note
+You will need this directory later, remember where you installed these files.
+:::
+
+## Next Steps
+
+We're done with the Prerequisites and we can now move on to [Setup](./setup).

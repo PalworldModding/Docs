@@ -1,0 +1,32 @@
+---
+sidebar_position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Installation (Dedicated Server)
+
+This guide will be more focused towards third-party hosting rather than self-hosting since the steps for self-hosting are similar to a normal Steam install. Before purchasing a server, make sure the server provider supports mods because some might prevent ue4ss from working.
+
+If you are hosting it on your own machine then you can just follow the Steam installation guide in the [Installation (Client)](./installation) guide, but look for a PalServer folder instead if using steamcmd or Palworld Dedicated Server in your Steam Library if you're using that. You can skip this guide in this case entirely.
+
+:::warning
+Linux is not officially supported by UE4SS currently which means you will have to utilize Wine or Proton to run your server under Windows.
+:::
+
+## Installing UE4SS
+
+If you're on a third-party host, then those typically come with File Managers, however it is not recommended to use these to upload files because they can sometimes corrupt files during the upload process which will cause confusing issues with either ue4ss or mods not working. Corruption will typically present itself as the uploaded file being 0KB on the server.
+
+It is recommended to use an FTP client like [WinSCP](https://winscp.net/eng/download.php) or [FileZilla Client](https://filezilla-project.org/download.php?type=client) to upload your files to the server if the provider supports it. Use of an FTP client won't be covered in this since there are plenty of guides for that available online.
+
+1. Open your server's File Manager or connect to your server's FTP and locate the Win64 folder. If you can't find a Win64 folder and only see a Linux folder then your server is running on Linux which means ue4ss won't work either and you'll have to either see if you can change the server to run under Windows or look for another host.
+
+2. Once you have located the Win64 folder, go back to the UE4SS-Palworld.zip or UE4SS.zip depending on which method you chose for downloading UE4SS, open it and start uploading the ue4ss folder and dwmapi.dll into your server's Win64 folder. If you went the manual route, you'll also want to put the MemberVariableLayout.ini inside the ue4ss folder afterwards.
+
+3. That's everything, now we can move on to [configuring UE4SS](./configuration).
+
+:::warning
+It is difficult to give exact folder locations because hosts have different folder structures, e.g. some might have a traditional Pal/Binaries/Win64 structure while some won't. Some hosts also have automatic installation for UE4SS which is recommended to turn off if possible since they might be running an incompatible or older version of UE4SS with bugs that have been fixed ages ago in latest versions.
+:::

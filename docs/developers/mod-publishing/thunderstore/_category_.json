@@ -1,0 +1,8 @@
+{
+    "label": "Thunderstore",
+    "position": 1,
+    "link": {
+        "type": "generated-index",
+        "description": "A guide on publishing your mods to Thunderstore"
+    }
+}
