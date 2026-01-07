@@ -2,6 +2,7 @@
     "label": "Steam Workshop",
     "position": 2,
     "link": {
+        "slug": "category/dev/steam-workshop",
         "type": "generated-index",
         "description": "A guide on publishing your mods to the Steam Workshop"
     }
