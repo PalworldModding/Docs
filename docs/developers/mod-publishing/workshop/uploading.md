@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: How to upload your mods to Steam Workshop
 ---
 
 # Uploading
