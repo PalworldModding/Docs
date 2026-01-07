@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: How to package mods for Steam Workshop
 ---
 
 # Packaging
