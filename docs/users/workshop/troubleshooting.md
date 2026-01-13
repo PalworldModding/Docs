@@ -18,7 +18,7 @@ Seeing the Crash Reporter after launching the game can occur for many reasons an
 
 ## Crashing when loading a World
 
-This is where you should investiage your error message that the Crash Reporter is showing you.
+This is where you should investigate your error message that the Crash Reporter is showing you.
 
 I'll do separate sections here to make it easier to understand.
 
