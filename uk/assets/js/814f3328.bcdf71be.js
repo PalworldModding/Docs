@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpalworld_docs=self.webpackChunkpalworld_docs||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Blog","permalink":"/uk/blog/Blog","unlisted":false}]}')}}]);
