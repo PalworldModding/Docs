@@ -14,13 +14,14 @@ If Palworld isn't in the first dropdown, click the interchanging arrows symbol t
 Name it `Palworld` (Or whatever you want, doesn't matter.)
 Change the directory to your `Palworld` executable directory, which by default is in `C:\Program Files (x86)\Steam\steamapps\common\Palworld\`
 If you cannot find it, go to your `Steam library -> Right Click -> Palworld -> Manage -> Browse local files`, copy this path to the `Directory` section.
+Click `OK`
 
-Click `OK` and go to FModel settings.
+Next, open FModel settings.
 Change your `Output Directory` to somewhere you'll find easily.
 In the `GAME` section, change `UE Versions` to `GAME_UE5_1`.
 In the `ADVANCED` section, check `Local Mapping File` and change `Mapping File Path` to the [Palworld Mapping File](https://github.com/PalworldModding/UsefulFiles/raw/refs/heads/master/Mappings.usmap) you downloaded earlier.
 
-On the left side of the settings, click on the `Models` tab.
+On the left side of the settings, click on the `Exports` or `Models` tab (depending on version of FModel
 Change your `Model Export Directory` to somewhere you'll find easily.
 Change `Mesh Format` to `ActorX (psk / pskx)`
 Change `Texture Format` to `PNG`.
