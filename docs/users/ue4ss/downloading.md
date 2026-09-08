@@ -16,7 +16,7 @@ Two methods of downloading UE4SS will be provided below, bundled and manual.
 
 This method will involve downloading UE4SS from a fork which already contains the `MemberVariableLayout` fix with UE4SS' files, meaning you only have to worry about downloading UE4SS and then installing it.
 
-1. Download `UE4SS-Palworld.zip` from [here](https://github.com/Okaetsu/RE-UE4SS/releases/tag/experimental-palworld) which contains the necessary `MemberVariableLayout` fix.
+1. Download `UE4SS-Palworld-xxxxxxxxx.zip` from [Latest Palworld UE4SS](https://github.com/Okaetsu/RE-UE4SS/releases/latest) fork available, since it comes with an extra `MemberVariableLayout` file that prevents crashing issues with various mods. `xxxxxxxxx` = git commit hash for that version.
 
 2. After you're done downloading UE4SS, if you open the .zip file, you should see a ue4ss folder and dwmapi.dll inside. This means you've downloaded the correct version of UE4SS.
 

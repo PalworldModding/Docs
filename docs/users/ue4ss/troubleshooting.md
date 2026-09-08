@@ -10,7 +10,7 @@ sidebar_position: 5
 
 - You might see mentions about needing to use something called "UE4SS Signatures". Please do not use this regardless of what anyone says. It was necessary back during Palworld's release in 2024, but it is not necessary anymore and will cause problems. If you have a folder called `UE4SS_Signatures`, delete it. You can find it in the Win64/WinGDK folder.
 
-- Do **NOT** use the UE4SS version that was released back in February 14th 2024, because there are many bugs in the old version of UE4SS that were fixed ages ago. Same thing goes for any versions before 3.0.1. You should be using [experimental-palworld](https://github.com/Okaetsu/RE-UE4SS/releases/tag/experimental-palworld) fork, since it comes with an extra `MemberVariableLayout` file that prevents crashing issues with various mods.
+- Do **NOT** use the UE4SS version that was released back in February 14th 2024, because there are many bugs in the old version of UE4SS that were fixed ages ago. Same thing goes for any versions before 3.0.1. You should be using [Latest Palworld UE4SS](https://github.com/Okaetsu/RE-UE4SS/releases/latest) fork available, since it comes with an extra `MemberVariableLayout` file that prevents crashing issues with various mods.
 
 - UE4SS will always come with some default mods like `BPModLoaderMod` or `BPML_GenericFunctions`. Do **NOT** delete these as that will cause UE4SS to not function properly. Leave the default mods alone. Same goes for `mods.txt` and `mods.json`, never ever touch these files, because you risk breaking UE4SS' functionality.
 
